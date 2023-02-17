@@ -1,0 +1,15 @@
+version: 2
+updates:
+# Fetch and update latest `npm` packages
+- package-ecosystem: npm
+  directory: '/app/'
+  schedule:
+    interval: weekly
+  reviewers:
+    - tapan bavaliya
+  assignees:
+    - tapan bavaliya
+  commit-message:
+    prefix: fix
+    prefix-development: chore
+    include: scope
