@@ -36,6 +36,7 @@ export default {
     "@nuxt/image",
     "@/modules/sitemapRouteGenerator",
   ],
+  
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
@@ -44,11 +45,13 @@ export default {
     "@nuxtjs/sitemap",
     "vue-social-sharing/nuxt",
   ],
+  
   robots: {
     UserAgent: "*",
     Disallow: "",
     Sitemap: process.env.BASE_URL + "/sitemap.xml",
   },
+  
   sitemap: {
     hostname: process.env.BASE_URL,
     defaults: {
@@ -97,5 +100,5 @@ export default {
 
   image: {
     domains: ["data.improwised.com"],
-  },
+  }
 };
