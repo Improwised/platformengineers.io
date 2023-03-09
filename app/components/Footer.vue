@@ -2,80 +2,35 @@
   <footer class="space--sm footer-2 bg--dark">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-3 col-6">
+        <div class="col-md-6 col-lg-4 col-6">
           <h6 class="type--uppercase">Company</h6>
           <ul class="list--hover">
-            <li>
-              <a href="#">About Company</a>
-            </li>
-            <li>
-              <a href="#">Our Team</a>
-            </li>
-            <li>
-              <a href="#">Locations</a>
-            </li>
-            <li>
-              <a href="#">History</a>
-            </li>
-            <li>
-              <a href="#">Work With Us</a>
+            <li class="">
+              <a href="/about-us">About Us</a>
             </li>
           </ul>
         </div>
-        <div class="col-md-6 col-lg-3 col-6">
-          <h6 class="type--uppercase">Developers</h6>
-          <ul class="list--hover">
-            <li>
-              <a href="#">Developer Center</a>
-            </li>
-            <li>
-              <a href="#">API Reference</a>
-            </li>
-            <li>
-              <a href="#">Downloads</a>
-            </li>
-            <li>
-              <a href="#">Tools</a>
-            </li>
-            <li>
-              <a href="#">Developer Blog</a>
-            </li>
-            <li>
-              <a href="#">Developer Forums</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-3 col-6">
+        <div class="col-md-6 col-lg-4 col-6">
           <h6 class="type--uppercase">Support</h6>
           <ul class="list--hover">
             <li>
-              <a href="#">Help Center</a>
+              <a href="/contact-us">Contact Us</a>
             </li>
             <li>
-              <a href="#">Live Chat</a>
-            </li>
-            <li>
-              <a href="#">Downloads</a>
-            </li>
-            <li>
-              <a href="#">Press Kit</a>
+              <a href="mailto:sales@platformengineers.in"
+                >sales@platformengineers.in</a
+              >
             </li>
           </ul>
         </div>
-        <div class="col-md-6 col-lg-3 col-6">
-          <h6 class="type--uppercase">Locations</h6>
+        <div class="col-md-6 col-lg-4 col-6">
+          <h6 class="type--uppercase">Resources</h6>
           <ul class="list--hover">
-            <li>
-              <a href="#">Melbourne</a>
+            <li class="">
+              <a href="/blogs">Blogs</a>
             </li>
-            <li>
-              <a href="#">London</a>
-            </li>
-            <li>
-              <a href="#">New York</a>
-            </li>
-            <li>
-              <a href="#">San Francisco</a>
+            <li class="">
+              <a href="/case-studies">Case Studies</a>
             </li>
           </ul>
         </div>

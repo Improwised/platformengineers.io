@@ -22,11 +22,58 @@ Vue.filter("formatDateTime", function (value) {
 });
 
 const urls = {
-  services: `/items/services?filter[status][_eq]=published&fields=*.*&sort=title`,
+  categories:
+    "/items/pe_categories?fields=name,description,services.title,services.description,services.slug",
+  home: "https://data.improwised.com/items/pe_home",
+  services: "/items/pe_services?fields=slug,title,description,icon",
+  servicesNames: "/items/pe_services?fields=slug,title,description,icon",
+  whyUs: "/items/pe_why_us?fields=title,description,icon",
+
+  aboutUs: "/items/pe_about_us?fields=*.*",
+
+  service: (title) =>
+    `/items/pe_services?filter[slug][_eq]=${title}&single=1&fields=*.*`,
+
+  // services: `/items/services?filter[status][_eq]=published&fields=*.*&sort=title`,
+  // servicesListWithTitleOnly:
+  //   "/items/services?filter[status][_eq]=published&fields=title,slug&sort=title",
+  // service: (title) =>
+  //   `/items/services?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields=*.*`,
+
+  // services: `/items/services?filter[status][_eq]=published&fields=*.*&sort=title`,
   servicesListWithTitleOnly:
     "/items/services?filter[status][_eq]=published&fields=title,slug&sort=title",
-  service: (title) =>
-    `/items/services?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields=*.*`,
+
+  careers:
+    "/items/pages?filter[status][_eq]=published&filter[slug][_eq]=careers&fields[]=*.*",
+
+  jobOpenings:
+    "/items/careers?filter[status][_eq]=published&fields=*.*&sort=title",
+  job: (title) =>
+    `/items/careers?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields=*.*`,
+
+  caseStudies:
+    "/items/case-studies?filter[status][_eq]=published&fields=*.*&sort=title",
+
+  whyus: "/items/why_us?filter[status][_eq]=published&fields=*.*&sort=title",
+
+  testimonials:
+    "/items/testimonials?filter[status][_eq]=published&fields=*.*&sort=sort,-id&limit=3",
+
+  whyUsHome: `/items/why_us_home?filter[status][_eq]=published&fields=*.*&sort=title`,
+
+  whoWeAre: `/items/blog?filter[status][_eq]=published&filter[slug][_eq]=who-we-are&fields[]=*.*,tags.tags_id.name`,
+  whatWeDo: `/items/blog?filter[status][_eq]=published&filter[slug][_eq]=what-we-do&fields[]=*.*,tags.tags_id.name`,
+  simpleHiringProcess: `/items/blog?filter[status][_eq]=published&filter[slug][_eq]=simple-hiring-process&fields[]=*.*,tags.tags_id.name`,
+  coreValues: `/items/blog?filter[status][_eq]=published&filter[tags][tags_id][_eq]=2&sort=sort,-id&limit=3&fields[]=*.*`,
+  meetTeam: `/items/team?filter[status][_eq]=published&fields=*.*&sort=sort,id`,
+  blogs: `/items/blog?filter[status][_eq]=published&filter[tags][tags_id][_neq]=2&sort=sort,-id&limit=6&fields[]=*.*,tags.*`,
+  blog: (title) =>
+    `/items/blog?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields=*.*,tags.tags_id.name,users.user_created.first_name,users.user_created.last_name`,
+  blogothers: (title) =>
+    `/items/blog?filter[status][_eq]=published&sort=sort,-id&limit=3&fields[]=*.*&filter[slug][_neq]=${title}&filter[tags][tags_id][_neq]=2`,
+  blogPageData: `/items/blog?filter[status][_eq]=published&sort=sort,-id&fields[]=*.*&filter[tags][tags_id][_neq]=2`,
+  gallery: `/items/gallery?filter[status][_eq]=published&fields[]=*.*&sort=sort,-id`,
 };
 
 export default function (context, inject) {
@@ -48,4 +95,14 @@ export default function (context, inject) {
 
   inject("urls", urls);
   context.$urls = urls;
+
+  Vue.filter("str_limit", function (value, size) {
+    if (!value) return "";
+    value = value.toString();
+
+    if (value.length <= size) {
+      return value;
+    }
+    return value.substr(0, size) + "...";
+  });
 }
