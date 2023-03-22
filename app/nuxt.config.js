@@ -14,7 +14,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "~/plugins/urlroutes" }],
+  plugins: [
+    { src: "~/plugins/urlroutes" },
+    { src: "~/plugins/download.js", mode: "server" }
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

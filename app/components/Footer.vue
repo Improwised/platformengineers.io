@@ -26,25 +26,25 @@
         <div class="col-md-6 col-lg-4 col-6">
           <h6 class="type--uppercase">Resources</h6>
           <ul class="list--hover">
-            <li class="">
+            <!--             <li class="">
               <a href="/blogs">Blogs</a>
             </li>
             <li class="">
               <a href="/case-studies">Case Studies</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
       <!--end of row-->
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12 text-center">
           <span class="type--fine-print"
-            >&copy; <span class="update-year"></span> Stack Inc.</span
+            >&copy; <span class="update-year"></span> Platform Engineers</span
           >
-          <a class="type--fine-print" href="#">Privacy Policy</a>
-          <a class="type--fine-print" href="#">Legal</a>
+          <!-- <a class="type--fine-print" href="#">Privacy Policy</a> -->
+          <!-- <a class="type--fine-print" href="#">Legal</a> -->
         </div>
-        <div class="col-md-6 text-right text-left-xs">
+        <!-- <div class="col-md-6 text-right text-left-xs">
           <ul class="social-list list-inline list--hover">
             <li>
               <a href="#">
@@ -67,7 +67,7 @@
               </a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
       <!--end of row-->
     </div>

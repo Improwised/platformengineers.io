@@ -1,12 +1,11 @@
 <template>
   <div class="nav-container">
-    <div class="bar bar--sm visible-xs bg--dark">
+    <div class="bar bar--sm visible-xs">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-3 col-md-2">
             <a href="/">
-              <img class="logo logo-dark" alt="logo" src="/img/logo.png" />
-              <img class="logo logo-light" alt="logo" src="/img/logo.png" />
+              <img src="/img/plateform-engineers.png" style="height: 55px" />
             </a>
           </div>
           <div class="col-9 col-md-10 text-right">
@@ -23,22 +22,24 @@
     </div>
     <nav
       id="menu1"
-      class="bar bar--sm bar-1 hidden-xs bg--dark"
+      class="bar bar--sm bar-1 hidden-xs"
       data-scroll-class="366px:pos-fixed"
     >
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="hidden-xs d-flex align-items-center">
             <div class="bar__module">
               <a href="/">
-                <img class="logo logo-dark" alt="logo" src="/img/logo.png" />
-                <img class="logo logo-light" alt="logo" src="/img/logo.png" />
+                <img src="/img/plateform-engineers.png" style="height: 55px" />
               </a>
             </div>
           </div>
           <div class="col text-right text-left-xs text-left-sm">
             <div class="bar__module">
               <ul class="menu-horizontal text-left">
+                <li>
+                  <a href="/">Home</a>
+                </li>
                 <li>
                   <a href="/about-us">About Us</a>
                 </li>
@@ -48,7 +49,7 @@
                     <div class="container">
                       <div class="row">
                         <div
-                          class="mt-1 dropdown__content col-lg-3 col-md-4 col-sm-6"
+                          class="mt-1 dropdown__content col-lg-4 col-md-4 col-sm-6"
                         >
                           <ul class="menu-vertical">
                             <li
@@ -65,12 +66,12 @@
                     </div>
                   </div>
                 </li>
-                <li class="">
+                <!--                 <li class="">
                   <a href="/blog">Blog</a>
                 </li>
                 <li class="">
                   <a href="/case-studies">Case Studies</a>
-                </li>
+                </li> -->
               </ul>
             </div>
             <div class="bar__module">

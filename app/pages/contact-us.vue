@@ -95,22 +95,6 @@
             </form>
           </div>
         </div>
-        <!--end of row-->
-      </div>
-      <!--end of container-->
-    </section>
-    <section>
-      <div class="container">
-        <div class="row">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.6509218365454!2d70.78636435101201!3d22.29120934878471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca22a0751231%3A0x23edc234940c18b2!2sImprowised+Technologies+Private+Limited.!5e0!3m2!1sen!2sin!4v1495780225620"
-            width="600"
-            height="530"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen
-          ></iframe>
-        </div>
       </div>
     </section>
   </div>

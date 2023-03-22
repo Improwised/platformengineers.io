@@ -18,16 +18,19 @@ export function slugify(value) {
 Vue.filter("formatDateTime", function (value) {
   if (!value) return "-";
 
-  return `${moment(value).local().format("ddd, MMM DD, YYYY")}`;
+  return `${moment(value).local().format("dddd, MMMM DD, YYYY")}`;
 });
 
 const urls = {
   categories:
     "/items/pe_categories?fields=name,description,services.title,services.description,services.slug",
   home: "https://data.improwised.com/items/pe_home",
-  services: "/items/pe_services?fields=slug,title,description,icon",
-  servicesNames: "/items/pe_services?fields=slug,title,description,icon",
-  whyUs: "/items/pe_why_us?fields=title,description,icon",
+  services:
+    "/items/pe_services?fields=slug,title,description,icon,icon_as_image&sort=order&filter[status][_eq]=published",
+  servicesNames:
+    "/items/pe_services?fields=slug,title,description,icon&filter[status][_eq]=published",
+  whyUs:
+    "/items/pe_why_us?fields=title,description,icon,image&filter[status][_eq]=published&sort=order",
 
   aboutUs: "/items/pe_about_us?fields=*.*",
 
@@ -53,7 +56,9 @@ const urls = {
     `/items/careers?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields=*.*`,
 
   caseStudies:
-    "/items/case-studies?filter[status][_eq]=published&fields=*.*&sort=title",
+    "/items/pe_case_studies?filter[status][_eq]=published&fields=*.*&sort=title",
+  caseStudy: (title) =>
+    `/items/pe_case_studies?filter[slug][_eq]=${title}&single=1`,
 
   whyus: "/items/why_us?filter[status][_eq]=published&fields=*.*&sort=title",
 
@@ -67,9 +72,8 @@ const urls = {
   simpleHiringProcess: `/items/blog?filter[status][_eq]=published&filter[slug][_eq]=simple-hiring-process&fields[]=*.*,tags.tags_id.name`,
   coreValues: `/items/blog?filter[status][_eq]=published&filter[tags][tags_id][_eq]=2&sort=sort,-id&limit=3&fields[]=*.*`,
   meetTeam: `/items/team?filter[status][_eq]=published&fields=*.*&sort=sort,id`,
-  blogs: `/items/blog?filter[status][_eq]=published&filter[tags][tags_id][_neq]=2&sort=sort,-id&limit=6&fields[]=*.*,tags.*`,
-  blog: (title) =>
-    `/items/blog?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields=*.*,tags.tags_id.name,users.user_created.first_name,users.user_created.last_name`,
+  blogs: `/items/blog?filter[tags][tags_id][_neq]=2&sort=sort,-id&limit=6&fields[]=*.*,tags.*`,
+  blog: (title) => `/items/pe_blog?filter[slug][_eq]=${title}&single=1`,
   blogothers: (title) =>
     `/items/blog?filter[status][_eq]=published&sort=sort,-id&limit=3&fields[]=*.*&filter[slug][_neq]=${title}&filter[tags][tags_id][_neq]=2`,
   blogPageData: `/items/blog?filter[status][_eq]=published&sort=sort,-id&fields[]=*.*&filter[tags][tags_id][_neq]=2`,

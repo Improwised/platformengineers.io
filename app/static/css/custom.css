@@ -1,0 +1,47 @@
+.technologies img {
+  margin: 0 5px 8px;
+  max-height: 40px;
+}
+
+.technologies .boxed {
+  padding: 1em;
+}
+
+.technologies h6 {
+  line-height: 1;
+}
+
+.dlab-separator-outer {
+  overflow: hidden;
+}
+
+.dlab-separator.style-liner {
+  width: 30px;
+}
+
+.dlab-separator {
+  display: inline-block;
+  height: 2px;
+  width: 80px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #00aedb
+}
+
+.dlab-separator[class*="style-"]:after, .dlab-separator[class*="style-"]:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  width: 70px;
+  height: 2px;
+  background: #dfdfdf;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.dlab-separator[class*="style-"]:before {
+  left: auto;
+  right: 40px;
+}
