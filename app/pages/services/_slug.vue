@@ -51,13 +51,21 @@
           <div
             v-for="(feature, index) in service.features"
             :key="index"
-            class="col-md-4 d-flex"
+            :class="`col-md-${
+              $route.params.slug === 'kubernetes-consulting-services'
+                ? '6'
+                : '4'
+            } d-flex`"
           >
             <div class="w-100 feature feature-3 boxed boxed--lg bs-1 rounded">
               <div class="svg mb-4" v-html="feature.image"></div>
-              <h4 class="flex-grow-1">{{ feature.title }}</h4>
+              <h4 class="flex-grow-1 text-center">{{ feature.title }}</h4>
               <div
-                class="list-style-content"
+                :class="`list-style-content ${
+                  $route.params.slug !== 'kubernetes-consulting-services'
+                    ? 'text-center'
+                    : ''
+                }`"
                 v-html="feature.description"
               ></div>
             </div>
