@@ -28,7 +28,7 @@ const urls = {
   services:
     "/items/pe_services?fields=slug,title,description,icon,icon_as_image&sort=order&filter[status][_eq]=published",
   servicesNames:
-    "/items/pe_services?fields=slug,title,description,icon&filter[status][_eq]=published",
+    "/items/pe_services?fields=slug,title,description,icon&filter[status][_eq]=published&sort=order",
   whyUs:
     "/items/pe_why_us?fields=title,description,icon,image&filter[status][_eq]=published&sort=order",
 
