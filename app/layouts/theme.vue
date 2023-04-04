@@ -30,6 +30,7 @@
     <script src="/theme/js/jquery-3.1.1.min.js"></script>
     <script src="/theme/js/scripts.js"></script>
     <script src="/js/contactus.js"></script>
+    <GoogleAnalyticsV4 v-if="$config.MODE !== 'development'" />
   </div>
 </template>
 
@@ -37,11 +38,13 @@
 // import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
 import backToTop from "@/components/backToTop.vue";
+import GoogleAnalyticsV4 from "@/components/GoogleAnalyticsV4.vue";
 export default {
   components: {
     // Navigation,
     Footer,
     backToTop,
+    GoogleAnalyticsV4,
   },
 };
 </script>
