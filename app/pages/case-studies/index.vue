@@ -50,7 +50,7 @@
                   width="100%"
                   height="245"
                   loading="lazy"
-                  :format="caseStudie.image.filename_download.split('.')[1]"
+                  format="png"
                 />
               </a>
               <div class="feature__body boxed">
