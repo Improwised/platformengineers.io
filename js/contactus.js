@@ -1,23 +1,4 @@
-var widgetId1;
-window.onloadCallback = function() {
-  widgetId1 = grecaptcha.render('recaptcha', {
-    'sitekey' : $('#sitekey').val(),
-    'callback': enableBtn,
-    'expired-callback': disableBtn,
-    'error-callback': disableBtn
-  });
-
-};
 setInitial();
-
-function enableBtn() {
-  $("#btn-submit").attr("disabled", false);
-}
-
-function disableBtn() {
-  $("#btn-submit").attr("disabled", true);
-}
-
 
 $(function() {
   //hang on event of form with id=myform
@@ -39,7 +20,7 @@ $(function() {
 
     !e.target['message'].value ? errors.push('Message is required') : undefined;
 
-    !e.target['g-recaptcha-response'].value ? errors.push('Please verify the recaptcha') : undefined;
+    // !e.target['g-recaptcha-response'].value ? errors.push('Please verify the recaptcha') : undefined;
 
     e.target['email'].value && !validateEmail(e.target['email'].value) ? errors.push('Invalid email') : undefined;
 
@@ -55,27 +36,30 @@ $(function() {
       $("#btn-submit").html('Sending...');
       $("#btn-submit").attr("disabled", true);
 
-      $.ajax({
-        url: actionurl,
-        type: 'post',
-        data: JSON.stringify({
-          name: e.target['name'].value,
-          email: e.target['email'].value,
-          message: e.target['message'].value,
-          recaptcha_response: e.target['g-recaptcha-response'].value
-        }),
-        success: function(data) {
-          setToDefault();
-          showSuccess();
-        },
-        error: function(err) {
-          setToDefault();
-          var errors = err.responseJSON ? err.responseJSON.error : undefined;
-          showErrors(errors || ['Something went wrong. Please try again']);
-        }
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg', {action: 'platformengineers_contactus_form'}).then(function(token) {
+          $.ajax({
+            url: actionurl,
+            type: 'post',
+            data: JSON.stringify({
+              name: e.target['name'].value,
+              email: e.target['email'].value,
+              message: e.target['message'].value,
+              recaptcha_response: token
+            }),
+            success: function(data) {
+              setToDefault();
+              showSuccess();
+            },
+            error: function(err) {
+              setToDefault();
+              var errors = err.responseJSON ? err.responseJSON.error : undefined;
+              showErrors(errors || ['Something went wrong. Please try again']);
+            }
+          });
+        });
       });
     }
-
   });
 });
 
@@ -99,7 +83,7 @@ function showSuccess() {
 }
 
 function setToDefault() {
-  grecaptcha.reset(widgetId1);
+  // grecaptcha.reset(widgetId1);
   setInitial();
 }
 
@@ -108,6 +92,6 @@ function setInitial() {
   $('#success').css('display', 'none');
   $('#errorMessages ul').remove();
   $('#errorMessages').css('display', 'none');
-  $("#btn-submit").html('Send');
-  $("#btn-submit").attr("disabled", true);
+  $("#btn-submit").html('Send Enquiry');
+  $("#btn-submit").attr("disabled", false);
 }
