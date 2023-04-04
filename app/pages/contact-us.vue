@@ -8,8 +8,8 @@
             <div class="col-md-8 col-lg-6">
               <h1>Let's talk about your project</h1>
               <p class="lead">
-                Visit us or make contact via the form below to talk more about
-                your project, ideas or any others technical queries.
+                Contact via the form below to talk more about your project,
+                ideas or any others technical queries.
               </p>
             </div>
           </div>
@@ -33,12 +33,6 @@
               id="contactus-submit"
               action="https://rnnmftp4t7.execute-api.us-west-2.amazonaws.com/production/api/contactus"
             >
-              <input
-                id="sitekey"
-                type="hidden"
-                name="sitekey"
-                value="6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg"
-              />
               <div class="col-xs-12">
                 <label for="name">Your Name:</label>
                 <input
@@ -78,7 +72,6 @@
                   id="btn-submit"
                   type="submit"
                   class="btn btn--primary type--uppercase"
-                  disabled="disabled"
                 >
                   Send Enquiry
                 </button>
@@ -163,9 +156,7 @@ export default {
       ],
       script: [
         {
-          src: "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit",
-          async: true,
-          body: true,
+          src: "https://www.google.com/recaptcha/api.js?render=6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg",
         },
       ],
       link: [

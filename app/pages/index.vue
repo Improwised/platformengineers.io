@@ -159,7 +159,7 @@
                   <nuxt-img
                     :src="$urls.assets(service.icon_as_image)"
                     :alt="service.title"
-                    :title="service.title"                    
+                    :title="service.title"
                     format="png"
                     loading="lazy"
                     height="80px"
@@ -197,7 +197,7 @@
                   <nuxt-img
                     :src="$urls.assets(why.image)"
                     :alt="why.title"
-                    :title="why.title"                    
+                    :title="why.title"
                     format="png"
                     loading="lazy"
                     height="80px"
