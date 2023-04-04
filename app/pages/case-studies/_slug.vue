@@ -1,0 +1,341 @@
+<template>
+  <div v-if="caseStudy" class="main-container case-studies">
+    <div class="case-studies-bk">
+      <Navigation />
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-6 d-flex align-items-center justify-content-center"
+          >
+            <div>
+              <h3>{{ caseStudy.title }}</h3>
+              <!-- <p class="m-0" style="font-size: 18px; color: #724fe9">
+                Published On
+                {{ caseStudy.date_updated | formatDateTime }}
+              </p> -->
+              <p style="font-size: 16px; max-width: 300px">
+                {{ caseStudy.date_updated | formatDateTime }}
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 text-right">
+            <img
+              v-if="caseStudy && caseStudy.image && caseStudy.image.id"
+              alt="Image"
+              :src="$urls.assets(caseStudy.image.id)"
+              height="400px"
+            />
+            <!-- <img alt="Image" src="/img/c5.svg" height="400px" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-- border-bottom wave-bk">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">{{ caseStudy.client_info_title }}</h2>
+            <div class="lead" v-html="caseStudy.client_info_description"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-- border-bottom wave-bk">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">{{ caseStudy.goal_title }}</h2>
+            <div class="lead" v-html="caseStudy.goal_description"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-- border-bottom wave-bk">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">{{ caseStudy.solution_title }}</h2>
+            <div class="lead" v-html="caseStudy.solution_description"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-- border-bottom wave-bk">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">{{ caseStudy.outcome_title }}</h2>
+            <div class="lead" v-html="caseStudy.outcome_description"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg--">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">{{ caseStudy.conclusion_title }}</h2>
+            <div class="lead" v-html="caseStudy.conclusion_description"></div>
+            <br />
+            <br />
+            <br />
+            <div class="d-flex align-items-center">
+              <h5
+                v-for="(tag, index) in caseStudy.tags"
+                :key="index"
+                class="mx-2 my-0 py-1 px-2 bg-secondary text-white"
+                style="border-radius: 10px; font-weight: normal"
+              >
+                {{
+                  tag &&
+                  tag.pe_case_studies_tags_id &&
+                  tag.pe_case_studies_tags_id.name
+                }}
+              </h5>
+            </div>
+            <hr />
+            <div class="article__share mt-0">
+              <ul
+                class="social-list list-inline list--hover blog_social"
+                style="list-style: none; padding: 0; margin: 0"
+              >
+                <!-- <span class="h4 d-inline"> Share : </span> -->
+                <li class="list-inline-item mr-0">
+                  <ShareNetwork
+                    network="email"
+                    :title="`${caseStudy.title}`"
+                    :url="`${baseUrlPath}`"
+                    :description="`${strippedHtml(caseStudy.description)}`"
+                  >
+                    <i class="socicon socicon-google icon icon--xs"></i>
+                  </ShareNetwork>
+                </li>
+
+                <li class="list-inline-item mr-0">
+                  <ShareNetwork
+                    network="linkedin"
+                    :title="`${caseStudy.title}`"
+                    :url="`${baseUrlPath}`"
+                    :description="`${strippedHtml(caseStudy.description)}`"
+                  >
+                    <i class="socicon socicon-linkedin icon icon--xs"></i>
+                  </ShareNetwork>
+                </li>
+                <li class="list-inline-item mr-0">
+                  <ShareNetwork
+                    network="twitter"
+                    :title="`${caseStudy.title}`"
+                    :url="`${baseUrlPath}`"
+                  >
+                    <i class="socicon socicon-twitter icon icon--xs"></i>
+                  </ShareNetwork>
+                </li>
+                <li class="list-inline-item mr-0">
+                  <ShareNetwork
+                    network="facebook"
+                    :title="`${caseStudy.title}`"
+                    :description="`${strippedHtml(caseStudy.description)}`"
+                    :url="`${baseUrlPath}`"
+                    :quote="`${caseStudy.title}`"
+                    hashtags="caseStudy"
+                  >
+                    <i class="socicon socicon-facebook icon icon--xs"></i>
+                  </ShareNetwork>
+                </li>
+                <li class="list-inline-item mr-0">
+                  <ShareNetwork
+                    network="whatsapp"
+                    :url="`${baseUrlPath}`"
+                    :title="`${caseStudy.title}`"
+                    :description="`${strippedHtml(caseStudy.description)}`"
+                  >
+                    <i class="socicon socicon-whatsapp icon icon--xs"></i>
+                  </ShareNetwork>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--     <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2"></div>
+        </div>
+      </div>
+    </section> -->
+  </div>
+</template>
+
+<script>
+import Navigation from "@/components/Navigation.vue";
+
+export default {
+  components: {
+    Navigation,
+  },
+  filters: {
+    truncate(text, length, suffix) {
+      if (text.length > length) {
+        return text.substring(0, length) + suffix;
+      } else {
+        return text;
+      }
+    },
+  },
+  layout: "theme",
+  async asyncData({ app, params }) {
+    const title = params.slug;
+    //  const tagsname = "";
+    const caseStudy = await app.$axios.$get(app.$urls.caseStudy(title));
+    // caseStudy.data[0].content = app.$unescapeHTML(caseStudy.data[0].content);
+    // caseStudy.data[0].content = app.$dImage(caseStudy.data[0].content);
+    // caseStudy.data[0].content = await app.$gist(caseStudy.data[0].content);
+    return { caseStudy: caseStudy.data[0] };
+  },
+  data() {
+    if (process.client) {
+      return {
+        baseUrlPath: window.location.href, // this.$route.fullPath,
+      };
+    } else {
+      return {
+        baseUrlPath: "",
+      };
+    }
+  },
+  head() {
+    return {
+      title: (this.caseStudy && this.caseStudy.seo_title) || "",
+      meta: [
+        {
+          name: "description",
+          content: (this.caseStudy && this.caseStudy.seo_description) || "",
+        },
+        {
+          name: "title",
+          content: (this.caseStudy && this.caseStudy.seo_title) || "",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:url",
+          content: process.env.BASE_URL + this.$route.path + "/",
+        },
+        {
+          property: "og:title",
+          content: (this.caseStudy && this.caseStudy.seo_title) || "",
+        },
+        {
+          property: "og:description",
+          content: (this.caseStudy && this.caseStudy.seo_description) || "",
+        },
+        {
+          property: "og:image",
+          content: process.env.BASE_URL + "/img/logo.png",
+        },
+        {
+          property: "twitter:card",
+          content: "summary",
+        },
+        {
+          property: "twitter:site",
+          content: "@improwised",
+        },
+        {
+          property: "twitter:creator",
+          content: "@improwised",
+        },
+        {
+          property: "twitter:title",
+          content: (this.caseStudy && this.caseStudy.seo_title) || "",
+        },
+        {
+          property: "twitter:description",
+          content: (this.caseStudy && this.caseStudy.seo_description) || "",
+        },
+        {
+          property: "twitter:image",
+          content: process.env.BASE_URL + "/img/logo.png",
+        },
+      ],
+      link: [
+        {
+          rel: "canonical",
+          href: process.env.BASE_URL + this.$route.path + "/",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css",
+        },
+      ],
+    };
+  },
+  methods: {
+    strippedHtml(description) {
+      const regex = /(<([^>]+)>)/gi;
+
+      return description.replace(regex, "");
+    },
+  },
+};
+</script>
+
+<style>
+.case-studies-bk {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 0 200px 200px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+}
+
+.case-studies-bk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: -1;
+  background: url("/img/a3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.case-studies ul {
+  list-style: inherit;
+  padding: revert;
+}
+
+.wave-bk {
+  overflow: hidden;
+  position: relative;
+}
+
+.wave-bk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  z-index: -1;
+  background: url("/img/s2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+</style>
