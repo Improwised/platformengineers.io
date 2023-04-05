@@ -1,12 +1,13 @@
 {
-    "name": "Build Infra Cloud",
-    "short_name": "BuildInfraCloud",
-    "theme_color": "#3D60BF",
-    "background_color": "#fff",
-    "display": "browser",
+    "name" : "Platform Engineers",
+    "description": "Streamlining Your Cloud Infrastructure",
+    "short_name" : "Platform Engineers",
+    "display" : "standalone",
     "orientation": "any",
-    "scope": "/",
-    "start_url": "/",
+    "scope" : "/",
+    "start_url" : "/",
+    "theme_color" : "#179bfd",
+    "background_color" : "#ffffff",
     "icons": [        
         {
             "src": "/img/favicon/android-icon-36x36.png",
@@ -15,7 +16,7 @@
         },
         {
             "src": "/img/favicon/android-icon-48x48.png",
-            "sizes": "72x72",
+            "sizes": "48x48",
             "type": "image/png"
         },
         {
@@ -40,7 +41,7 @@
         },
         {
             "src": "/img/favicon/apple-icon-57x57.png",
-            "sizes": "36x36",
+            "sizes": "57x57",
             "type": "image/png"
         },
         {

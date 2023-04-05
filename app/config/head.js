@@ -40,7 +40,7 @@ const meta = [
   },
   {
     name: "theme-color",
-    content: "#3D60BF",
+    content: "#179bfd",
   },
   {
     name: "application-name",
@@ -125,11 +125,6 @@ const prodLinks = [
 
 const _link = [
   {
-    rel: "icon",
-    type: "image/x-icon",
-    href: "/img/favicon/favicon.ico",
-  },
-  {
     href: "https://fonts.googleapis.com",
     rel: "preconnect",
   },
@@ -175,8 +170,8 @@ const _link = [
   },
   {
     rel: "apple-touch-icon",
-    sizes: "114x114",
-    href: "/img/favicon/apple-icon-114x114.png",
+    sizes: "60x60",
+    href: "/img/favicon/apple-icon-60x60.png",
   },
   {
     rel: "apple-touch-icon",
@@ -185,13 +180,13 @@ const _link = [
   },
   {
     rel: "apple-touch-icon",
-    sizes: "144x144",
-    href: "/img/favicon/apple-icon-144x144.png",
+    sizes: "76x76",
+    href: "/img/favicon/apple-icon-76x76.png",
   },
   {
     rel: "apple-touch-icon",
-    sizes: "60x60",
-    href: "/img/favicon/apple-icon-60x60.png",
+    sizes: "114x114",
+    href: "/img/favicon/apple-icon-114x114.png",
   },
   {
     rel: "apple-touch-icon",
@@ -200,8 +195,8 @@ const _link = [
   },
   {
     rel: "apple-touch-icon",
-    sizes: "76x76",
-    href: "/img/favicon/apple-icon-76x76.png",
+    sizes: "144x144",
+    href: "/img/favicon/apple-icon-144x144.png",
   },
   {
     rel: "apple-touch-icon",
@@ -215,9 +210,14 @@ const _link = [
   },
   {
     rel: "icon",
+    type: "image/x-icon",
+    href: "/img/favicon/favicon.ico",
+  },
+  {
+    rel: "icon",
     type: "image/png",
-    href: "/img/favicon/favicon-96x96.png",
-    sizes: "96x96",
+    href: "/img/favicon/favicon-16x16.png",
+    sizes: "16x16",
   },
   {
     rel: "icon",
@@ -228,8 +228,8 @@ const _link = [
   {
     rel: "icon",
     type: "image/png",
-    href: "/img/favicon/favicon-16x16.png",
-    sizes: "16x16",
+    href: "/img/favicon/favicon-96x96.png",
+    sizes: "96x96",
   },
   {
     rel: "manifest",
@@ -272,11 +272,11 @@ const prodScripts = [
 
 const structuredLdJsonData = {
   "@context": "https://schema.org",
-  "@type": "Corporation",
-  name: "",
-  alternateName: "",
-  url: "",
-  logo: "",
+  "@type": "WebSite",
+  name: "Platform Engineers",
+  alternateName: "Platform Engineers",
+  url: "https://platformengineers.in/",
+  logo: "https://platformengineers.in/img/plateform-engineers.png",
   sameAs: [],
 };
 

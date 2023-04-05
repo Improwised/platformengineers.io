@@ -1,4 +1,4 @@
 export default {
-  title: "Build Infra Cloud",
-  description: "",
+  title: "Platform Engineers",
+  description: "Streamlining Your Cloud Infrastructure",
 };
