@@ -23,7 +23,6 @@
       <link rel="stylesheet" href="/dist/index.min.css" lazyload />
     </div>
     <a id="start" rel="nofollow" href="javscript:void(0);"></a>
-    <!-- <Navigation v-if="$route.name !== 'index'" /> -->
     <nuxt />
     <Footer />
     <backToTop />
@@ -35,13 +34,11 @@
 </template>
 
 <script>
-// import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
 import backToTop from "@/components/backToTop.vue";
 import GoogleAnalyticsV4 from "@/components/GoogleAnalyticsV4.vue";
 export default {
   components: {
-    // Navigation,
     Footer,
     backToTop,
     GoogleAnalyticsV4,

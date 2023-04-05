@@ -43,42 +43,13 @@
           </ul>
         </div>
       </div>
-      <!--end of row-->
       <div class="row">
         <div class="col-md-12 text-center">
           <span class="type--fine-print"
             >&copy; <span class="update-year"></span> Platform Engineers</span
           >
-          <!-- <a class="type--fine-print" href="#">Privacy Policy</a> -->
-          <!-- <a class="type--fine-print" href="#">Legal</a> -->
         </div>
-        <!-- <div class="col-md-6 text-right text-left-xs">
-          <ul class="social-list list-inline list--hover">
-            <li>
-              <a href="#">
-                <i class="socicon socicon-google icon icon--xs"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="socicon socicon-twitter icon icon--xs"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="socicon socicon-facebook icon icon--xs"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="socicon socicon-instagram icon icon--xs"></i>
-              </a>
-            </li>
-          </ul>
-        </div> -->
       </div>
-      <!--end of row-->
     </div>
-    <!--end of container-->
   </footer>
 </template>

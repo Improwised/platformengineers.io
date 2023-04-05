@@ -9,23 +9,20 @@
           >
             <div>
               <h3>{{ caseStudy.title }}</h3>
-              <!-- <p class="m-0" style="font-size: 18px; color: #724fe9">
-                Published On
-                {{ caseStudy.date_updated | formatDateTime }}
-              </p> -->
               <p style="font-size: 16px; max-width: 300px">
-                {{ caseStudy.date_updated | formatDateTime }}
+                {{ caseStudy.date_created | formatDateTime }}
               </p>
             </div>
           </div>
           <div class="col-md-6 text-right">
-            <img
+            <nuxt-img
               v-if="caseStudy && caseStudy.image && caseStudy.image.id"
-              alt="Image"
               :src="$urls.assets(caseStudy.image.id)"
+              :alt="`${caseStudy.title} | Platform Engineers`"
+              format="png"
+              loading="lazy"
               height="400px"
             />
-            <!-- <img alt="Image" src="/img/c5.svg" height="400px" /> -->
           </div>
         </div>
       </div>
@@ -104,7 +101,6 @@
                 class="social-list list-inline list--hover blog_social"
                 style="list-style: none; padding: 0; margin: 0"
               >
-                <!-- <span class="h4 d-inline"> Share : </span> -->
                 <li class="list-inline-item mr-0">
                   <ShareNetwork
                     network="email"
@@ -163,14 +159,6 @@
         </div>
       </div>
     </section>
-
-    <!--     <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2"></div>
-        </div>
-      </div>
-    </section> -->
   </div>
 </template>
 
@@ -193,11 +181,7 @@ export default {
   layout: "theme",
   async asyncData({ app, params }) {
     const title = params.slug;
-    //  const tagsname = "";
     const caseStudy = await app.$axios.$get(app.$urls.caseStudy(title));
-    // caseStudy.data[0].content = app.$unescapeHTML(caseStudy.data[0].content);
-    // caseStudy.data[0].content = app.$dImage(caseStudy.data[0].content);
-    // caseStudy.data[0].content = await app.$gist(caseStudy.data[0].content);
     return { caseStudy: caseStudy.data[0] };
   },
   data() {
@@ -212,6 +196,10 @@ export default {
     }
   },
   head() {
+    const image = this.$img(this.$urls.assets(this.caseStudy.image.id), {
+      format: "png",
+      height: "400px",
+    });
     return {
       title: (this.caseStudy && this.caseStudy.seo_title) || "",
       meta: [
@@ -241,7 +229,7 @@ export default {
         },
         {
           property: "og:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + image,
         },
         {
           property: "twitter:card",
@@ -249,11 +237,11 @@ export default {
         },
         {
           property: "twitter:site",
-          content: "@improwised",
+          content: "",
         },
         {
           property: "twitter:creator",
-          content: "@improwised",
+          content: "",
         },
         {
           property: "twitter:title",
@@ -265,7 +253,7 @@ export default {
         },
         {
           property: "twitter:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + image,
         },
       ],
       link: [

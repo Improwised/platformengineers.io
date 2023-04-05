@@ -8,22 +8,15 @@
             class="col-md-6 d-flex align-items-center justify-content-center"
           >
             <h1>Case Studies</h1>
-            <!-- <p class="m-0" style="font-size: 18px; color: #724fe9">
-              Powering innovation with expertise
-            </p>
-            <p style="font-size: 16px; max-width: 300px">
-              Our platform engineers are driven to solve your challenges and
-              build tomorrow's solutions.
-            </p> -->
           </div>
           <div class="col-md-6 text-right">
-            <!-- <img
-              v-if="service && service.page_image && service.page_image.id"
-              alt="Image"
-              :src="$urls.assets(service.page_image.id)"
+            <nuxt-img
+              src="/img/c4.svg"
+              alt="Case Studies | Platform Engineers"
+              format="png"
+              loading="lazy"
               height="400px"
-            /> -->
-            <img alt="Image" src="/img/c4.svg" height="400px" />
+            />
           </div>
         </div>
       </div>
@@ -85,31 +78,17 @@ export default {
   layout: "theme",
   async asyncData({ app, params, store }) {
     const caseStudies = await app.$axios.$get(app.$urls.caseStudies);
-
-    // const ids = [];
-    // caseStudies.data.forEach((d) => {
-    //   const { id } = d.document;
-    //   ids.push(id);
-    // });
-
-    // if (
-    //   store.state.generate &&
-    //   caseStudies &&
-    //   caseStudies.data &&
-    //   caseStudies.data.length
-    // ) {
-    //   try {
-    //     await app.$download(ids);
-    //   } catch (error) {
-    //     console.log("error", error); // eslint-disable-line no-console
-    //   }
-    // }
-
     return { caseStudies: caseStudies.data };
   },
   head() {
-    const caseStudiesTitle = "";
-    const caseStudiesDescription = "";
+    const caseStudiesTitle = "Case Studies | Platform Engineers";
+    const caseStudiesDescription = "Case Studies | Platform Engineers";
+
+    const image = this.$img("/img/c4.svg", {
+      format: "png",
+      height: "400px",
+    });
+
     return {
       title: caseStudiesTitle,
       meta: [
@@ -139,7 +118,7 @@ export default {
         },
         {
           property: "og:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + image,
         },
         {
           property: "twitter:card",
@@ -147,11 +126,11 @@ export default {
         },
         {
           property: "twitter:site",
-          content: "@improwised",
+          content: "",
         },
         {
           property: "twitter:creator",
-          content: "@improwised",
+          content: "",
         },
         {
           property: "twitter:title",
@@ -163,7 +142,7 @@ export default {
         },
         {
           property: "twitter:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + image,
         },
       ],
       link: [

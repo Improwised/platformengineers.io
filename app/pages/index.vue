@@ -14,7 +14,13 @@
                 </a>
               </div>
               <div class="col-7">
-                <img alt="Image" src="/img/l13.svg" />
+                <nuxt-img
+                  src="/img/l13.svg"
+                  alt="Platform Engineers"
+                  format="png"
+                  loading="lazy"
+                  height="456px"
+                />
               </div>
             </div>
           </div>
@@ -26,108 +32,117 @@
           <div class="row text-center justify-content-center">
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/linux.png"
-                  alt="linux"
-                  class="lazyload"
-                  title="Linux"
+                  alt="Linux | Platform Engineers"
+                  format="png"
                   loading="lazy"
+                  title="Linux"
+                  height="40px"
                 />
                 <h6>Linux</h6>
               </div>
             </div>
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/docker.png"
-                  alt="docker"
-                  class="lazyload"
-                  title="Docker"
+                  alt="Docker | Platform Engineers"
+                  format="png"
                   loading="lazy"
+                  title="Docker"
+                  height="40px"
                 />
                 <h6>Docker</h6>
               </div>
             </div>
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/kubernetes.svg"
-                  alt="kubernetes"
-                  title="kubernetes"
-                  class="lazyload"
+                  alt="Kubernetes | Platform Engineers"
+                  format="png"
                   loading="lazy"
+                  title="Kubernetes"
+                  height="40px"
                 />
                 <h6>Kubernetes</h6>
               </div>
             </div>
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/helm.png"
-                  alt="Helm"
-                  class="lazyload"
-                  title="Helm"
+                  alt="Helm | Platform Engineers"
+                  format="png"
                   loading="lazy"
+                  title="Helm"
+                  height="40px"
                 />
                 <h6>Helm</h6>
               </div>
             </div>
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/terraform.svg"
-                  alt="Terraforms"
-                  class="lazyload"
-                  title="Terraform"
+                  alt="Terraforms | Platform Engineers"
+                  format="png"
                   loading="lazy"
+                  title="Terraforms"
+                  height="40px"
                 />
                 <h6>Terraform</h6>
               </div>
             </div>
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/nginx.png"
-                  alt="nginx"
-                  class="lazyload"
-                  title="nginx"
+                  alt="Nginx | Platform Engineers"
+                  format="png"
                   loading="lazy"
+                  title="Nginx"
+                  height="40px"
                 />
                 <h6>Nginx</h6>
               </div>
             </div>
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/amazon-web-services-icon.svg"
-                  alt="amazon_web_services"
-                  class="lazyload"
+                  alt="Amazon Web Services | Platform Engineers"
+                  format="png"
                   loading="lazy"
                   title="Amazon Web Services"
+                  height="40px"
                 />
                 <h6>Amazon Web Services</h6>
               </div>
             </div>
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/google_cloud_platform.png"
-                  alt="google_cloud_platform"
-                  class="lazyload"
+                  alt="Google Cloud Platform | Platform Engineers"
+                  format="png"
                   loading="lazy"
                   title="Google Cloud Platform"
+                  height="40px"
                 />
                 <h6>Google Cloud Platform</h6>
               </div>
             </div>
             <div class="">
               <div class="boxed m-0 text-center">
-                <img
+                <nuxt-img
                   src="img/technologies/digital_ocean.png"
-                  alt="digital_ocean"
-                  class="lazyload"
+                  alt="Digital Ocean | Platform Engineers"
+                  format="png"
                   loading="lazy"
-                  title="DigitalOcean"
+                  title="Digital Ocean"
+                  height="40px"
                 />
                 <h6>DigitalOcean</h6>
               </div>
@@ -280,7 +295,7 @@ export default {
         },
         {
           property: "og:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + "/img/plateform-engineers.png",
         },
         {
           property: "twitter:card",
@@ -304,7 +319,7 @@ export default {
         },
         {
           property: "twitter:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + "/img/plateform-engineers.png",
         },
       ],
       link: [

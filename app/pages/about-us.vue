@@ -4,27 +4,11 @@
       <Navigation />
       <div>
         <div class="container">
-          <!--           <div class="row align-items-center justify-content-center d-flex">
-            <div class="">
-              <h1>{{ aboutUs.title }}</h1>
-              <p class="m-0" style="font-size: 18px; color: #724fe9">
-                Powering innovation with expertise
-              </p>
-              <p style="font-size: 16px; max-width: 300px">
-                Our platform engineers are driven to solve your challenges and
-                build tomorrow's solutions.
-              </p>
-            </div>
-            <div class="text-right">
-              <img alt="Image" src="/img/about-us-2.svg" height="400px" />
-            </div>
-          </div> -->
-
           <div class="row py-2">
             <div
               class="col-md-6 d-flex align-items-center justify-content-center"
             >
-              <div class="">
+              <div>
                 <h1>{{ aboutUs.title }}</h1>
                 <p class="m-0" style="font-size: 18px; color: #724fe9">
                   Powering innovation with expertise
@@ -38,35 +22,18 @@
             <div
               class="col-md-6 d-flex align-items-center justify-content-center"
             >
-              <img alt="Image" src="/img/about-us-2.svg" height="400px" />
-              <!--               <nuxt-img
-                v-if="service && service.page_image && service.page_image.id"
-                :src="$urls.assets(service.page_image.id)"
-                :alt="service.title"
-                :title="service.title"
+              <nuxt-img
+                src="/img/about-us-2.svg"
+                alt="About us | Platform Engineers"
                 format="png"
                 loading="lazy"
                 height="400px"
-              /> -->
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <div>
-      <Navigation />
-      <section class="text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-10 col-md-8">
-              <h1 class="">{{ aboutUs.title }}</h1>
-              c
-            </div>
-          </div>
-        </div>
-      </section>
-    </div> -->
 
     <section v-if="aboutUs" class="text-center bg--secondary">
       <div class="container">
@@ -76,9 +43,7 @@
             v-html="aboutUs.content"
           ></div>
         </div>
-        <!--end of row-->
       </div>
-      <!--end of container-->
     </section>
 
     <section class="text-center">
@@ -97,9 +62,7 @@
             </div>
           </div>
         </div>
-        <!--end of row-->
       </div>
-      <!--end of container-->
     </section>
   </div>
 </template>
@@ -119,6 +82,11 @@ export default {
     };
   },
   head() {
+    const image = this.$img("/img/about-us-2.svg", {
+      format: "png",
+      height: "400px",
+    });
+
     return {
       title: this.aboutUs.seo_title,
       meta: [
@@ -148,7 +116,7 @@ export default {
         },
         {
           property: "og:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + image,
         },
         {
           property: "twitter:card",
@@ -156,11 +124,11 @@ export default {
         },
         {
           property: "twitter:site",
-          content: "@improwised",
+          content: "",
         },
         {
           property: "twitter:creator",
-          content: "@improwised",
+          content: "",
         },
         {
           property: "twitter:title",
@@ -172,7 +140,7 @@ export default {
         },
         {
           property: "twitter:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + image,
         },
       ],
       link: [

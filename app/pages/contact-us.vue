@@ -95,9 +95,9 @@ export default {
   },
   layout: "theme",
   head() {
-    const contactTitle = "Contact - Improwised Technologies Pvt. Ltd.";
+    const contactTitle = "Contact Us | Platform Engineers";
     const contactDescription =
-      "We are open from 10am - 7pm on weekdays. For any further info please feel free to Contact us on careers@improwised.com.";
+      "For any further info please feel free to Contact us on contact@platformengineers.in";
     return {
       title: contactTitle,
       meta: [
@@ -127,7 +127,7 @@ export default {
         },
         {
           property: "og:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + "/img/plateform-engineers.png",
         },
         {
           property: "twitter:card",
@@ -135,11 +135,11 @@ export default {
         },
         {
           property: "twitter:site",
-          content: "@improwised",
+          content: "",
         },
         {
           property: "twitter:creator",
-          content: "@improwised",
+          content: "",
         },
         {
           property: "twitter:title",
@@ -151,7 +151,7 @@ export default {
         },
         {
           property: "twitter:image",
-          content: process.env.BASE_URL + "/img/logo.png",
+          content: process.env.BASE_URL + "/img/plateform-engineers.png",
         },
       ],
       script: [

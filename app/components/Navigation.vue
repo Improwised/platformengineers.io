@@ -5,7 +5,14 @@
         <div class="row align-items-center">
           <div class="col-3 col-md-2">
             <a href="/">
-              <img src="/img/plateform-engineers.png" style="height: 55px" />
+              <nuxt-img
+                src="/img/plateform-engineers.png"
+                alt="Platform Engineers"
+                title="Platform Engineers"
+                format="png"
+                loading="lazy"
+                height="55px"
+              />
             </a>
           </div>
           <div class="col-9 col-md-10 text-right">
@@ -30,7 +37,14 @@
           <div class="hidden-xs d-flex align-items-center">
             <div class="bar__module">
               <a href="/">
-                <img src="/img/plateform-engineers.png" style="height: 55px" />
+                <nuxt-img
+                  src="/img/plateform-engineers.png"
+                  alt="Platform Engineers"
+                  title="Platform Engineers"
+                  format="png"
+                  loading="lazy"
+                  height="55px"
+                />
               </a>
             </div>
           </div>
