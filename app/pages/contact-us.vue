@@ -71,7 +71,7 @@
                 <button
                   id="btn-submit"
                   type="submit"
-                  class="btn btn--primary type--uppercase"
+                  class="btn btn--primary type--uppercase b-30"
                 >
                   Send Enquiry
                 </button>
@@ -186,12 +186,18 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.4;
   z-index: -1;
-  background: url("/img/a112.jpg");
+  background: url("/img/ab2.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-us-bk {
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .contact-us-form-bk {

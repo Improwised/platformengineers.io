@@ -28,6 +28,7 @@
                 format="png"
                 loading="lazy"
                 height="400px"
+                class="img-dim"
               />
             </div>
           </div>
@@ -53,7 +54,7 @@
             <div class="cta">
               <h2>Want to know more about us?</h2>
               <a
-                class="btn btn--primary type--uppercase"
+                class="btn btn--primary type--uppercase b-30"
                 href="/contact-us"
                 title="contact"
               >
@@ -181,5 +182,11 @@ export default {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-bk {
+    border-radius: 0 0 30px 30px;
+  }
 }
 </style>

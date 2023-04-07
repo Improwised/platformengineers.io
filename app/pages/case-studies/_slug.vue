@@ -8,7 +8,7 @@
             class="col-md-6 d-flex align-items-center justify-content-center"
           >
             <div>
-              <h3>{{ caseStudy.title }}</h3>
+              <h2>{{ caseStudy.title }}</h2>
               <p style="font-size: 16px; max-width: 300px">
                 {{ caseStudy.date_created | formatDateTime }}
               </p>
@@ -22,13 +22,17 @@
               format="png"
               loading="lazy"
               height="400px"
+              class="img-dim"
             />
           </div>
         </div>
       </div>
     </div>
 
-    <section class="bg-- border-bottom wave-bk">
+    <section
+      v-if="caseStudy.client_info_title"
+      class="bg-- border-bottom wave-bk"
+    >
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -39,7 +43,7 @@
       </div>
     </section>
 
-    <section class="bg-- border-bottom wave-bk">
+    <section v-if="caseStudy.goal_title" class="bg-- border-bottom wave-bk">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -50,7 +54,7 @@
       </div>
     </section>
 
-    <section class="bg-- border-bottom wave-bk">
+    <section v-if="caseStudy.solution_title" class="bg-- border-bottom wave-bk">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -61,7 +65,36 @@
       </div>
     </section>
 
-    <section class="bg-- border-bottom wave-bk">
+    <section
+      v-if="caseStudy.technologies_title"
+      class="bg-- border-bottom wave-bk"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">{{ caseStudy.technologies_title }}</h2>
+            <div class="d-flex align-items-center justify-content-center">
+              <div
+                v-for="(technology, index) in caseStudy.technologies"
+                :key="index"
+                class="p-2"
+              >
+                <nuxt-img
+                  :src="$urls.assets(technology.directus_files_id.id)"
+                  :alt="technology.directus_files_id.title"
+                  :title="technology.directus_files_id.title"
+                  format="png"
+                  loading="lazy"
+                  height="40px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section v-if="caseStudy.outcome_title" class="bg-- border-bottom wave-bk">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -72,7 +105,7 @@
       </div>
     </section>
 
-    <section class="bg--">
+    <section v-if="caseStudy.conclusion_title" class="bg--">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -296,10 +329,16 @@ export default {
   height: 100%;
   opacity: 0.8;
   z-index: -1;
-  background: url("/img/a3.jpg");
+  background: url("/img/bk-1212.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .case-studies-bk {
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .case-studies ul {

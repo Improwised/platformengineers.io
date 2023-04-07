@@ -90,7 +90,7 @@
             </div>
             <div class="bar__module">
               <a
-                class="btn btn--sm btn--primary type--uppercase"
+                class="btn btn--sm btn--primary type--uppercase b-30"
                 href="/contact-us"
               >
                 <span class="btn__text">Contact Us</span>
@@ -102,3 +102,10 @@
     </nav>
   </div>
 </template>
+
+<style>
+.nav-container ul {
+  list-style: none !important;
+  padding: inherit !important;
+}
+</style>

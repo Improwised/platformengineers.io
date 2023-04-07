@@ -6,20 +6,31 @@
         <section>
           <div class="container">
             <div class="row align-items-center justify-content-around">
-              <div class="col-md-6 col-lg-5">
-                <h1>{{ home.tagline }}</h1>
-                <p class="lead">{{ home.description }}</p>
-                <a class="btn btn--primary type--uppercase" href="/contact-us">
-                  <span class="btn__text"> Contact Us </span>
-                </a>
+              <div
+                class="col-md-6 col-12 d-flex align-items-center justify-content-center"
+              >
+                <div>
+                  <h1>{{ home.tagline }}</h1>
+                  <p class="lead">{{ home.description }}</p>
+                  <a
+                    class="btn btn--primary type--uppercase b-30"
+                    href="/contact-us"
+                  >
+                    <span class="btn__text"> Contact Us </span>
+                  </a>
+                  <br />
+                </div>
               </div>
-              <div class="col-7">
+              <div
+                class="col-md-6 col-12 d-flex align-items-center justify-content-center"
+              >
                 <nuxt-img
                   src="/img/l13.svg"
                   alt="Platform Engineers"
                   format="png"
                   loading="lazy"
                   height="456px"
+                  class="img-dim"
                 />
               </div>
             </div>
@@ -165,10 +176,10 @@
             <div
               v-for="(service, index) in services"
               :key="index"
-              class="col-md-4 d-flex"
+              class="col-md-6 col-lg-4 d-flex mt-5"
             >
               <div
-                class="text-center w-100 feature feature-3 boxed boxed--lg bs-1 rounded d-flex flex-column"
+                class="text-center w-100 p-5 bs-1 d-flex flex-column b-30 card-svg"
               >
                 <div class="mb-4">
                   <nuxt-img
@@ -180,11 +191,18 @@
                     height="80px"
                   />
                 </div>
-                <h4 class="flex-grow-1">{{ service.title }}</h4>
-                <p class="flex-grow-1">
+                <a :href="`/services/${service.slug}`" class="t-hover">
+                  <h4 class="flex-grow-1 mb-2">{{ service.title }}</h4>
+                </a>
+                <p class="flex-grow-1 m-0">
                   {{ service.description }}
                 </p>
-                <a :href="`/services/${service.slug}`"> Learn More </a>
+                <a
+                  :href="`/services/${service.slug}`"
+                  class="d-lg-none mt-4 mb-0 text-center"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
@@ -203,10 +221,10 @@
             <div
               v-for="(why, index) in whyUs"
               :key="index"
-              class="col-md-4 d-flex"
+              class="col-md-6 col-lg-4 d-flex mt-5"
             >
               <div
-                class="text-center w-100 feature feature-3 boxed boxed--lg bs-1 rounded d-flex flex-column"
+                class="text-center w-100 p-5 bs-1 b-30 d-flex flex-column card-svg"
               >
                 <div class="mb-4">
                   <nuxt-img
@@ -218,7 +236,7 @@
                     height="80px"
                   />
                 </div>
-                <h4 class="flex-grow-1">{{ why.title }}</h4>
+                <h4 class="flex-grow-1 mb-2">{{ why.title }}</h4>
                 <p class="flex-grow-1">
                   {{ why.description }}
                 </p>
@@ -231,11 +249,14 @@
       <section class="space--xs bg--secondary">
         <div class="container">
           <div class="cta cta--horizontal text-center-xs row">
-            <div class="col-md-6">
-              <h4>Let's Connect</h4>
+            <div class="col-6 d-flex align-items-center">
+              <h4 class="m-0">Let's Connect</h4>
             </div>
-            <div class="col-md-6 text-right text-center-xs">
-              <a class="btn btn--primary type--uppercase" href="/contact-us">
+            <div class="col-6 text-right text-center-xs">
+              <a
+                class="btn btn--primary type--uppercase b-30"
+                href="/contact-us"
+              >
                 <span class="btn__text">Contact Us</span>
               </a>
             </div>
@@ -342,7 +363,7 @@ export default {
   z-index: 1;
   overflow: hidden;
   position: relative;
-  border-radius: 0 0 200px 200px;
+  border-radius: 0 0 150px 150px;
   box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
@@ -357,11 +378,16 @@ export default {
   height: 100%;
   opacity: 0.5;
   z-index: -1;
-  background: url("/img/bk/bg-3.jpg");
   background: url("/img/a9.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-bk {
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .wave-bk {
@@ -405,6 +431,40 @@ export default {
 }
 
 .bs-1 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
+    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+
+  /*  box-shadow: rgba(0, 0, 0, 0.3) -30px 0 30px 0; */
+
+  /*  box-shadow: -25px 0 20px -20px rgba(0, 0, 0, 0.45); */
+}
+
+.t-hover:hover h4 {
+  color: #179bfd;
+}
+
+.t-hover:hover {
+  text-decoration-color: #179bfd;
+}
+
+.card-svg {
+  overflow: hidden;
+  position: relative;
+  background: transparent !important;
+}
+
+.card-svg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -1;
+  background: url("/img/card47.png") white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 </style>

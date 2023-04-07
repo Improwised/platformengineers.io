@@ -20,6 +20,7 @@
               format="png"
               loading="lazy"
               height="400px"
+              class="img-dim"
             />
           </div>
         </div>
@@ -46,13 +47,13 @@
           <div
             v-for="(feature, index) in service.features"
             :key="index"
-            :class="`col-md-${
+            :class="`mt-5 col-md-${
               $route.params.slug === 'kubernetes-consulting-services'
                 ? '6'
                 : '4'
             } d-flex`"
           >
-            <div class="w-100 feature feature-3 boxed boxed--lg bs-1 rounded">
+            <div class="w-100 p-5 bs-1 card-svg b-30">
               <div class="svg mb-4" v-html="feature.image"></div>
               <h4 class="flex-grow-1 text-center">{{ feature.title }}</h4>
               <div
@@ -82,8 +83,8 @@
             style="border-radius: 5px"
             :style="
               index % 2
-                ? 'box-shadow: rgba(136, 165, 191, 0.38) 12px 2px 16px 0px, rgba(255, 255, 255, 1) -12px -2px 16px 0px;'
-                : 'box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;'
+                ? 'box-shadow: rgba(204, 219, 232, 0.5) 15px 0px 15px 0px;'
+                : 'box-shadow: rgb(204, 219, 232, 0.5) 15px 0px 15px 0px inset;'
             "
           >
             <div class="d-flex align-items-center">
@@ -111,9 +112,9 @@
           <div
             v-for="(approach, index) in service.approach_cards"
             :key="index"
-            class="text-center col-md-4 d-flex"
+            class="mt-5 text-center col-md-4 d-flex"
           >
-            <div class="w-100 feature feature-3 boxed boxed--lg bs-1 rounded">
+            <div class="w-100 p-5 bs-1 card-svg b-30">
               <div class="svg mb-4" v-html="approach.image"></div>
               <h4 class="flex-grow-1">{{ approach.title }}</h4>
               <div v-html="approach.content"></div>
@@ -132,9 +133,9 @@
           <div
             v-for="(offering, index) in service.offering_cards"
             :key="index"
-            class="text-center col-md-4 d-flex"
+            class="mt-5 text-center col-md-4 d-flex"
           >
-            <div class="w-100 feature feature-3 boxed boxed--lg bs-1 rounded">
+            <div class="w-100 p-5 bs-1 card-svg b-30">
               <div class="svg mb-4" v-html="offering.image"></div>
               <h4 class="flex-grow-1">{{ offering.title }}</h4>
               <div v-html="offering.content"></div>
@@ -151,7 +152,7 @@
             <div class="cta">
               <h2>Want to know more about us?</h2>
               <a
-                class="btn btn--primary type--uppercase"
+                class="btn btn--primary type--uppercase b-30"
                 href="/contact-us"
                 title="contact"
               >
@@ -272,8 +273,14 @@ export default {
   z-index: -1;
   background: url("/img/a112.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .services-bk {
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .wave-bk {
@@ -297,7 +304,12 @@ export default {
 }
 
 .bs-1 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+  /*  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0; */
+
+  /* box-shadow: -25px 0 20px -20px rgba(0, 0, 0, 0.45),
+    0 25px 20px -20px rgba(0, 0, 0, 0.45); */
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
+    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
 .svg svg {
@@ -343,5 +355,26 @@ export default {
 ._process-step svg {
   width: 100%;
   height: 80px;
+}
+
+.card-svg {
+  overflow: hidden;
+  position: relative;
+  background: transparent !important;
+}
+
+.card-svg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -1;
+  background: url("/img/card47.png") white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 </style>

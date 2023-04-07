@@ -16,6 +16,7 @@
               format="png"
               loading="lazy"
               height="400px"
+              class="img-dim"
             />
           </div>
         </div>
@@ -30,7 +31,7 @@
             :key="index"
             class="masonry__item col-lg-4 col-md-6"
           >
-            <article class="feature feature-1 border rounded">
+            <article class="b-30 bs-1">
               <a
                 href="#"
                 class="block d-flex align-items-center justify-content-center"
@@ -46,10 +47,16 @@
                   format="png"
                 />
               </a>
-              <div class="feature__body boxed">
-                <span>{{ caseStudie.date_created | formatDateTime }}</span>
-                <h5>{{ caseStudie.title }}</h5>
-                <a :href="`/case-studies/${caseStudie.slug}`"> Read More </a>
+              <div class="feature__body px-5 py-4">
+                <a :href="`/case-studies/${caseStudie.slug}`" class="t-hover">
+                  <h5>{{ caseStudie.title }}</h5>
+                </a>
+                <p class="m-0">
+                  {{ caseStudie.date_created | formatDateTime }}
+                </p>
+                <a :href="`/case-studies/${caseStudie.slug}`" class="d-lg-none">
+                  Read More
+                </a>
               </div>
             </article>
           </div>
@@ -174,9 +181,27 @@ export default {
   height: 100%;
   opacity: 0.8;
   z-index: -1;
-  background: url("/img/a112.jpg");
+  background: url("/img/bk-1212.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .case-studies-bk {
+    border-radius: 0 0 30px 30px;
+  }
+}
+
+.t-hover:hover {
+  text-decoration-color: #179bfd;
+}
+
+.t-hover:hover h5 {
+  color: #179bfd;
+}
+
+.bs-1 {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 </style>

@@ -58,7 +58,7 @@ const urls = {
   caseStudies:
     "/items/pe_case_studies?filter[status][_eq]=published&fields=*.*&sort=title",
   caseStudy: (title) =>
-    `/items/pe_case_studies?filter[slug][_eq]=${title}&single=1&fields[]=*.*,tags.pe_case_studies_tags_id.name`,
+    `/items/pe_case_studies?filter[slug][_eq]=${title}&single=1&fields[]=*.*,tags.pe_case_studies_tags_id.name,technologies.directus_files_id.*`,
 
   whyus: "/items/why_us?filter[status][_eq]=published&fields=*.*&sort=title",
 
