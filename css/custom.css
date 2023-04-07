@@ -45,3 +45,12 @@
   left: auto;
   right: 40px;
 }
+
+.b-30 {
+  border-radius: 30px;
+}
+
+.img-dim {
+  width: auto !important;
+  height: auto !important;
+}
