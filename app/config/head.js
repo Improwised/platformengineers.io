@@ -288,6 +288,19 @@ export default function (mode) {
     htmlAttrs,
     meta,
     link: _link,
-    script: [{ type: "application/ld+json", json: structuredLdJsonData }],
+    script: [
+      { 
+        type: "application/ld+json", 
+        json: structuredLdJsonData 
+      },
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-LRC7N9VH4L",
+        body: true,
+      },
+      {
+        src: "/google-tag.js",
+        body: true,
+      },
+    ],
   };
 }
