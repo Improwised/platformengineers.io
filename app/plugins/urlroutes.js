@@ -37,6 +37,10 @@ const urls = {
   service: (title) =>
     `/items/pe_services?filter[slug][_eq]=${title}&single=1&fields=*.*`,
 
+  blogs: `/items/pe_blog?filter[status][_eq]=published&fields=*.*&sort=title`,
+  blog: (title) =>
+    `/items/pe_blog?filter[slug][_eq]=${title}&single=1&fields[]=*.*`,
+
   // services: `/items/services?filter[status][_eq]=published&fields=*.*&sort=title`,
   // servicesListWithTitleOnly:
   //   "/items/services?filter[status][_eq]=published&fields=title,slug&sort=title",
@@ -72,11 +76,11 @@ const urls = {
   simpleHiringProcess: `/items/blog?filter[status][_eq]=published&filter[slug][_eq]=simple-hiring-process&fields[]=*.*,tags.tags_id.name`,
   coreValues: `/items/blog?filter[status][_eq]=published&filter[tags][tags_id][_eq]=2&sort=sort,-id&limit=3&fields[]=*.*`,
   meetTeam: `/items/team?filter[status][_eq]=published&fields=*.*&sort=sort,id`,
-  blogs: `/items/blog?filter[tags][tags_id][_neq]=2&sort=sort,-id&limit=6&fields[]=*.*,tags.*`,
-  blog: (title) => `/items/pe_blog?filter[slug][_eq]=${title}&single=1`,
-  blogothers: (title) =>
-    `/items/blog?filter[status][_eq]=published&sort=sort,-id&limit=3&fields[]=*.*&filter[slug][_neq]=${title}&filter[tags][tags_id][_neq]=2`,
-  blogPageData: `/items/blog?filter[status][_eq]=published&sort=sort,-id&fields[]=*.*&filter[tags][tags_id][_neq]=2`,
+  // blogs: `/items/blog?filter[tags][tags_id][_neq]=2&sort=sort,-id&limit=6&fields[]=*.*,tags.*`,
+  // blog: (title) => `/items/pe_blog?filter[slug][_eq]=${title}&single=1`,
+  // blogothers: (title) =>
+  //   `/items/blog?filter[status][_eq]=published&sort=sort,-id&limit=3&fields[]=*.*&filter[slug][_neq]=${title}&filter[tags][tags_id][_neq]=2`,
+  // blogPageData: `/items/blog?filter[status][_eq]=published&sort=sort,-id&fields[]=*.*&filter[tags][tags_id][_neq]=2`,
   gallery: `/items/gallery?filter[status][_eq]=published&fields[]=*.*&sort=sort,-id`,
 };
 

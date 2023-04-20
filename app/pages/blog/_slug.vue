@@ -1,6 +1,6 @@
 <template>
-  <div v-if="caseStudy" class="main-container case-studies">
-    <div class="case-studies-bk">
+  <div v-if="blog" class="main-container blog">
+    <div class="blog-bk">
       <Navigation />
       <div class="container">
         <div class="row">
@@ -8,17 +8,17 @@
             class="col-md-6 d-flex align-items-center justify-content-center"
           >
             <div>
-              <h2>{{ caseStudy.title }}</h2>
+              <h2>{{ blog.title }}</h2>
               <p style="font-size: 16px; max-width: 300px">
-                {{ caseStudy.date_created | formatDateTime }}
+                {{ blog.date_created | formatDateTime }}
               </p>
             </div>
           </div>
           <div class="col-md-6 img-align">
             <nuxt-img
-              v-if="caseStudy && caseStudy.image && caseStudy.image.id"
-              :src="$urls.assets(caseStudy.image.id)"
-              :alt="`${caseStudy.title} | Platform Engineers`"
+              v-if="blog && blog.image && blog.image.id"
+              :src="$urls.assets(blog.image.id)"
+              :alt="`${blog.title} | Platform Engineers`"
               format="png"
               loading="lazy"
               height="400px"
@@ -29,117 +29,36 @@
       </div>
     </div>
 
-    <section
-      v-if="caseStudy.client_info_title"
-      class="bg-- border-bottom wave-bk"
-    >
+    <section class="bg-- wave-bk-1">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <h2 class="text-center">{{ caseStudy.client_info_title }}</h2>
-            <div class="lead" v-html="caseStudy.client_info_description"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="col-lg-10 offset-lg-1 bs-1 p-5 b-30 bg-white">
+            <div v-if="blog.content" class="lead" v-html="blog.content"></div>
 
-    <section v-if="caseStudy.goal_title" class="bg-- border-bottom wave-bk">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <h2 class="text-center">{{ caseStudy.goal_title }}</h2>
-            <div class="lead" v-html="caseStudy.goal_description"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section v-if="caseStudy.solution_title" class="bg-- border-bottom wave-bk">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <h2 class="text-center">{{ caseStudy.solution_title }}</h2>
-            <div class="lead" v-html="caseStudy.solution_description"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      v-if="caseStudy.technologies_title"
-      class="bg-- border-bottom wave-bk"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <h2 class="text-center">{{ caseStudy.technologies_title }}</h2>
-            <div class="d-flex align-items-center justify-content-center">
-              <div
-                v-for="(technology, index) in caseStudy.technologies"
-                :key="index"
-                class="p-2"
-              >
-                <nuxt-img
-                  :src="$urls.assets(technology.directus_files_id.id)"
-                  :alt="technology.directus_files_id.title"
-                  :title="technology.directus_files_id.title"
-                  format="png"
-                  loading="lazy"
-                  height="40px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section v-if="caseStudy.outcome_title" class="bg-- border-bottom wave-bk">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <h2 class="text-center">{{ caseStudy.outcome_title }}</h2>
-            <div class="lead" v-html="caseStudy.outcome_description"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section v-if="caseStudy.conclusion_title" class="bg--">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <h2 class="text-center">{{ caseStudy.conclusion_title }}</h2>
-            <div class="lead" v-html="caseStudy.conclusion_description"></div>
-            <br />
-            <br />
-            <br />
-            <div class="d-flex align-items-center">
+            <hr />
+            <div class="d-flex align-items-center flex-wrap">
               <h5
-                v-for="(tag, index) in caseStudy.tags"
+                v-for="(tag, index) in blog.tags"
                 :key="index"
-                class="mx-2 my-0 py-1 px-2 bg-secondary text-white"
+                class="mr-2 mb-2 mt-0 py-1 px-2 bg-secondary text-white"
                 style="border-radius: 10px; font-weight: normal"
               >
-                {{
-                  tag &&
-                  tag.pe_case_studies_tags_id &&
-                  tag.pe_case_studies_tags_id.name
-                }}
+                {{ tag }}
               </h5>
             </div>
             <hr />
             <div class="article__share mt-0">
               <ul
                 class="social-list list-inline list--hover blog_social"
-                style="list-style: none; padding: 0; margin: 0"
+                style="margin: 0 !important; padding: 0 !important"
               >
+                <!-- <span class="h4 d-inline"> Share : </span> -->
                 <li class="list-inline-item mr-0">
                   <ShareNetwork
                     network="email"
-                    :title="`${caseStudy.title}`"
+                    :title="`${blog.title}`"
                     :url="`${baseUrlPath}`"
-                    :description="`${strippedHtml(caseStudy.description)}`"
+                    :description="`${strippedHtml(blog.description)}`"
                   >
                     <i class="socicon socicon-google icon icon--xs"></i>
                   </ShareNetwork>
@@ -148,9 +67,9 @@
                 <li class="list-inline-item mr-0">
                   <ShareNetwork
                     network="linkedin"
-                    :title="`${caseStudy.title}`"
+                    :title="`${blog.title}`"
                     :url="`${baseUrlPath}`"
-                    :description="`${strippedHtml(caseStudy.description)}`"
+                    :description="`${strippedHtml(blog.description)}`"
                   >
                     <i class="socicon socicon-linkedin icon icon--xs"></i>
                   </ShareNetwork>
@@ -158,7 +77,7 @@
                 <li class="list-inline-item mr-0">
                   <ShareNetwork
                     network="twitter"
-                    :title="`${caseStudy.title}`"
+                    :title="`${blog.title}`"
                     :url="`${baseUrlPath}`"
                   >
                     <i class="socicon socicon-twitter icon icon--xs"></i>
@@ -167,11 +86,11 @@
                 <li class="list-inline-item mr-0">
                   <ShareNetwork
                     network="facebook"
-                    :title="`${caseStudy.title}`"
-                    :description="`${strippedHtml(caseStudy.description)}`"
+                    :title="`${blog.title}`"
+                    :description="`${strippedHtml(blog.description)}`"
                     :url="`${baseUrlPath}`"
-                    :quote="`${caseStudy.title}`"
-                    hashtags="caseStudy"
+                    :quote="`${blog.title}`"
+                    hashtags="blog"
                   >
                     <i class="socicon socicon-facebook icon icon--xs"></i>
                   </ShareNetwork>
@@ -180,8 +99,8 @@
                   <ShareNetwork
                     network="whatsapp"
                     :url="`${baseUrlPath}`"
-                    :title="`${caseStudy.title}`"
-                    :description="`${strippedHtml(caseStudy.description)}`"
+                    :title="`${blog.title}`"
+                    :description="`${strippedHtml(blog.description)}`"
                   >
                     <i class="socicon socicon-whatsapp icon icon--xs"></i>
                   </ShareNetwork>
@@ -214,8 +133,13 @@ export default {
   layout: "theme",
   async asyncData({ app, params }) {
     const title = params.slug;
-    const caseStudy = await app.$axios.$get(app.$urls.caseStudy(title));
-    return { caseStudy: caseStudy.data[0] };
+    //  const tagsname = "";
+    const blog = await app.$axios.$get(app.$urls.blog(title));
+    blog.data[0].content = app.$unescapeHTML(blog.data[0].content);
+    blog.data[0].content = app.$dImage(blog.data[0].content);
+    blog.data[0].content = await app.$gist(blog.data[0].content);
+    console.log(blog.data[0]);
+    return { blog: blog.data[0] };
   },
   data() {
     if (process.client) {
@@ -229,13 +153,15 @@ export default {
     }
   },
   head() {
-    const image = this.$img(this.$urls.assets(this.caseStudy.image.id), {
+    const image = this.$img(this.$urls.assets(this.blog.image.id), {
       format: "png",
       height: "400px",
     });
 
-    const title = `${this.caseStudy && this.caseStudy.seo_title} | Platform Engineers`;
-    const description = `${this.caseStudy && this.caseStudy.seo_description} | Platform Engineers`;
+    const title = `${this.blog && this.blog.seo_title} | Platform Engineers`;
+    const description = `${
+      this.blog && this.blog.seo_description
+    } | Platform Engineers`;
 
     return {
       title: title || "",
@@ -316,7 +242,7 @@ export default {
 </script>
 
 <style>
-.case-studies-bk {
+.blog-bk {
   z-index: 1;
   overflow: hidden;
   position: relative;
@@ -324,36 +250,28 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 
-.case-studies-bk::before {
+.blog-bk::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.1;
   z-index: -1;
-  background: url("/img/bk-1212.png");
+  background: url("/img/blog-bk-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.img-align {
-  text-align: right;
-}
-
 @media only screen and (max-width: 600px) {
-  .case-studies-bk {
+  .blog-bk {
     border-radius: 0 0 30px 30px;
   }
-
-  .img-align {
-    text-align: center;
-  }
 }
 
-.case-studies ul {
+.blog ul {
   list-style: inherit;
   padding: revert;
 }
@@ -376,5 +294,65 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
+}
+
+.bs-1 {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+}
+
+.blog-svg {
+  overflow: hidden;
+  position: relative;
+  background: transparent !important;
+}
+
+.blog-svg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -1;
+  background: url("/img/card47.png") white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.wave-bk-1 {
+  overflow: hidden;
+  position: relative;
+}
+
+.wave-bk-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: -1;
+  background: url("/img/s2.svg");
+}
+
+.img-align {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-bk {
+    border-radius: 0 0 30px 30px;
+  }
+
+  .img-align {
+    text-align: center;
+  }
+}
+
+.blog blockquote {
+  font-size: 1em;
 }
 </style>

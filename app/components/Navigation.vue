@@ -80,9 +80,9 @@
                     </div>
                   </div>
                 </li>
-                <!-- <li class="">
+                <li class="">
                   <a href="/blog">Blog</a>
-                </li> -->
+                </li>
                 <li class="">
                   <a href="/case-studies">Case Studies</a>
                 </li>
