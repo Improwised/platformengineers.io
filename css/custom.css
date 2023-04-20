@@ -50,7 +50,7 @@
   border-radius: 30px;
 }
 
-.img-dim {
+img.img-dim {
   width: auto !important;
   height: auto !important;
 }
