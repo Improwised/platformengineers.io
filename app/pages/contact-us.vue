@@ -7,10 +7,6 @@
           <div class="row">
             <div class="col-md-8 col-lg-6">
               <h1>Let's talk about your project</h1>
-              <p class="lead">
-                Contact via the form below to talk more about your project,
-                ideas or any others technical queries.
-              </p>
             </div>
           </div>
         </div>
@@ -18,69 +14,52 @@
     </div>
     <section class="bg-- contact-us-form-bk">
       <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-md-6 offset-md-3 bs-1 p-5 br-30">
-            <div id="errorMessages"></div>
-            <div id="success">
-              <div class="success-msg">
-                <b
-                  >Message has been sent successfully. We will contact within 1
-                  business day.</b
+        <div
+          class="row justify-content-between bs-1 p-5 br-30 lead fc-lead bg-white"
+        >
+          <div
+            class="col-lg-6 text-center d-flex align-items-center justify-content-center py-5"
+          >
+            <nuxt-img
+              src="/img/contact-us.png"
+              alt="Contact Us | Platform Engineers"
+              format="png"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="col-lg-6 d-flex align-items-center justify-content-center"
+          >
+            <div>
+              <p>
+                We would love to hear from you! If you're interested in
+                improving and scaling your project through our platform
+                engineering services, please don't hesitate to get in touch.
+              </p>
+              <p>
+                Our team of experts is dedicated to helping you achieve your
+                goals. You can reach us at the following email address:
+                <a href="mailto:sales@platformengineers.in"
+                  >sales@platformengineers.in</a
+                >.
+              </p>
+              <p>
+                We'll do our best to get back to you as soon as possible and
+                provide you with the information you need to make an informed
+                decision.
+              </p>
+              <div class="text-center">
+                <a
+                  class="btn btn--primary type--uppercase b-30"
+                  href="mailto:sales@platformengineers.in"
                 >
+                  <span class="btn__text"> LET'S TALK </span>
+                </a>
               </div>
             </div>
-            <form
-              id="contactus-submit"
-              action="https://rnnmftp4t7.execute-api.us-west-2.amazonaws.com/production/api/contactus"
-            >
-              <div class="col-xs-12">
-                <label for="name">Your Name:</label>
-                <input
-                  id="name"
-                  type="text"
-                  class="validate-required"
-                  name="name"
-                  required="required"
-                />
-              </div>
-              <div class="col-xs-12">
-                <label for="email">Email Address:</label>
-                <input
-                  id="email"
-                  type="email"
-                  class="validate-required validate-email"
-                  name="email"
-                  required="required"
-                />
-              </div>
-              <div class="col-xs-12">
-                <label for="message">Message:</label>
-                <textarea
-                  id="message"
-                  type="textarea"
-                  class="validate-required"
-                  name="message"
-                  rows="4"
-                  required="required"
-                ></textarea>
-              </div>
-              <div class="col-xs-12">
-                <div id="recaptcha"></div>
-              </div>
-              <div class="col-xs-12">
-                <button
-                  id="btn-submit"
-                  type="submit"
-                  class="btn btn--primary type--uppercase b-30"
-                >
-                  Send Enquiry
-                </button>
-              </div>
-            </form>
-            <p class="text-center mt-5 mb-0">
-              We try to respond to all enquiries within 1 business day.
-            </p>
           </div>
+          <!-- <div class="col-md-6 offset-md-3">
+          </div> -->
         </div>
       </div>
     </section>
@@ -154,11 +133,11 @@ export default {
           content: process.env.BASE_URL + "/img/plateform-engineers.png",
         },
       ],
-      script: [
-        {
-          src: "https://www.google.com/recaptcha/api.js?render=6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg",
-        },
-      ],
+      // script: [
+      //   {
+      //     src: "https://www.google.com/recaptcha/api.js?render=6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg",
+      //   },
+      // ],
       link: [
         {
           rel: "canonical",

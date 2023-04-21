@@ -34,9 +34,9 @@
         <div class="col-md-3 col-sm-6 col-12 mb-5">
           <h6 class="type--uppercase m-0">Resources</h6>
           <ul class="list--hover">
-            <!-- <li class="">
-              <a href="/blogs">Blogs</a>
-            </li> -->
+            <li class="">
+              <a href="/blog">Blog</a>
+            </li>
             <li class="">
               <a href="/case-studies">Case Studies</a>
             </li>

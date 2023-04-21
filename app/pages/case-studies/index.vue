@@ -33,7 +33,7 @@
           >
             <article class="b-30 bs-1">
               <a
-                href="#"
+                :href="`/case-studies/${caseStudie.slug}`"
                 class="block d-flex align-items-center justify-content-center"
               >
                 <nuxt-img

@@ -33,7 +33,7 @@
           >
             <article class="b-30 bs-1">
               <a
-                href="#"
+                :href="`/blog/${blog.slug}`"
                 class="block d-flex align-items-center justify-content-center"
               >
                 <nuxt-img
@@ -79,7 +79,6 @@ export default {
     return { blogList: blogList.data };
   },
   head() {
-
     const image = this.$img("/img/blog-bk-1.png", {
       format: "png",
       height: "400px",

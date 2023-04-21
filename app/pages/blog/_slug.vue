@@ -33,7 +33,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 offset-lg-1 bs-1 p-5 b-30 bg-white">
-            <div v-if="blog.content" class="lead" v-html="blog.content"></div>
+            <div
+              v-if="blog.content"
+              class="lead fc-lead"
+              v-html="blog.content"
+            ></div>
 
             <hr />
             <div class="d-flex align-items-center flex-wrap">
