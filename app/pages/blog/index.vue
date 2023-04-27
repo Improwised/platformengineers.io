@@ -50,9 +50,32 @@
                 <a :href="`/blog/${blog.slug}`" class="t-hover">
                   <h5>{{ blog.title }}</h5>
                 </a>
-                <p class="m-0">
-                  {{ blog.date_created | formatDateTime }}
-                </p>
+                <div class="d-flex align-items-center mt-3">
+                  <div
+                    class="d-flex align-items-center mr-2"
+                    style="border-radius: 200px"
+                  >
+                    <nuxt-img
+                      v-if="blog.user_created.avatar"
+                      :src="$urls.assets(blog.user_created.avatar)"
+                      :alt="blog.title"
+                      :title="blog.title"
+                      format="png"
+                      class="p-0 m-0 rounded author-s"
+                    />
+                  </div>
+                  <div>
+                    <strong class="m-0 p-0 lh-1">
+                      {{ blog.user_created.first_name }}
+                      {{ blog.user_created.last_name }}
+                    </strong>
+                    <div class="lh-1">
+                      {{ blog.date_created | formatDateTime }} |
+                      {{ blog.time_to_read }}
+                    </div>
+                  </div>
+                </div>
+                <p class="m-0"></p>
                 <a :href="`/blog/${blog.slug}`" class="d-lg-none">
                   Read More
                 </a>
@@ -193,5 +216,15 @@ export default {
 
 .bs-1 {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+.author-s {
+  max-width: 40px;
+  max-height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
 }
 </style>

@@ -8,10 +8,34 @@
             class="col-md-6 d-flex align-items-center justify-content-center"
           >
             <div>
-              <h2>{{ blog.title }}</h2>
-              <p style="font-size: 16px; max-width: 300px">
-                {{ blog.date_created | formatDateTime }}
-              </p>
+              <div>
+                <h2>{{ blog.title }}</h2>
+              </div>
+              <div class="d-flex align-items-center mt-3">
+                <div
+                  class="d-flex align-items-center mr-2"
+                  style="border-radius: 200px"
+                >
+                  <nuxt-img
+                    v-if="blog.user_created.avatar"
+                    :src="$urls.assets(blog.user_created.avatar)"
+                    :alt="blog.title"
+                    :title="blog.title"
+                    format="png"
+                    class="p-0 m-0 rounded author-s"
+                  />
+                </div>
+                <div>
+                  <strong class="m-0 p-0 lh-1">
+                    {{ blog.user_created.first_name }}
+                    {{ blog.user_created.last_name }}
+                  </strong>
+                  <div class="lh-1">
+                    {{ blog.date_created | formatDateTime }} |
+                    {{ blog.time_to_read }}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6 img-align">
@@ -358,5 +382,11 @@ export default {
 
 .blog blockquote {
   font-size: 1em;
+}
+
+.author-s {
+  max-width: 40px;
+  max-height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
 }
 </style>
