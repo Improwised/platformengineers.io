@@ -53,7 +53,7 @@
                   id="sitekey"
                   type="hidden"
                   name="sitekey"
-                  value="6LfM73IUAAAAAFFFAv5jHjpT_UIjRZqD2xcijnwn"
+                  value="6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg"
                 />
                 <div class="col-xs-12">
                   <label for="name">Your Name:</label>
@@ -87,14 +87,10 @@
                   ></textarea>
                 </div>
                 <div class="col-xs-12">
-                  <div id="recaptcha"></div>
-                </div>
-                <div class="col-xs-12">
                   <button
                     id="btn-submit"
                     type="submit"
                     class="btn btn--primary type--uppercase"
-                    disabled="disabled"
                   >
                     Send Enquiry
                   </button>
