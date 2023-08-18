@@ -48,8 +48,14 @@ $(function() {
               recaptcha_response: token
             }),
             success: function(data) {
-              setToDefault();
-              showSuccess();
+              const { statusCode, body } = data; 
+              if( statusCode === 201 ) {
+                setToDefault();
+                showSuccess();
+              } else {
+                const { error: errors } = JSON.parse(body);
+                showErrors(errors || ['Something went wrong. Please try again']);
+              }
             },
             error: function(err) {
               setToDefault();
