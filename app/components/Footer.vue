@@ -25,8 +25,8 @@
               <a href="/contact-us">Contact Us</a>
             </li>
             <li>
-              <a href="mailto:sales@platformengineers.in"
-                >sales@platformengineers.in</a
+              <a href="mailto:sales@platformengineers.io"
+                >sales@platformengineers.io</a
               >
             </li>
           </ul>

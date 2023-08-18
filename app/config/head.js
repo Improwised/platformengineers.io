@@ -275,8 +275,8 @@ const structuredLdJsonData = {
   "@type": "WebSite",
   name: "Platform Engineers",
   alternateName: "Platform Engineers",
-  url: "https://platformengineers.in/",
-  logo: "https://platformengineers.in/img/plateform-engineers.png",
+  url: "https://platformengineers.io/",
+  logo: "https://platformengineers.io/img/plateform-engineers.png",
   sameAs: [],
 };
 
