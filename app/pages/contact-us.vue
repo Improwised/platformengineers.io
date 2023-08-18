@@ -7,6 +7,11 @@
           <div class="row">
             <div class="col-md-8 col-lg-6">
               <h1>Let's talk about your project</h1>
+              <p class="lead">
+                We would love to hear from you! If you're interested in
+                improving and scaling your project through our platform
+                engineering services, please don't hesitate to get in touch.
+              </p>
             </div>
           </div>
         </div>
@@ -30,32 +35,67 @@
           <div
             class="col-lg-6 d-flex align-items-center justify-content-center"
           >
-            <div>
-              <p>
-                We would love to hear from you! If you're interested in
-                improving and scaling your project through our platform
-                engineering services, please don't hesitate to get in touch.
-              </p>
-              <p>
-                Our team of experts is dedicated to helping you achieve your
-                goals. You can reach us at the following email address:
-                <a href="mailto:sales@platformengineers.in"
-                  >sales@platformengineers.in</a
-                >.
-              </p>
-              <p>
-                We'll do our best to get back to you as soon as possible and
-                provide you with the information you need to make an informed
-                decision.
-              </p>
-              <div class="text-center">
-                <a
-                  class="btn btn--primary type--uppercase b-30"
-                  href="mailto:sales@platformengineers.in"
-                >
-                  <span class="btn__text"> LET'S TALK </span>
-                </a>
+            <div class="col-sm-11">
+              <div id="errorMessages"></div>
+              <div id="success">
+                <div class="success-msg">
+                  <b
+                    >Message has been sent successfully. We will contact within
+                    1 business day.</b
+                  >
+                </div>
               </div>
+              <form
+                id="contactus-submit"
+                action="https://yrvaidnqcg.execute-api.ap-south-1.amazonaws.com/test/api/test"
+              >
+                <input
+                  id="sitekey"
+                  type="hidden"
+                  name="sitekey"
+                  value="6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg"
+                />
+                <div class="col-xs-12">
+                  <label for="name">Your Name:</label>
+                  <input
+                    id="name"
+                    type="text"
+                    class="validate-required"
+                    name="name"
+                    required="required"
+                  />
+                </div>
+                <div class="col-xs-12">
+                  <label for="email">Email Address:</label>
+                  <input
+                    id="email"
+                    type="email"
+                    class="validate-required validate-email"
+                    name="email"
+                    required="required"
+                  />
+                </div>
+                <div class="col-xs-12">
+                  <label for="message">Message:</label>
+                  <textarea
+                    id="message"
+                    type="textarea"
+                    class="validate-required"
+                    name="message"
+                    rows="4"
+                    required="required"
+                  ></textarea>
+                </div>
+                <div class="col-xs-12">
+                  <button
+                    id="btn-submit"
+                    type="submit"
+                    class="btn btn--primary type--uppercase"
+                  >
+                    Send Enquiry
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
           <!-- <div class="col-md-6 offset-md-3">
@@ -133,11 +173,11 @@ export default {
           content: process.env.BASE_URL + "/img/plateform-engineers.png",
         },
       ],
-      // script: [
-      //   {
-      //     src: "https://www.google.com/recaptcha/api.js?render=6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg",
-      //   },
-      // ],
+      script: [
+        {
+          src: "https://www.google.com/recaptcha/api.js?render=6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg",
+        },
+      ],
       link: [
         {
           rel: "canonical",
@@ -150,6 +190,29 @@ export default {
 </script>
 
 <style>
+#errorMessages {
+  display: none;
+  margin: 0 10px 15px 10px;
+  padding: 8px 35px 8px 30px;
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 2px solid #eed3d7;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#success {
+  display: none;
+}
+
+.success-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #270;
+  background-color: #dff2bf;
+}
+
 .contact-us-bk {
   z-index: 1;
   overflow: hidden;
