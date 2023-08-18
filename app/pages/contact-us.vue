@@ -116,7 +116,7 @@ export default {
   head() {
     const contactTitle = "Contact Us | Platform Engineers";
     const contactDescription =
-      "For any further info please feel free to Contact us on contact@platformengineers.in";
+      "For any further info please feel free to Contact us on sales@platformengineers.io";
     return {
       title: contactTitle,
       meta: [
