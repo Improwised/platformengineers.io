@@ -47,7 +47,7 @@
               </div>
               <form
                 id="contactus-submit"
-                action="https://yrvaidnqcg.execute-api.ap-south-1.amazonaws.com/test/api/test"
+                action="https://8uq6j8ikpd.execute-api.ap-south-1.amazonaws.com/contactus/api/contactus"
               >
                 <input
                   id="sitekey"
