@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-md-8 col-lg-6">
               <h1>Let's talk about your project</h1>
-              <p>
+              <p class="lead">
                 We would love to hear from you! If you're interested in
                 improving and scaling your project through our platform
                 engineering services, please don't hesitate to get in touch.
