@@ -92,7 +92,7 @@
                     type="submit"
                     class="btn btn--primary type--uppercase"
                   >
-                    Send Enquiry
+                    Send Inquiry
                   </button>
                 </div>
               </form>
