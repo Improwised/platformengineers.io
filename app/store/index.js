@@ -4,6 +4,7 @@ export const state = () => ({
   categories: [],
   services: [],
   generate: false,
+  industries: [],
 });
 
 export const mutations = {
@@ -12,6 +13,9 @@ export const mutations = {
   },
   services(state, services) {
     state.services = services;
+  },
+  industries(state, industries) {
+    state.industries = industries;
   },
   generate(state, generate) {
     state.generate = generate;
@@ -32,6 +36,12 @@ export const actions = {
         commit("generate", true);
       }
     });
+    await dispatch("industries").then((industries) => {
+      commit("industries", industries.data);
+      if (process.argv[2] && process.argv[2] === "generate") {
+        commit("generate", true);
+      }
+    });
   },
 
   categories({ commit }, slug) {
@@ -39,6 +49,11 @@ export const actions = {
   },
 
   services({ commit }, slug) {
+    console.log(this.$urls.servicesNames);
     return this.$axios.$get(this.$urls.servicesNames);
+  },
+  industries({ commit }, slug) {
+    console.log(this.$urls.industriesNames);
+    return this.$axios.$get(this.$urls.industriesNames);
   },
 };

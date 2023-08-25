@@ -25,11 +25,11 @@ const urls = {
   categories:
     "/items/pe_categories?fields=name,description,services.title,services.description,services.slug",
   home: "https://data.improwised.com/items/pe_home",
-  industry: "https://data.improwised.com/items/pe_industry",
   services:
     "/items/pe_services?fields=slug,title,description,icon,icon_as_image&sort=order&filter[status][_eq]=published",
   servicesNames:
     "/items/pe_services?fields=slug,title,description,icon&filter[status][_eq]=published&sort=order",
+  industriesNames: "/items/pe_industry?fields=slug,title,description",
   whyUs:
     "/items/pe_why_us?fields=title,description,icon,image&filter[status][_eq]=published&sort=order",
 
@@ -37,6 +37,9 @@ const urls = {
 
   service: (title) =>
     `/items/pe_services?filter[slug][_eq]=${title}&single=1&fields=*.*`,
+
+  industry: (title) =>
+    `https://data.improwised.com/items/pe_industry?filter[slug][_eq]=${title}&fields[]=*.*,services.pe_services_id.slug,services.pe_services_id.title,services.pe_services_id.description,services.pe_services_id.icon,services.pe_services_id.icon_as_image`,
 
   blogs: `/items/pe_blog?filter[status][_eq]=published&fields=*.*&sort=title`,
   blog: (title) =>

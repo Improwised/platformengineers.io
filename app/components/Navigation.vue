@@ -80,24 +80,24 @@
                     </div>
                   </div>
                 </li>
-                <!-- industries  -->
+
                 <li class="dropdown">
                   <span class="dropdown__trigger">Industries</span>
                   <div class="dropdown__container">
                     <div class="container">
                       <div class="row">
                         <div
-                          class="mt-1 dropdown__content col-lg-2 col-md-4 col-sm-6"
+                          class="mt-1 dropdown__content col-lg-4 col-md-4 col-sm-6"
                         >
                           <ul class="menu-vertical">
-                            <li>
-                              <a :href="`/industries/ecommerce`">eCommerce</a>
-                            </li>
-                            <li>
-                              <a :href="`/industries/iot`">Iot</a>
-                            </li>
-                            <li>
-                              <a :href="`/industries/saas`">Saas</a>
+                            <li
+                              v-for="(industry, index) in $store.state
+                                .industries"
+                              :key="index"
+                            >
+                              <a :href="`/industries/${industry.slug}`">{{
+                                industry.title
+                              }}</a>
                             </li>
                           </ul>
                         </div>
@@ -105,7 +105,6 @@
                     </div>
                   </div>
                 </li>
-                <!-- industries end  -->
 
                 <li class="">
                   <a href="/blog">Blog</a>
