@@ -25,6 +25,7 @@ const urls = {
   categories:
     "/items/pe_categories?fields=name,description,services.title,services.description,services.slug",
   home: "https://data.improwised.com/items/pe_home",
+  industry: "https://data.improwised.com/items/pe_industry",
   services:
     "/items/pe_services?fields=slug,title,description,icon,icon_as_image&sort=order&filter[status][_eq]=published",
   servicesNames:
