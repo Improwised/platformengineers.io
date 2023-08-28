@@ -30,6 +30,7 @@ const urls = {
   servicesNames:
     "/items/pe_services?fields=slug,title,description,icon&filter[status][_eq]=published&sort=order",
   industriesNames: "/items/pe_industry?fields=slug,title,description,image",
+  industries: "/items/pe_industries",
   whyUs:
     "/items/pe_why_us?fields=title,description,icon,image&filter[status][_eq]=published&sort=order",
 

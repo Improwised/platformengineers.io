@@ -163,7 +163,7 @@
           <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
               <div class="cta">
-                <h2>Want to know more about us?</h2>
+                <h2>Let's Dive Deeper into Your Needs – Ready to Talk?</h2>
                 <a
                   class="btn btn--primary type--uppercase b-30"
                   href="/contact-us"
@@ -355,6 +355,6 @@ export default {
 
 .svg svg {
   width: 70%;
-  height: 80px;
+  height: 50px;
 }
 </style>

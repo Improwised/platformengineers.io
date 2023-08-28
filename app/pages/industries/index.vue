@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="industries">
     <div class="main-container">
       <div class="industry-bk">
         <Navigation />
@@ -10,12 +10,9 @@
                 class="col-md-6 d-flex align-items-center justify-content-center"
               >
                 <div>
-                  <h1>Industries</h1>
+                  <h1>{{ industries.title }}</h1>
                   <p class="lead">
-                    If you are looking to improve the scalability, reliability,
-                    security, and cost-efficiency of your applications and
-                    infrastructure, then platform engineering is a good option
-                    to consider.
+                    {{ industries.description }}
                   </p>
                   <a
                     class="btn btn--primary type--uppercase b-30"
@@ -29,8 +26,10 @@
                 class="col-md-6 d-flex align-items-center justify-content-center"
               >
                 <nuxt-img
-                  src="/img/about-us-2.svg"
-                  alt="About us | Platform Engineers"
+                  v-if="industries && industries.image"
+                  :src="$urls.assets(industries.image)"
+                  :alt="industries.title"
+                  :title="industries.title"
                   format="png"
                   loading="lazy"
                   height="400px"
@@ -95,7 +94,7 @@
           <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
               <div class="cta">
-                <h2>Want to know more about us?</h2>
+                <h2>Let's Dive Deeper into Your Needs – Ready to Talk?</h2>
                 <a
                   class="btn btn--primary type--uppercase b-30"
                   href="/contact-us"
@@ -124,24 +123,30 @@ export default {
     const { data: industriesNames } = await app.$axios.$get(
       app.$urls.industriesNames
     );
+    const { data: industries } = await app.$axios.$get(app.$urls.industries);
 
     return {
       industriesNames,
+      industries,
     };
   },
 
   head() {
+    const image = this.$img(this.$urls.assets(this.industries.image), {
+      format: "png",
+      height: "400px",
+    });
+
     return {
-      title: "industries",
+      title: (this.industries && this.industries.seo_title) || "",
       meta: [
         {
           name: "description",
-          content:
-            "If you are looking to improve the scalability, reliability, security, and cost-efficiency of your applications and infrastructure, then platform engineering is a good option to consider",
+          content: (this.industries && this.industries.seo_description) || "",
         },
         {
           name: "title",
-          content: "industries",
+          content: (this.industries && this.industries.seo_title) || "",
         },
         {
           property: "og:type",
@@ -149,21 +154,20 @@ export default {
         },
         {
           property: "og:url",
-          content: "https://platformengineers.io/industries/",
+          content: process.env.BASE_URL + this.$route.path + "/",
         },
         {
           property: "og:title",
-          content: "industries",
+          content: (this.industries && this.industries.seo_title) || "",
         },
         {
           property: "og:description",
-          content:
-            "If you are looking to improve the scalability, reliability, security, and cost-efficiency of your applications and infrastructure, then platform engineering is a good option to consider.",
+          content: (this.industries && this.industries.seo_description) || "",
         },
-        // {
-        //   property: "og:image",
-        //   content: process.env.BASE_URL + image,
-        // },
+        {
+          property: "og:image",
+          content: process.env.BASE_URL + image,
+        },
         {
           property: "twitter:card",
           content: "summary",
@@ -178,22 +182,21 @@ export default {
         },
         {
           property: "twitter:title",
-          content: "industries",
+          content: (this.industries && this.industries.seo_title) || "",
         },
         {
           property: "twitter:description",
-          content:
-            "If you are looking to improve the scalability, reliability, security, and cost-efficiency of your applications and infrastructure, then platform engineering is a good option to consider.",
+          content: (this.industries && this.industries.seo_description) || "",
         },
-        // {
-        //   property: "twitter:image",
-        //   content: process.env.BASE_URL + image,
-        // },
+        {
+          property: "twitter:image",
+          content: process.env.BASE_URL + image,
+        },
       ],
       link: [
         {
           rel: "canonical",
-          href: "https://platformengineers.io/industries/",
+          href: process.env.BASE_URL + this.$route.path + "/",
         },
       ],
     };
