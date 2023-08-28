@@ -1,7 +1,7 @@
 <template>
   <div v-if="industry">
     <div class="main-container">
-      <div class="hero-bk">
+      <div class="industry-bk">
         <Navigation />
         <div>
           <div class="container">
@@ -270,7 +270,7 @@ export default {
 </script>
 
 <style>
-.hero-bk {
+.industry-bk {
   z-index: 1;
   overflow: hidden;
   position: relative;
@@ -278,7 +278,7 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 
-.hero-bk::before {
+.industry-bk::before {
   content: "";
   position: absolute;
   top: 0;
@@ -294,7 +294,7 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-  .hero-bk {
+  .industry-bk {
     border-radius: 0 0 30px 30px;
   }
 }
