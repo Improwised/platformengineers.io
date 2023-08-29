@@ -41,7 +41,7 @@ const urls = {
     `/items/pe_services?filter[slug][_eq]=${title}&single=1&fields=*.*`,
 
   industry: (title) =>
-    `https://data.improwised.com/items/pe_industry?filter[slug][_eq]=${title}&fields[]=*.*,services.pe_services_id.slug,services.pe_services_id.title,services.pe_services_id.description,services.pe_services_id.icon,services.pe_services_id.icon_as_image`,
+    `/items/pe_industry?filter[slug][_eq]=${title}&fields[]=*.*,services.pe_services_id.slug,services.pe_services_id.title,services.pe_services_id.description,services.pe_services_id.icon,services.pe_services_id.icon_as_image`,
 
   blogs: `/items/pe_blog?filter[status][_eq]=published&fields=*.*&sort=title`,
   blog: (title) =>
