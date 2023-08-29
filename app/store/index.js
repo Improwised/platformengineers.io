@@ -52,7 +52,6 @@ export const actions = {
     return this.$axios.$get(this.$urls.servicesNames);
   },
   industries({ commit }, slug) {
-    console.log(this.$urls.industriesNames);
     return this.$axios.$get(this.$urls.industriesNames);
   },
 };
