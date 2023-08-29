@@ -3,7 +3,7 @@
     <div class="main-container">
       <div class="industry-bk">
         <Navigation />
-        <div>
+        <section class="space--xs">
           <div class="container">
             <div class="row py-2">
               <div
@@ -38,13 +38,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
 
-      <section
-        v-if="industry.common_usecases_title"
-        class="wave-bk border-top bg--"
-      >
+      <section v-if="industry.common_usecases_title" class="wave-bk bg--">
         <div class="container">
           <div class="row">
             <div class="text-center col-md-8 offset-md-2 pb-5">
@@ -63,8 +60,6 @@
           </div>
         </div>
       </section>
-
-      <hr class="m-0" />
 
       <section v-if="industry.benefits_title" class="wave-bk border-top bg--">
         <div class="container">
@@ -86,9 +81,11 @@
         </div>
       </section>
 
-      <hr class="m-0" />
-
-      <section id="toolBox" class="text-center technologies space--xs">
+      <section
+        v-if="industry && industry.companies && industry.companies.length"
+        id="toolBox"
+        class="text-center technologies border-top"
+      >
         <h2>{{ industry.companies_title }}</h2>
         <div class="container-fluid o_05">
           <div class="row text-center justify-content-center">
@@ -106,9 +103,7 @@
         </div>
       </section>
 
-      <hr class="m-0" />
-
-      <section class="wave-bk">
+      <section class="wave-bk border-top bg--">
         <div class="container">
           <div class="row">
             <div class="text-center col-md-8 offset-md-2 pb-5">
@@ -197,10 +192,12 @@ export default {
   },
 
   head() {
-    const image = this.$img(this.$urls.assets(this.industry.image.id), {
-      format: "png",
-      height: "400px",
-    });
+    const image =
+      this.industry?.image?.id &&
+      this.$img(this.$urls.assets(this.industry.image.id), {
+        format: "png",
+        height: "400px",
+      });
 
     return {
       title: (this.industry && this.industry.seo_title) || "",
