@@ -87,7 +87,7 @@
                     <div class="container">
                       <div class="row">
                         <div
-                          class="mt-1 dropdown__content col-lg-3 col-md-4 col-sm-6"
+                          class="mt-1 dropdown__content col-lg-3 col-md-4 col-sm-6 p-3"
                         >
                           <ul class="menu-vertical">
                             <li

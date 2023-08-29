@@ -29,7 +29,8 @@ const urls = {
     "/items/pe_services?fields=slug,title,description,icon,icon_as_image&sort=order&filter[status][_eq]=published",
   servicesNames:
     "/items/pe_services?fields=slug,title,description,icon&filter[status][_eq]=published&sort=order",
-  industriesNames: "/items/pe_industry?fields=slug,title,description,image",
+  industriesNames:
+    "/items/pe_industry?fields=slug,title,description,image&filter[status][_eq]=published",
   industries: "/items/pe_industries",
   whyUs:
     "/items/pe_why_us?fields=title,description,icon,image&filter[status][_eq]=published&sort=order",

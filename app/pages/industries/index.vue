@@ -43,8 +43,6 @@
 
       <hr class="m-0" />
 
-      <hr class="m-0" />
-
       <section v-if="industriesNames && industriesNames.length" class="bg--">
         <div class="container">
           <div class="row">
