@@ -9,12 +9,33 @@
               <a href="/about-us">About Us</a>
             </li>
           </ul>
+          <!--  -->
+          <h6 class="type--uppercase m-0">Resources</h6>
+          <ul class="list--hover">
+            <li class="">
+              <a href="/blog">Blog</a>
+            </li>
+            <li class="">
+              <a href="/case-studies">Case Studies</a>
+            </li>
+          </ul>
         </div>
         <div class="col-md-3 col-sm-6 col-12 mb-5">
           <h6 class="type--uppercase m-0">Services</h6>
           <ul class="list--hover">
             <li v-for="(service, index) in $store.state.services" :key="index">
               <a :href="`/services/${service.slug}`">{{ service.title }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12 mb-5">
+          <h6 class="type--uppercase m-0">Industries</h6>
+          <ul class="list--hover">
+            <li
+              v-for="(industry, index) in $store.state.industries"
+              :key="index"
+            >
+              <a :href="`/industries/${industry.slug}`">{{ industry.title }}</a>
             </li>
           </ul>
         </div>
@@ -28,17 +49,6 @@
               <a href="mailto:sales@platformengineers.io"
                 >sales@platformengineers.io</a
               >
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-6 col-12 mb-5">
-          <h6 class="type--uppercase m-0">Resources</h6>
-          <ul class="list--hover">
-            <li class="">
-              <a href="/blog">Blog</a>
-            </li>
-            <li class="">
-              <a href="/case-studies">Case Studies</a>
             </li>
           </ul>
         </div>
