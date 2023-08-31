@@ -45,11 +45,6 @@
             <li>
               <a href="/contact-us">Contact Us</a>
             </li>
-            <li>
-              <a href="mailto:sales@platformengineers.io"
-                >sales@platformengineers.io</a
-              >
-            </li>
           </ul>
         </div>
       </div>
