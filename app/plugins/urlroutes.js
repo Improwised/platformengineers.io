@@ -43,7 +43,7 @@ const urls = {
   industry: (title) =>
     `/items/pe_industry?filter[slug][_eq]=${title}&fields[]=*.*,services.pe_services_id.slug,services.pe_services_id.title,services.pe_services_id.description,services.pe_services_id.icon,services.pe_services_id.icon_as_image`,
 
-  blogs: `/items/pe_blog?filter[status][_eq]=published&fields=*.*&sort=title`,
+  blogs: `/items/pe_blog?filter[status][_eq]=published&fields=*.*&sort=-date_created`,
   blog: (title) =>
     `/items/pe_blog?filter[slug][_eq]=${title}&single=1&fields[]=*.*`,
 
@@ -66,7 +66,7 @@ const urls = {
     `/items/careers?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields=*.*`,
 
   caseStudies:
-    "/items/pe_case_studies?filter[status][_eq]=published&fields=*.*&sort=title",
+    "/items/pe_case_studies?filter[status][_eq]=published&fields=*.*&sort=-date_created",
   caseStudy: (title) =>
     `/items/pe_case_studies?filter[slug][_eq]=${title}&single=1&fields[]=*.*,tags.pe_case_studies_tags_id.name,technologies.directus_files_id.*`,
 
