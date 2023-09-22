@@ -8,7 +8,7 @@
             class="col-md-6 d-flex align-items-center justify-content-center"
           >
             <div>
-              <h2>{{ caseStudy.title }}</h2>
+              <h3>{{ caseStudy.title }}</h3>
               <p style="font-size: 16px; max-width: 300px">
                 {{ caseStudy.date_created | formatDateTime }}
               </p>
@@ -37,7 +37,10 @@
         <div class="row">
           <div class="col-md-8 offset-md-2">
             <h2 class="text-center">{{ caseStudy.client_info_title }}</h2>
-            <div class="lead" v-html="caseStudy.client_info_description"></div>
+            <div
+              class="lead ul-list"
+              v-html="caseStudy.client_info_description"
+            ></div>
           </div>
         </div>
       </div>
@@ -48,7 +51,7 @@
         <div class="row">
           <div class="col-md-8 offset-md-2">
             <h2 class="text-center">{{ caseStudy.goal_title }}</h2>
-            <div class="lead" v-html="caseStudy.goal_description"></div>
+            <div class="lead ul-list" v-html="caseStudy.goal_description"></div>
           </div>
         </div>
       </div>
@@ -59,7 +62,10 @@
         <div class="row">
           <div class="col-md-8 offset-md-2">
             <h2 class="text-center">{{ caseStudy.solution_title }}</h2>
-            <div class="lead" v-html="caseStudy.solution_description"></div>
+            <div
+              class="lead ul-list"
+              v-html="caseStudy.solution_description"
+            ></div>
           </div>
         </div>
       </div>
@@ -99,7 +105,10 @@
         <div class="row">
           <div class="col-md-8 offset-md-2">
             <h2 class="text-center">{{ caseStudy.outcome_title }}</h2>
-            <div class="lead" v-html="caseStudy.outcome_description"></div>
+            <div
+              class="lead ul-list"
+              v-html="caseStudy.outcome_description"
+            ></div>
           </div>
         </div>
       </div>
@@ -234,8 +243,12 @@ export default {
       height: "400px",
     });
 
-    const title = `${this.caseStudy && this.caseStudy.seo_title} | Platform Engineers`;
-    const description = `${this.caseStudy && this.caseStudy.seo_description} | Platform Engineers`;
+    const title = `${
+      this.caseStudy && this.caseStudy.seo_title
+    } | Platform Engineers`;
+    const description = `${
+      this.caseStudy && this.caseStudy.seo_description
+    } | Platform Engineers`;
 
     return {
       title: title || "",

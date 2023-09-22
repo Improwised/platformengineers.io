@@ -41,13 +41,12 @@
                   :src="$urls.assets(caseStudie.image.id)"
                   :alt="caseStudie.title"
                   :title="caseStudie.title"
-                  width="100%"
                   height="245"
                   loading="lazy"
                   format="png"
                 />
               </a>
-              <div class="feature__body px-5 py-4">
+              <div class="feature__body p-4">
                 <a :href="`/case-studies/${caseStudie.slug}`" class="t-hover">
                   <h5>{{ caseStudie.title }}</h5>
                 </a>
@@ -195,6 +194,10 @@ export default {
 
 .t-hover:hover {
   text-decoration-color: #179bfd;
+}
+
+.t-hover h5 {
+  line-height: 1.5;
 }
 
 .t-hover:hover h5 {

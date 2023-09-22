@@ -7,7 +7,7 @@
           <div class="container">
             <div class="row py-2">
               <div
-                class="col-md-6 d-flex align-items-center justify-content-center"
+                class="col-md-6 d-flex align-items-center justify-content-center my-5"
               >
                 <div>
                   <h1>{{ industries.title }}</h1>
@@ -32,16 +32,13 @@
                   :title="industries.title"
                   format="png"
                   loading="lazy"
-                  height="400px"
-                  class="img-dim"
+                  height="250px"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <hr class="m-0" />
 
       <section v-if="industriesNames && industriesNames.length" class="bg--">
         <div class="container">
@@ -54,19 +51,19 @@
               <article class="b-30 bs-1">
                 <a
                   :href="`/industries/${industry.slug}`"
-                  class="industry d-flex align-items-center justify-content-center"
+                  class="industry d-flex align-items-center justify-content-center p-4"
+                  style="height: 300px"
                 >
                   <nuxt-img
                     v-if="industry.image"
                     :src="$urls.assets(industry.image)"
                     :alt="industry.title"
                     :title="industry.title"
-                    width="100%"
                     loading="lazy"
                     format="png"
                   />
                 </a>
-                <div class="feature__body px-5 py-4 text-center">
+                <div class="feature__body px-4 pb-4 text-center">
                   <a :href="`/industries/${industry.slug}`" class="t-hover">
                     <h5>{{ industry.title }}</h5>
                   </a>

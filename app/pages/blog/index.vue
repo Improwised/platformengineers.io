@@ -41,12 +41,12 @@
                   :src="$urls.assets(blog.image.id)"
                   :alt="blog.title"
                   :title="blog.title"
-                  width="100%"
+                  height="300px"
                   loading="lazy"
                   format="png"
                 />
               </a>
-              <div class="feature__body px-5 py-4">
+              <div class="feature__body p-4">
                 <a :href="`/blog/${blog.slug}`" class="t-hover">
                   <h5>{{ blog.title }}</h5>
                 </a>
@@ -208,6 +208,10 @@ export default {
 
 .t-hover:hover {
   text-decoration-color: #179bfd;
+}
+
+.t-hover h5 {
+  line-height: 1.5 !important;
 }
 
 .t-hover:hover h5 {

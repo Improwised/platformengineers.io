@@ -179,9 +179,9 @@
               class="col-md-6 col-lg-4 d-flex mt-5"
             >
               <div
-                class="text-center w-100 p-5 bs-1 d-flex flex-column b-30 card-svg"
+                class="text-center w-100 p-5 bs-1 d-flex flex-column b-30 card-svg pos-r"
               >
-                <div class="mb-4">
+                <div class="mb-4 zi-0">
                   <nuxt-img
                     :src="$urls.assets(service.icon_as_image)"
                     :alt="service.title"
@@ -191,15 +191,15 @@
                     height="80px"
                   />
                 </div>
-                <a :href="`/services/${service.slug}`" class="t-hover">
-                  <h4 class="flex-grow-1 mb-2">{{ service.title }}</h4>
+                <a :href="`/services/${service.slug}`" class="t-hover zi-0">
+                  <h5 class="mb-0">{{ service.title }}</h5>
                 </a>
-                <p class="flex-grow-1 m-0">
+                <p class="m-0 zi-0">
                   {{ service.description }}
                 </p>
                 <a
                   :href="`/services/${service.slug}`"
-                  class="d-lg-none mt-4 mb-0 text-center"
+                  class="d-lg-none mt-4 mb-0 text-center zi-0"
                 >
                   Learn More
                 </a>
@@ -224,9 +224,9 @@
               class="col-md-6 col-lg-4 d-flex mt-5"
             >
               <div
-                class="text-center w-100 p-5 bs-1 b-30 d-flex flex-column card-svg"
+                class="text-center w-100 p-5 bs-1 b-30 d-flex flex-column card-svg pos-r"
               >
-                <div class="mb-4">
+                <div class="mb-4 zi-0">
                   <nuxt-img
                     :src="$urls.assets(why.image)"
                     :alt="why.title"
@@ -236,8 +236,8 @@
                     height="80px"
                   />
                 </div>
-                <h4 class="flex-grow-1 mb-2">{{ why.title }}</h4>
-                <p class="flex-grow-1">
+                <h5 class="mb-0 zi-0">{{ why.title }}</h5>
+                <p class="zi-0">
                   {{ why.description }}
                 </p>
               </div>
@@ -439,7 +439,7 @@ export default {
   /*  box-shadow: -25px 0 20px -20px rgba(0, 0, 0, 0.45); */
 }
 
-.t-hover:hover h4 {
+.t-hover:hover h5 {
   color: #179bfd;
 }
 
@@ -450,7 +450,6 @@ export default {
 .card-svg {
   overflow: hidden;
   position: relative;
-  background: transparent !important;
 }
 
 .card-svg::before {
@@ -461,7 +460,7 @@ export default {
   width: 100%;
   height: 100%;
   opacity: 1;
-  z-index: -1;
+  z-index: 0;
   background: url("/img/card47.png") white;
   background-size: contain;
   background-repeat: no-repeat;

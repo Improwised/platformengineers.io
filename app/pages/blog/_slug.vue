@@ -59,7 +59,7 @@
           <div class="col-lg-10 offset-lg-1 bs-1 p-5 b-30 bg-white">
             <div
               v-if="blog.content"
-              class="lead fc-lead"
+              class="lead fc-lead ul-list"
               v-html="blog.content"
             ></div>
 
