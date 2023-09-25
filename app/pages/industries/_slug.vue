@@ -10,7 +10,7 @@
                 class="col-md-6 d-flex align-items-center justify-content-center"
               >
                 <div>
-                  <h1>{{ industry.title }}</h1>
+                  <h2>{{ industry.title }}</h2>
                   <p class="lead">
                     {{ industry.description }}
                   </p>
@@ -53,7 +53,7 @@
               class="mt-5 text-center col-md-4 d-flex"
             >
               <div class="w-100 p-5 bs-1 card-svg b-30">
-                <h4 class="flex-grow-1">{{ usecase.title }}</h4>
+                <h5 class="m-0">{{ usecase.title }}</h5>
                 <div>{{ usecase.description }}</div>
               </div>
             </div>
@@ -73,7 +73,7 @@
               class="mt-5 text-center col-md-4 d-flex"
             >
               <div class="w-100 p-5 bs-1 card-svg b-30">
-                <h4 class="flex-grow-1">{{ benefits.title }}</h4>
+                <h5 class="m-0">{{ benefits.title }}</h5>
                 <div>{{ benefits.description }}</div>
               </div>
             </div>
@@ -134,11 +134,11 @@
                   :href="`/services/${service.pe_services_id.slug}`"
                   class="t-hover"
                 >
-                  <h4 class="flex-grow-1 mb-2">
+                  <h5 class="m-0">
                     {{ service.pe_services_id.title }}
-                  </h4>
+                  </h5>
                 </a>
-                <p class="flex-grow-1 m-0">
+                <p class="m-0">
                   {{ service.pe_services_id.description }}
                 </p>
                 <a
@@ -321,7 +321,7 @@ export default {
     -25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
-.t-hover:hover h4 {
+.t-hover:hover h5 {
   color: #179bfd;
 }
 

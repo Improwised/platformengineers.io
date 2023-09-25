@@ -40,7 +40,7 @@
       <div class="container">
         <div class="row">
           <div
-            class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-left lead"
+            class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-left lead text-dark ul-list"
             v-html="aboutUs.content"
           ></div>
         </div>

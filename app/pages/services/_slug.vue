@@ -7,7 +7,7 @@
           <div
             class="col-md-6 d-flex align-items-center justify-content-center"
           >
-            <h1>{{ service.title }}</h1>
+            <h2>{{ service.title }}</h2>
           </div>
           <div
             class="col-md-6 d-flex align-items-center justify-content-center"
@@ -31,7 +31,7 @@
       <div class="container">
         <div class="row">
           <div
-            class="col-sm-10 col-sm-offset-1 col-md-8 offset-md-2 text-left lead"
+            class="col-sm-10 col-sm-offset-1 col-md-8 offset-md-2 text-left lead text-dark ul-list"
             v-html="service.content"
           ></div>
         </div>
@@ -55,9 +55,9 @@
           >
             <div class="w-100 p-5 bs-1 card-svg b-30">
               <div class="svg mb-4" v-html="feature.image"></div>
-              <h4 class="flex-grow-1 text-center">{{ feature.title }}</h4>
+              <h5 class="text-center mb-0">{{ feature.title }}</h5>
               <div
-                :class="`list-style-content ${
+                :class="`ul-list list-style-content ${
                   $route.params.slug !== 'kubernetes-consulting-services'
                     ? 'text-center'
                     : ''
@@ -94,7 +94,7 @@
                 v-html="_process.image"
               ></div>
               <div class="flex-grow-1">
-                <h4 class="m-0 p-0">{{ _process.title }}</h4>
+                <h5 class="m-0 p-0">{{ _process.title }}</h5>
                 <p>{{ _process.description }}</p>
               </div>
             </div>
@@ -116,7 +116,7 @@
           >
             <div class="w-100 p-5 bs-1 card-svg b-30">
               <div class="svg mb-4" v-html="approach.image"></div>
-              <h4 class="flex-grow-1">{{ approach.title }}</h4>
+              <h5 class="mb-0">{{ approach.title }}</h5>
               <div v-html="approach.content"></div>
             </div>
           </div>
@@ -137,7 +137,7 @@
           >
             <div class="w-100 p-5 bs-1 card-svg b-30">
               <div class="svg mb-4" v-html="offering.image"></div>
-              <h4 class="flex-grow-1">{{ offering.title }}</h4>
+              <h5 class="mb-0">{{ offering.title }}</h5>
               <div v-html="offering.content"></div>
             </div>
           </div>
