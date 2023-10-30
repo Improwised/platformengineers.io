@@ -20,6 +20,7 @@
             <a
               href="#"
               class="hamburger-toggle"
+              aria-label="toggle"
               data-toggle-class="#menu1;hidden-xs"
             >
               <i class="icon icon--sm stack-interface stack-menu"></i>

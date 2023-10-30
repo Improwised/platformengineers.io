@@ -3,14 +3,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6 col-12 mb-5">
-          <h6 class="type--uppercase m-0">Company</h6>
+          <h4 class="type--uppercase m-0 h6">Company</h4>
           <ul class="list--hover">
             <li class="">
               <a href="/about-us">About Us</a>
             </li>
           </ul>
           <!--  -->
-          <h6 class="type--uppercase m-0">Resources</h6>
+          <h5 class="type--uppercase m-0 h6">Resources</h5>
           <ul class="list--hover">
             <li class="">
               <a href="/blog">Blog</a>
