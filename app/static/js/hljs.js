@@ -1,1 +1,3 @@
-hljs.highlightAll();
+window.onload = (event) => {
+  hljs.highlightAll();
+};
