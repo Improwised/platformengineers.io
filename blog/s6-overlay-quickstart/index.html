@@ -1,0 +1,218 @@
+<!doctype html>
+<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>S6-Overlay quickstart | Platform Engineers</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" http-equiv="Content-Language" content="en"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" name="format-detection" content="telephone=no"><meta data-n-head="ssr" name="author" content="Platform Engineers"><meta data-n-head="ssr" name="copyright" content="Platform Engineers"><meta data-n-head="ssr" name="robots" content="index, follow"><meta data-n-head="ssr" name="theme-color" content="#179bfd"><meta data-n-head="ssr" name="application-name" content="Platform Engineers"><meta data-n-head="ssr" name="msapplication-TileColor" content="#FFFFFF"><meta data-n-head="ssr" name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png"><meta data-n-head="ssr" name="msapplication-square70x70logo" content="/img/favicon/ms-icon-70x70.png"><meta data-n-head="ssr" name="msapplication-square144x144logo" content="/img/favicon/ms-icon-144x144.png"><meta data-n-head="ssr" name="msapplication-square150x150logo" content="/img/favicon/ms-icon-150x150.png"><meta data-n-head="ssr" name="msapplication-square310x310logo" content="/img/favicon/ms-icon-310x310.png"><meta data-n-head="ssr" name="description" content="S6-Overlay quickstart | Platform Engineers"><meta data-n-head="ssr" name="title" content="S6-Overlay quickstart | Platform Engineers"><meta data-n-head="ssr" property="og:type" content="website"><meta data-n-head="ssr" property="og:url" content="https://platformengineers.io/blog/s6-overlay-quickstart/"><meta data-n-head="ssr" property="og:title" content="S6-Overlay quickstart | Platform Engineers"><meta data-n-head="ssr" property="og:description" content="S6-Overlay quickstart | Platform Engineers"><meta data-n-head="ssr" property="og:image" content="https://platformengineers.io/_nuxt/image/939049.png"><meta data-n-head="ssr" property="twitter:card" content="summary"><meta data-n-head="ssr" property="twitter:site" content=""><meta data-n-head="ssr" property="twitter:creator" content=""><meta data-n-head="ssr" property="twitter:title" content="S6-Overlay quickstart | Platform Engineers"><meta data-n-head="ssr" property="twitter:description" content="S6-Overlay quickstart | Platform Engineers"><meta data-n-head="ssr" property="twitter:image" content="https://platformengineers.io/_nuxt/image/939049.png"><link data-n-head="ssr" href="https://fonts.googleapis.com" rel="preconnect"><link data-n-head="ssr" href="https://maps.googleapis.com" rel="preconnect"><link data-n-head="ssr" href="https://vars.hotjar.com" rel="preconnect"><link data-n-head="ssr" href="https://static.hotjar.com" rel="preconnect"><link data-n-head="ssr" href="https://www.gstatic.com" rel="preconnect"><link data-n-head="ssr" href="https://script.hotjar.com" rel="preconnect"><link data-n-head="ssr" href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i&display=swap" rel="stylesheet" lazyload="true"><link data-n-head="ssr" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500&display=swap" rel="stylesheet" lazyload="true"><link data-n-head="ssr" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet" lazyload="true"><link data-n-head="ssr" rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png"><link data-n-head="ssr" rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png"><link data-n-head="ssr" rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png"><link data-n-head="ssr" rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png"><link data-n-head="ssr" rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png"><link data-n-head="ssr" rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png"><link data-n-head="ssr" rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png"><link data-n-head="ssr" rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png"><link data-n-head="ssr" rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico"><link data-n-head="ssr" rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16"><link data-n-head="ssr" rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32"><link data-n-head="ssr" rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96"><link data-n-head="ssr" rel="manifest" href="/manifest.json"><link data-n-head="ssr" rel="canonical" href="https://platformengineers.io/blog/s6-overlay-quickstart/"><link data-n-head="ssr" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css"><script data-n-head="ssr" type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Platform Engineers","alternateName":"Platform Engineers","url":"https://platformengineers.io/","logo":"https://platformengineers.io/img/plateform-engineers.png","sameAs":[]}</script><link rel="preload" href="/_nuxt/160727e.js" as="script"><link rel="preload" href="/_nuxt/0a72c78.js" as="script"><link rel="preload" href="/_nuxt/css/66a9740.css" as="style"><link rel="preload" href="/_nuxt/bb34b37.js" as="script"><link rel="preload" href="/_nuxt/4688b3a.js" as="script"><link rel="preload" href="/_nuxt/86c3f09.js" as="script"><link rel="preload" href="/_nuxt/css/511bd18.css" as="style"><link rel="preload" href="/_nuxt/69e60eb.js" as="script"><link rel="stylesheet" href="/_nuxt/css/66a9740.css"><link rel="stylesheet" href="/_nuxt/css/511bd18.css"><link rel="preload" href="/_nuxt/static/1699448422/blog/s6-overlay-quickstart/state.js" as="script"><link rel="preload" href="/_nuxt/static/1699448422/blog/s6-overlay-quickstart/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1699448422/manifest.js" as="script">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div><div><link rel="stylesheet" href="/dist/index.min.css" lazyload></div> <a id="start" rel="nofollow" href="javscript:void(0);"></a> <div class="main-container blog"><div class="blog-bk"><div class="nav-container"><div class="bar bar--sm visible-xs"><div class="container"><div class="row align-items-center"><div class="col-3 col-md-2"><a href="/"><img src="/_nuxt/image/8686bc.png" height="55" alt="Platform Engineers" loading="lazy" title="Platform Engineers"></a></div> <div class="col-9 col-md-10 text-right"><a href="#" data-toggle-class="#menu1;hidden-xs" class="hamburger-toggle"><i class="icon icon--sm stack-interface stack-menu"></i></a></div></div></div></div> <nav id="menu1" data-scroll-class="366px:pos-fixed" class="bar bar--sm bar-1 hidden-xs"><div class="container"><div class="row align-items-center"><div class="hidden-xs d-flex align-items-center"><div class="bar__module"><a href="/"><img src="/_nuxt/image/8686bc.png" height="55" alt="Platform Engineers" loading="lazy" title="Platform Engineers"></a></div></div> <div class="col text-right text-left-xs text-left-sm"><div class="bar__module"><ul class="menu-horizontal text-left"><li><a href="/">Home</a></li> <li><a href="/about-us">About Us</a></li> <li class="dropdown"><span class="dropdown__trigger">Services</span> <div class="dropdown__container"><div class="container"><div class="row"><div class="mt-1 dropdown__content col-lg-3 col-md-4 col-sm-6 p-3"><ul class="menu-vertical"><li><a href="/services/platform-engineering">Platform Engineering</a></li><li><a href="/services/kubernetes-consulting-services">Kubernetes Consulting</a></li><li><a href="/services/containerization">Containerization</a></li><li><a href="/services/performance-optimization">Performance Optimization</a></li><li><a href="/services/ci-cd-implementation">CI/CD Implementation</a></li><li><a href="/services/infrastructure-maintenance-and-support">Infra Maintenance & Support</a></li></ul></div></div></div></div></li> <li class="dropdown"><span class="dropdown__trigger">Industries</span> <div class="dropdown__container"><div class="container"><div class="row"><div class="mt-1 dropdown__content col-lg-3 col-md-4 col-sm-6 p-3"><ul class="menu-vertical"><li><a href="/industries/SaaS">SaaS</a></li><li><a href="/industries/IoT">IoT</a></li><li><a href="/industries/ecommerce">eCommerce</a></li><li><a href="/industries/enterprise">Enterprise</a></li><li><a href="/industries/fintech">FinTech</a></li></ul></div></div></div></div></li> <li><a href="/blog">Blog</a></li> <li><a href="/case-studies">Case Studies</a></li></ul></div> <div class="bar__module"><a href="/contact-us" class="btn btn--sm btn--primary type--uppercase b-30"><span class="btn__text">Contact Us</span></a></div></div></div></div></nav></div> <div class="container"><div class="row"><div class="col-md-6 d-flex align-items-center justify-content-center"><div><div><h2>S6-Overlay quickstart</h2></div> <div class="d-flex align-items-center mt-3"><div class="d-flex align-items-center mr-2" style="border-radius:200px"><img src="/_nuxt/image/69505e.png" alt="S6-Overlay quickstart" title="S6-Overlay quickstart" class="p-0 m-0 rounded author-s"></div> <div><strong class="m-0 p-0 lh-1">
+                  Munir
+                  Khakhi
+                </strong> <div class="lh-1">
+                  Wednesday, November 08, 2023 |
+                  5 minutes
+                </div></div></div></div></div> <div class="col-md-6 img-align"><img src="/_nuxt/image/bda3f2.png" height="400" alt="S6-Overlay quickstart | Platform Engineers" loading="lazy" class="img-dim"></div></div></div></div> <section class="bg-- wave-bk-1"><div class="container"><div class="row"><div class="col-lg-10 offset-lg-1 bs-1 p-5 b-30 bg-white"><div class="fc-lead ul-list"><p data-pm-slice="1 1 []">S6-overlay is designed for docker containers. But, It is hard to understand from <u><a href="https://github.com/just-containers/s6-overlay/blob/master/README.md" rel="noopener noreferrer nofollow">Readme</a></u> of <a href="https://github.com/just-containers/s6-overlay" rel="noopener noreferrer nofollow">repository</a>. So, I thought that let’s write quick start guide for it.</p>
+<h3><span class="heading-content">What is s6-overlay?</span></h3>
+<p>S6-overlay is process manager which is designed for containerization from ground up. It is a perfect tool to manage lifetime(init to shutdown) of container. I can say that it is a better alternative of supervisord. Why I am saying that? Let’s see features of s6-overlay.</p>
+<h3><span class="heading-content">Features of s6-overlay</span></h3>
+<ul>
+<li>
+<p>You can run one-time and long running processes using it.</p>
+</li>
+<li>
+<p>You can define dependencies of processes.</p>
+</li>
+<li>
+<p>You can set sequence of process</p>
+</li>
+<li>
+<p>It supports templating for scripts with environment variables.</p>
+</li>
+<li>
+<p>Easy to install in any docker image (1 or 2 tarballs)</p>
+</li>
+<li>
+<p>It supports log rotating.</p>
+</li>
+<li>
+<p>Graceful shutdown. Also, you can run your own script or process before the shutdown</p>
+</li>
+<li>
+<p>Multi-arch container images are supported.</p>
+</li>
+</ul>
+<h3><span class="heading-content">Directory Structure</span></h3>
+<p>S6-overlay directory structure makes it different than other process managers. Due to directory structure, instead of single file, it gives us flexibility to inject more processes from app level image without overriding base image’s processes. <code class="inline" spellcheck="false">/etc/s6-overlay/s6-rc</code> will be base directory. You need to create directory for each process that you want to run. In each directory you need to create few files. Let’s understand each file.</p>
+<p><code class="inline" spellcheck="false">type</code> - In that file you need to write just <code class="inline" spellcheck="false">oneshot</code> or <code class="inline" spellcheck="false">longrun</code>. If you want to run any script as initializations tasks before your main processes then <code class="inline" spellcheck="false">oneshot</code> is useful. If you want to run some daemon processes which should be supervise by s6 then you can use <code class="inline" spellcheck="false">longrun</code></p>
+<p><code class="inline" spellcheck="false">up</code> - In this file you need to pass filepath of your script. It will be just path of your script. If you will not pass that then s6 will consider <code class="inline" spellcheck="false">run</code> as your script.</p>
+<p><code class="inline" spellcheck="false">run</code> - Here you can write your script/process. If you want to use environment variable then you can also use <a href="https://skarnet.org/software/execline/execlineb.html" rel="noopener noreferrer nofollow">execlineb</a></p>
+<p><code class="inline" spellcheck="false">dependencies.d</code> - This is directory. If your process is dependent on another process then you can create an empty file with name of that process in this directory. You can create multiple files, if your process is dependent on multiple processes.</p>
+<p>Finally, it will look like below</p>
+<div class="code-block with-line-numbers" data-language="javascript">
+<pre><code spellcheck="false">s6-overlay
+└── s6-rc.d
+    ├── init-nginx
+    │   ├── dependencies.d
+    │   │   └── base
+    │   ├── run
+    │   ├── type
+    │   └── up
+    ├── init-php82-fpm
+    │   ├── dependencies.d
+    │   │   └── init-nginx
+    │   ├── run
+    │   ├── type
+    │   └── up
+    ├── init-usermod
+    │   ├── dependencies.d
+    │   │   └── init-nginx
+    │   ├── run
+    │   ├── type
+    │   └── up
+    ├── svc-nginx
+    │   ├── dependencies.d
+    │   │   ├── init-nginx
+    │   │   └── svc-php82-fpm
+    │   ├── run
+    │   └── type
+    ├── svc-php82-fpm
+    │   ├── dependencies.d
+    │   ├── run
+    │   └── type
+    ├── svc-stdout
+    │   ├── dependencies.d
+    │   │   ├── svc-nginx
+    │   │   └── svc-php82-fpm
+    │   ├── run
+    │   └── type
+    └── user
+        └── contents.d
+            ├── init-nginx
+            ├── init-php82-fpm
+            ├── init-usermod
+            ├── svc-nginx
+            ├── svc-php82-fpm
+            └── svc-stdout</code></pre>
+</div>
+<h3><span class="heading-content">Installing S6</span></h3>
+<p>S6-overlay comes in few tar files. They gave <a href="https://github.com/just-containers/s6-overlay?tab=readme-ov-file#installation" rel="noopener noreferrer nofollow">detailed descriptions</a> of all tarfiles. If you want to use script with environment variable then you need to install symlinks tarfiles. If you are running daemons that cannot log to stderr to take advantage of the s6 logging infrastructure, but hardcode the use of the old <code class="inline" spellcheck="false">syslog()</code> mechanism, you can install <code class="inline" spellcheck="false">syslog-overlay-noarch</code> tar file. Here is sample code to install S6 in docker image. You can find full image <a href="https://github.com/Improwised/docker-php-base/tree/s6-php82" rel="noopener noreferrer nofollow">here</a>.</p>
+<div class="code-block with-line-numbers" data-language="bash">
+<pre><code spellcheck="false">FROM alpine:3.18
+
+ARG S6_OVERLAY_VERSION="3.1.5.0"
+ARG S6_OVERLAY_ARCH="x86_64"
+
+# add s6 overlay
+ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp
+RUN tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz
+ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-${S6_OVERLAY_ARCH}.tar.xz /tmp
+RUN tar -C / -Jxpf /tmp/s6-overlay-${S6_OVERLAY_ARCH}.tar.xz
+
+# add s6 optional symlinks
+ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-symlinks-noarch.tar.xz /tmp
+RUN tar -C / -Jxpf /tmp/s6-overlay-symlinks-noarch.tar.xz
+ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-symlinks-arch.tar.xz /tmp
+RUN tar -C / -Jxpf /tmp/s6-overlay-symlinks-arch.tar.xz
+ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/syslogd-overlay-noarch.tar.xz /tmp
+RUN tar -C / -Jxpf /tmp/syslogd-overlay-noarch.tar.xz
+</code></pre>
+</div>
+<p>When you need to run PHP application on production you need to use PHP-FPM as PHP is single threaded so it can’t handle heavy traffic with minimal use of memory and CPU. So, s6-overlay is perfect for those kind of applications. So, In this example we will run PHP-FPM & nginx.</p>
+<h3><span class="heading-content">Installing PHP & Nginx</span></h3>
+<p>you can install PHP and nginx using package manager. In our case we are using alpine base image so, we will use apk to install PHP & Nginx. It will look like below:</p>
+<div class="code-block with-line-numbers" data-language="bash">
+<pre><code spellcheck="false"># Install OS Dependencies
+RUN set -ex \
+  && apk add --no-cache --virtual .build-deps \
+    autoconf automake build-base python3 gmp-dev \
+    curl \
+    tar \
+  && apk add --no-cache --virtual .run-deps \
+    nodejs npm \
+    # PHP and extensions
+    php82 php82-bcmath php82-ctype php82-curl php82-dom php82-exif php82-fileinfo \
+    php82-fpm php82-gd php82-gmp php82-iconv php82-intl php82-mbstring \
+    php82-mysqlnd php82-mysqli php82-opcache php82-openssl php82-pcntl php82-pecl-apcu php82-pdo php82-pdo_mysql \
+    php82-phar php82-posix php82-session php82-simplexml php82-sockets php82-sqlite3 php82-tidy \
+    php82-tokenizer php82-xml php82-xmlreader php82-xmlwriter php82-zip php82-pecl-xdebug php82-pecl-redis php82-soap php82-sodium php82-pdo_sqlite php82-pdo_pgsql php82-pgsql \
+    # Other dependencies
+    mariadb-client sudo shadow \
+    # Miscellaneous packages
+    bash ca-certificates dialog git libjpeg libpng-dev openssh-client vim wget shadow \
+    # Nginx
+    nginx \
+    # Create directories
+  && mkdir -p /etc/nginx \
+    && mkdir -p /run/nginx \
+    && mkdir -p /etc/nginx/sites-available \
+    && mkdir -p /etc/nginx/sites-enabled \
+    && rm -Rf /var/www/* \
+    && rm -Rf /etc/nginx/nginx.conf \
+  # Composer
+  && wget https://composer.github.io/installer.sig -O - -q | tr -d '\n' > installer.sig \
+    && php82 -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
+    && php82 -r "if (hash_file('SHA384', 'composer-setup.php') === file_get_contents('installer.sig')) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" \
+    && php82 composer-setup.php --install-dir=/usr/bin --filename=composer \
+    && php82 -r "unlink('composer-setup.php'); unlink('installer.sig');" \
+  # Cleanup
+  && apk del .build-deps</code></pre>
+</div>
+<p>Here we also installed Nodejs and npm as we are using this image for the Laravel app in which frontend files will be built using vite.</p>
+<p>Now we need PHP-FPM and Nginx config. That generally we kept in base image repo in following directory structure</p>
+<div class="code-block with-line-numbers" data-language="javascript">
+<pre><code spellcheck="false">└── rootfs
+    └── etc
+        ├── nginx
+        │   ├── nginx.conf
+        │   ├── sites-available
+        │   │   └── default.conf
+        │   └── sites-enabled
+        ├── php82
+        │   ├── conf.d
+        │   ├── php-fpm.conf
+        │   ├── php-fpm.d
+        │   │   └── www.conf
+        │   └── php.ini
+        ├── s6-overlay
+        │   └── s6-rc.d</code></pre>
+</div>
+<p>So we added that using below line in Dockerfile</p>
+<div class="code-block with-line-numbers" data-language="javascript">
+<pre><code spellcheck="false">ADD rootfs /</code></pre>
+</div>
+<h3><span class="heading-content">Setting Users & Permission in your image</span></h3>
+<p>By default, docker runs containers with <code class="inline" spellcheck="false">root</code> privileges. This is fine for local development as developer need to install new packages or edit configs. But, It is not good for production as anyone who have access of that container can add packages or change permissions. So, to run your process as a non-root user you need to specify that user/UID. In this case we will run process as <code class="inline" spellcheck="false">nginx</code> user. Using below script we will set UID & GID of nginx user and group. We included that script in s6-overlay, so it will run as <code class="inline" spellcheck="false">oneshot</code> before PHP-FPM and nginx start.</p>
+<div class="code-block with-line-numbers" data-language="javascript">
+<pre><code spellcheck="false">#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+UID=${UID:-911}
+GID=${GID:-911}
+
+usermod -u "$UID" nginx && groupmod -g "$GID" nginx</code></pre>
+</div>
+<p>In that script, you can use environment variables that you passed to your container.</p>
+<p>i.e <code class="inline" spellcheck="false">docker run --name s6-app -e UID -e GID -p 8888:80 -v .:/var/www</code></p>
+<h3><span class="heading-content">Process Sequence</span></h3>
+<p>When you are running multiple processes, then you need to run those in some sequence too. It is very easy in s6 to set that sequence. Our nginx process is dependent on nginx init process so, we can set sequence like below</p>
+<div class="code-block with-line-numbers" data-language="javascript">
+<pre><code spellcheck="false">cd svc-nginx
+mkdir dependencies.d
+touch init-nginx svc-php82-fpm</code></pre>
+</div>
+<p>Now, <code class="inline" spellcheck="false">svc-nginx</code> will start only after <code class="inline" spellcheck="false">init-nginx</code> will be completed(as it is oneshot) and <code class="inline" spellcheck="false">svc-php82-fpm</code> will be in a running state.</p>
+<h3><span class="heading-content">Graceful Shutdown</span></h3>
+<p>Graceful shutdown is important if you want proper state of data or response when container exit. S6-overlay supports <code class="inline" spellcheck="false">S6_SERVICES_GRACETIME</code> & <code class="inline" spellcheck="false">S6_KILL_GRACETIME</code> variables to set gracetime. Also, s6-overlay supports to change exit code that container will return on exit. You can write <code class="inline" spellcheck="false">finish</code> file in your process directory. Suppose, I am running a process which is not important then I can finish script to return 0 status like below. Finish script is optional, you only need it when you want to modify exitcode or want to run some cleanup process.</p>
+<div class="code-block with-line-numbers" data-language="bash">
+<pre><code spellcheck="false">#!/bin/sh
+
+echo "0" > /run/s6-linux-init-container-results/exitcode</code></pre>
+</div>
+<h3><span class="heading-content">Extending Image</span></h3>
+<p>As s6-overlay follows directory structure instead of single file. It is very easy to extend this image from another image. Now, we can build many images from this image and add as many other processes as we want. Just by writing something like below without overwriting anything existing in s6.</p>
+<div class="code-block with-line-numbers" data-language="javascript">
+<pre><code spellcheck="false">COPY svc-crond /etc/s6-overlay/s6-rc.d/svc-crond</code></pre>
+</div>
+<h3><span class="heading-content">Summary</span></h3>
+<p>We used supervisor in production for many years. It is not solving all problems which s6-overlay is solving. It is modern alternative to supervisor. It is perfect for images in which we need to run multiple processes.</p></div> <hr> <div class="d-flex align-items-center flex-wrap"></div> <hr> <div class="article__share mt-0"><ul class="social-list list-inline list--hover blog_social" style="margin:0!important;padding:0!important"><li class="list-inline-item mr-0"><a href="javascript:void(0)" class="share-network-email"><i class="socicon socicon-google icon icon--xs"></i></a></li> <li class="list-inline-item mr-0"><a href="javascript:void(0)" class="share-network-linkedin"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li> <li class="list-inline-item mr-0"><a href="javascript:void(0)" class="share-network-twitter"><i class="socicon socicon-twitter icon icon--xs"></i></a></li> <li class="list-inline-item mr-0"><a href="javascript:void(0)" class="share-network-facebook"><i class="socicon socicon-facebook icon icon--xs"></i></a></li> <li class="list-inline-item mr-0"><a href="javascript:void(0)" class="share-network-whatsapp"><i class="socicon socicon-whatsapp icon icon--xs"></i></a></li></ul></div></div></div></div></section></div> <footer class="space--sm footer-2 bg--dark"><div class="container"><div class="row"><div class="col-md-3 col-sm-6 col-12 mb-5"><h6 class="type--uppercase m-0">Company</h6> <ul class="list--hover"><li><a href="/about-us">About Us</a></li></ul> <h6 class="type--uppercase m-0">Resources</h6> <ul class="list--hover"><li><a href="/blog">Blog</a></li> <li><a href="/case-studies">Case Studies</a></li></ul></div> <div class="col-md-3 col-sm-6 col-12 mb-5"><h6 class="type--uppercase m-0">Services</h6> <ul class="list--hover"><li><a href="/services/platform-engineering">Platform Engineering</a></li><li><a href="/services/kubernetes-consulting-services">Kubernetes Consulting</a></li><li><a href="/services/containerization">Containerization</a></li><li><a href="/services/performance-optimization">Performance Optimization</a></li><li><a href="/services/ci-cd-implementation">CI/CD Implementation</a></li><li><a href="/services/infrastructure-maintenance-and-support">Infra Maintenance & Support</a></li></ul></div> <div class="col-md-3 col-sm-6 col-12 mb-5"><h6 class="type--uppercase m-0">Industries</h6> <ul class="list--hover"><li><a href="/industries/SaaS">SaaS</a></li><li><a href="/industries/IoT">IoT</a></li><li><a href="/industries/ecommerce">eCommerce</a></li><li><a href="/industries/enterprise">Enterprise</a></li><li><a href="/industries/fintech">FinTech</a></li></ul></div> <div class="col-md-3 col-sm-6 col-12 mb-5"><h6 class="type--uppercase m-0">Support</h6> <ul class="list--hover"><li><a href="/contact-us">Contact Us</a></li></ul></div></div> <div class="row"><div class="col-md-12 text-center"><span class="type--fine-print">© <span class="update-year"></span> Platform Engineers</span></div></div></div></footer> <a href="#start" data-scroll-class="100vh:active" title="click & go to top of the page" class="back-to-top inner-link"><i class="stack-interface stack-up-open-big"></i></a> <script src="/theme/js/jquery-3.1.1.min.js"></script> <script src="/theme/js/scripts.js"></script> <script src="/js/contactus.js"></script></div></div></div><script defer src="/_nuxt/static/1699448422/blog/s6-overlay-quickstart/state.js"></script><script src="/_nuxt/160727e.js" defer></script><script src="/_nuxt/86c3f09.js" defer></script><script src="/_nuxt/69e60eb.js" defer></script><script src="/_nuxt/0a72c78.js" defer></script><script src="/_nuxt/bb34b37.js" defer></script><script src="/_nuxt/4688b3a.js" defer></script><script data-n-head="ssr" src="https://www.googletagmanager.com/gtag/js?id=G-LRC7N9VH4L" data-body="true"></script><script data-n-head="ssr" src="/google-tag.js" data-body="true"></script><script data-n-head="ssr" src="/js/chaskiq.js" data-body="true"></script><script data-n-head="ssr" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" data-body="true"></script><script data-n-head="ssr" src="/js/hljs.js" data-body="true"></script>
+  </body>
+</html>
