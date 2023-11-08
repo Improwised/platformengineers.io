@@ -59,7 +59,7 @@
           <div class="col-lg-10 offset-lg-1 bs-1 p-5 b-30 bg-white">
             <div
               v-if="blog.content"
-              class="lead fc-lead ul-list"
+              class="fc-lead ul-list"
               v-html="blog.content"
             ></div>
 
@@ -163,10 +163,9 @@ export default {
     const title = params.slug;
     //  const tagsname = "";
     const blog = await app.$axios.$get(app.$urls.blog(title));
-    blog.data[0].content = app.$unescapeHTML(blog.data[0].content);
+    // blog.data[0].content = app.$unescapeHTML(blog.data[0].content);
     blog.data[0].content = app.$dImage(blog.data[0].content);
-    blog.data[0].content = await app.$gist(blog.data[0].content);
-    console.log(blog.data[0]);
+    // blog.data[0].content = await app.$gist(blog.data[0].content);
     return { blog: blog.data[0] };
   },
   data() {
@@ -181,10 +180,12 @@ export default {
     }
   },
   head() {
-    const image = this.$img(this.$urls.assets(this.blog.image.id), {
-      format: "png",
-      height: "400px",
-    });
+    const image =
+      this.blog?.image?.id &&
+      this.$img(this.$urls.assets(this.blog.image.id), {
+        format: "png",
+        height: "400px",
+      });
 
     const title = `${this.blog && this.blog.seo_title} | Platform Engineers`;
     const description = `${
@@ -255,6 +256,16 @@ export default {
         {
           rel: "stylesheet",
           href: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css",
+        },
+      ],
+      script: [
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js",
+          body: true,
+        },
+        {
+          src: "/js/hljs.js",
+          body: true,
         },
       ],
     };
@@ -388,5 +399,13 @@ export default {
   max-width: 40px;
   max-height: 40px;
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+}
+
+.blog pre {
+  padding: 0 !important;
+}
+
+.blog table tr:not(:last-of-type) {
+  border: none;
 }
 </style>
