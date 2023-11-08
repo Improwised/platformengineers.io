@@ -290,8 +290,8 @@ export default function (mode) {
     link: _link,
     script: [
       { 
-        type: "application/ld+json", 
-        json: structuredLdJsonData 
+        type: "application/ld+json",
+        json: structuredLdJsonData
       },
       {
         src: "https://www.googletagmanager.com/gtag/js?id=G-LRC7N9VH4L",
@@ -301,6 +301,10 @@ export default function (mode) {
         src: "/google-tag.js",
         body: true,
       },
+      {
+        src:"/js/chaskiq.js",
+        body:true,
+      }
     ],
   };
 }
