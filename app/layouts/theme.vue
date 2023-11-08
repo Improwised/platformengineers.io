@@ -29,23 +29,6 @@
     <script src="/theme/js/jquery-3.1.1.min.js"></script>
     <script src="/theme/js/scripts.js"></script>
     <script src="/js/contactus.js"></script>
-    <script>
-      (function (d, t) {
-        var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-        g.src = "https://support.platformengineers.io/embed.js";
-        s.parentNode.insertBefore(g, s);
-        g.onload = function () {
-          new window.ChaskiqMessengerEncrypted({
-            domain: "https://support.platformengineers.io",
-            ws: "wss://support.platformengineers.io/cable",
-            app_id: "BfzTsCS7K4vKytFvEP5Yv7Fd",
-            data: "YOUR_ENCRYPTED_JWE_DATA",
-            lang: "USER_LANG_OR_DEFAULTS_TO_BROWSER_LANG",
-          });
-        };
-      })(document, "script");
-    </script>
   </div>
 </template>
 
