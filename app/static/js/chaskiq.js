@@ -18,7 +18,6 @@
       app_id: "BfzTsCS7K4vKytFvEP5Yv7Fd",
       data: "YOUR_ENCRYPTED_JWE_DATA",
       lang: "USER_LANG_OR_DEFAULTS_TO_BROWSER_LANG",
-      right: right,
     });
   };
 })(document, "script");
