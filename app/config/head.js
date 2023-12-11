@@ -289,7 +289,7 @@ export default function (mode) {
     meta,
     link: _link,
     script: [
-      { 
+      {
         type: "application/ld+json",
         json: structuredLdJsonData
       },
@@ -300,10 +300,6 @@ export default function (mode) {
       {
         src: "/google-tag.js",
         body: true,
-      },
-      {
-        src:"/js/chaskiq.js",
-        body:true,
       }
     ],
   };
