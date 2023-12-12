@@ -46,7 +46,17 @@
               <a href="/contact-us">Contact Us</a>
             </li>
           </ul>
+          <h6 class="type--uppercase m-0">Assessment</h6>
+          <ul class="list--hover">
+            <li>
+              <a href="/assessment">Cost Assessment</a>
+            </li>
+            <li>
+              <a href="/assessment">Performance Assessment</a>
+            </li>
+          </ul>
         </div>
+        <!-- <div class="col-md-3 col-sm-6 col-12 mb-5"></div> -->
       </div>
       <div class="row">
         <div class="col-md-12 text-center">

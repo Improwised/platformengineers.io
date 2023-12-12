@@ -38,7 +38,10 @@
         </section>
       </div>
 
-      <section id="toolBox" class="text-center technologies space--xs o_05">
+      <section
+        id="toolBox"
+        class="text-center technologies space--xs o_05 pb-0"
+      >
         <div class="container-fluid">
           <div class="row text-center justify-content-center">
             <div class="">
@@ -162,9 +165,27 @@
         </div>
       </section>
 
-      <hr class="m-0" />
+      <div class="py-5">
+        <div
+          class="px-3 px-sm-0 py-5 py-md-0 d-flex align-items-center justify-content-center text-white as-call-to-action-block flex-wrap flex-md-nowrap"
+        >
+          <h3 class="p-0 p-md-5 m-0 text-white text-center">
+            Let's elevate your Architecture performance and Infrastructure cost
+            efficiency
+          </h3>
+          <div class="p-0 p-md-5">
+            <a
+              href="/assessment"
+              class="btn my-0 my-md-4 px-5 as-call-to-action b-30"
+              title="Assessment by platformengineers"
+            >
+              GET ASSESSMENT
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <section class="wave-bk">
+      <section class="wave-bk pt-0">
         <div class="container">
           <div class="row">
             <div class="text-center col-md-8 offset-md-2 pb-5">
@@ -208,6 +229,30 @@
           </div>
         </div>
       </section>
+
+      <!-- Call to Action -->
+      <div
+        class="d-flex align-items-center justify-content-center as-call-to-action-block"
+        :style="`background-image: url(${callToAction})`"
+      >
+        <div
+          class="d-flex align-items-center align-self-stretch p-3 p-sm-5 text-center"
+        >
+          <div>
+            <h2 class="text-white">
+              Assessment for
+              <span class="as-color-o">Application Performance</span> and
+              <span class="as-color-o">Infrastructure Cost</span> efficiency.
+            </h2>
+            <button
+              class="btn px-5 as-call-to-action b-30 m-0"
+              @click="scrollPricingSection"
+            >
+              SCHEDULE A CALL
+            </button>
+          </div>
+        </div>
+      </div>
 
       <section class="wave-bk-reverse bg--">
         <div class="container">
@@ -285,7 +330,15 @@ export default {
       whyUs,
     };
   },
-
+  data() {
+    return {
+      callToAction: this.$img("/img/as/call-to-action/background.svg", {
+        format: "png",
+        width: "378",
+        quality: "80",
+      }),
+    };
+  },
   head() {
     return {
       title: this.home && this.home.seo_title,
@@ -465,5 +518,35 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.as-call-to-action-block {
+  background-color: #093097;
+  background-image: url("/img/as/call-to-action/background.svg");
+}
+
+.btn.as-call-to-action {
+  color: #212121;
+  height: auto;
+  padding: 10px;
+  outline: none;
+  border-width: 2px;
+  border-color: #ff900a;
+  background-color: #ff900a;
+}
+
+.btn.as-call-to-action:hover {
+  color: #212121;
+  outline: none;
+  border-color: #ff900a;
+  background-color: #ff900a;
+}
+
+.as-color-o {
+  color: #ff900a;
+}
+
+.as-color-o:hover {
+  color: #ff900a;
 }
 </style>

@@ -5,6 +5,7 @@
     href="#start"
     data-scroll-class="100vh:active"
     title="click & go to top of the page"
+    aria-label="click & go to top of the page"
   >
     <i class="stack-interface stack-up-open-big"></i>
   </a>
