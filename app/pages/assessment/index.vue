@@ -686,7 +686,7 @@ export default {
   head() {
     const seoTitle = "Assessment by Platformengineers.io";
     const seoDescription =
-      "Assessment for Application Performance and Infrastructure Cost efficiency";
+      "Assessment for application performance and infrastructure cost efficiency";
     return {
       title: seoTitle,
       meta: [
