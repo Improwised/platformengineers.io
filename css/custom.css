@@ -95,3 +95,12 @@ img.img-dim {
   list-style: revert;
   padding: revert;
 }
+
+.btn--primary, .btn--primary:visited {
+  background-color: #1a59a2;
+  border-color: #1a59a2;  
+}
+
+.lead {
+  color: #303030;
+}
