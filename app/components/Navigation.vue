@@ -11,7 +11,8 @@
                 title="Platform Engineers"
                 format="png"
                 loading="lazy"
-                height="55px"
+                width="68"
+                height="55"
               />
             </a>
           </div>
@@ -43,7 +44,8 @@
                   title="Platform Engineers"
                   format="png"
                   loading="lazy"
-                  height="55px"
+                  width="68"
+                  height="55"
                 />
               </a>
             </div>
@@ -66,6 +68,12 @@
                           class="mt-1 dropdown__content col-lg-3 col-md-4 col-sm-6 p-3"
                         >
                           <ul class="menu-vertical">
+                            <li>
+                              <a href="/assessment">Cost Assessment</a>
+                            </li>
+                            <li>
+                              <a href="/assessment">Performance Assessment</a>
+                            </li>
                             <li
                               v-for="(service, index) in $store.state.services"
                               :key="index"
@@ -132,5 +140,15 @@
 <style>
 .nav-container ul {
   list-style: none !important;
+}
+
+.menu-horizontal > li:not(:hover) > a,
+.menu-horizontal > li:not(:hover) > span,
+.menu-horizontal > li:not(:hover) > .modal-instance > .modal-trigger {
+  opacity: 1;
+}
+
+.dropdown .dropdown__content:not([class="bg--dark"]) .menu-vertical a {
+  color: #252525;
 }
 </style>
