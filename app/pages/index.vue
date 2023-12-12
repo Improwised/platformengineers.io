@@ -170,7 +170,7 @@
           class="px-3 px-sm-0 py-5 py-md-0 d-flex align-items-center justify-content-center text-white as-call-to-action-block flex-wrap flex-md-nowrap"
         >
           <h3 class="p-0 p-md-5 m-0 text-white text-center">
-            Let's elevate your Architecture performance and Infrastructure cost
+            Let's elevate your application performance and infrastructure cost
             efficiency
           </h3>
           <div class="p-0 p-md-5">

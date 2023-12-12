@@ -614,8 +614,8 @@
       >
         <div>
           <h2 class="text-white">
-            Let's elevate your Architecture performance and Infrastructure cost
-            efficiency.
+            Let's elevate your application performance and infrastructure cost
+            efficiency
           </h2>
           <button
             class="btn px-5 as-call-to-action b-30 m-0"
