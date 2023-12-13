@@ -704,7 +704,7 @@ export default {
         },
         {
           property: "og:url",
-          content: process.env.BASE_URL + "/",
+          content: process.env.BASE_URL + this.$route.path + "/",
         },
         {
           property: "og:title",
