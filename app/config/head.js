@@ -300,9 +300,6 @@ export default function (mode) {
       {
         src: "/google-tag.js",
         body: true,
-      },
-      {
-        src: "/hotjar.js"
       }
     ],
   };

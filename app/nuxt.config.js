@@ -17,6 +17,7 @@ export default {
   plugins: [
     { src: "~/plugins/urlroutes" },
     { src: "~/plugins/download.js", mode: "server" },
+    { src: "~/plugins/hotjar.js", mode: "client" }
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
