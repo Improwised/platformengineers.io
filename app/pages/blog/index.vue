@@ -226,6 +226,10 @@ export default {
   line-height: 1;
 }
 
+.masonry__item {
+  display: flex;
+}
+
 .author-s {
   max-width: 40px;
   max-height: 40px;
