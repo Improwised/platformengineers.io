@@ -48,9 +48,11 @@
               </a>
               <div class="feature__body p-4">
                 <a :href="`/blog/${blog.slug}`" class="t-hover">
-                  <h5>{{ blog.title }}</h5>
+                  <h5 class="blog-title" :title="blog.title">
+                    {{ blog.title }}
+                  </h5>
                 </a>
-                <div class="d-flex align-items-center mt-3">
+                <div class="d-flex align-items-center mt-1">
                   <div
                     class="d-flex align-items-center mr-2"
                     style="border-radius: 200px"
@@ -107,7 +109,7 @@ export default {
       height: "400px",
     });
 
-    const blogTitle = "Blog | | Platform Engineers";
+    const blogTitle = "Blog | Platform Engineers";
     const blogDescription = "Blog | Platform Engineers";
     return {
       title: blogTitle,
@@ -230,5 +232,11 @@ export default {
   max-width: 40px;
   max-height: 40px;
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+}
+
+.blog-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
