@@ -230,30 +230,6 @@
         </div>
       </section>
 
-      <!-- Call to Action -->
-      <div
-        class="d-flex align-items-center justify-content-center as-call-to-action-block"
-        :style="`background-image: url(${callToAction})`"
-      >
-        <div
-          class="d-flex align-items-center align-self-stretch p-3 p-sm-5 text-center"
-        >
-          <div>
-            <h2 class="text-white">
-              Assessment for
-              <span class="as-color-o">Application Performance</span> and
-              <span class="as-color-o">Infrastructure Cost</span> efficiency.
-            </h2>
-            <button
-              class="btn px-5 as-call-to-action b-30 m-0"
-              @click="scrollPricingSection"
-            >
-              SCHEDULE A CALL
-            </button>
-          </div>
-        </div>
-      </div>
-
       <section class="wave-bk-reverse bg--">
         <div class="container">
           <div class="row">
@@ -291,7 +267,7 @@
         </div>
       </section>
 
-      <section class="space--xs bg--secondary">
+      <!--       <section class="space--xs bg--secondary">
         <div class="container">
           <div class="cta cta--horizontal text-center-xs row">
             <div class="col-6 d-flex align-items-center">
@@ -307,7 +283,34 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
+
+      <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
+        <div
+          class="container d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap"
+        >
+          <div>
+            <h3 class="mb-3 p-0 text-white">Let's talk about your project</h3>
+            <p class="text-white">
+              We would love to hear from you! If you're interested in improving
+              and scaling your project through our platform engineering
+              services, please don't hesitate to get in touch.
+            </p>
+          </div>
+          <div class="p-0 p-md-5">
+            <!-- <a
+              href="/assessment"
+              class="btn btn--primary type--uppercase b-30"
+              title="Assessment by platformengineers"
+            >
+              Contact Us
+            </a> -->
+            <a class="btn btn--primary type--uppercase b-30" href="/contact-us">
+              <span class="btn__text"> Contact Us </span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -328,15 +331,6 @@ export default {
       home,
       services,
       whyUs,
-    };
-  },
-  data() {
-    return {
-      callToAction: this.$img("/img/as/call-to-action/background.svg", {
-        format: "png",
-        width: "378",
-        quality: "80",
-      }),
     };
   },
   head() {
@@ -523,6 +517,10 @@ export default {
 .as-call-to-action-block {
   background-color: #093097;
   background-image: url("/img/as/call-to-action/background.svg");
+}
+
+.as-home {
+  background-color: #151515;
 }
 
 .btn.as-call-to-action {
