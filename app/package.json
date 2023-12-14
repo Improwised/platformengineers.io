@@ -1,5 +1,5 @@
 {
-  "name": "BuildInfraCloud",
+  "name": "platformengineers",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     }
   },
   "dependencies": {
+    "@hotjar/browser": "^1.0.9",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",

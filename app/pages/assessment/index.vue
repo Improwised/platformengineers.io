@@ -543,7 +543,7 @@
     </div>
 
     <!-- faqs -->
-    <div class="as-faqs py-5">
+    <div class="as-faqs py-5" :style="`background-image: url(${feature})`">
       <div class="container">
         <div class="row">
           <div class="text-center col-md-8 offset-md-2 py-5">
@@ -651,7 +651,6 @@ export default {
 
       feature: this.$img("/img/as/features/background.jpg", {
         format: "png",
-        quality: "80",
         width: "1875",
       }),
 
@@ -849,7 +848,7 @@ div.as-whyus .container {
   border: 1px solid #eee;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
 }
 
 @media only screen and (max-width: 767px) {
