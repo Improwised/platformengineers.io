@@ -18,7 +18,7 @@ export function slugify(value) {
 Vue.filter("formatDateTime", function (value) {
   if (!value) return "-";
 
-  return `${moment(value).local().format("dddd, MMMM DD, YYYY")}`;
+  return `${moment(value).local().format("ddd, DD/MM/YYYY")}`;
 });
 
 const urls = {

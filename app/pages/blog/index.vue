@@ -52,7 +52,7 @@
                     {{ blog.title }}
                   </h5>
                 </a>
-                <div class="d-flex align-items-center mt-3">
+                <div class="d-flex align-items-center mt-1">
                   <div
                     class="d-flex align-items-center mr-2"
                     style="border-radius: 200px"
@@ -109,7 +109,7 @@ export default {
       height: "400px",
     });
 
-    const blogTitle = "Blog | | Platform Engineers";
+    const blogTitle = "Blog | Platform Engineers";
     const blogDescription = "Blog | Platform Engineers";
     return {
       title: blogTitle,
@@ -235,7 +235,6 @@ export default {
 }
 
 .blog-title {
-  width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
