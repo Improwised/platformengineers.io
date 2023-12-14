@@ -297,14 +297,7 @@
               services, please don't hesitate to get in touch.
             </p>
           </div>
-          <div class="p-0 p-md-5">
-            <!-- <a
-              href="/assessment"
-              class="btn btn--primary type--uppercase b-30"
-              title="Assessment by platformengineers"
-            >
-              Contact Us
-            </a> -->
+          <div class="pt-3 pb-0 p-md-5">
             <a class="btn btn--primary type--uppercase b-30" href="/contact-us">
               <span class="btn__text"> Contact Us </span>
             </a>
