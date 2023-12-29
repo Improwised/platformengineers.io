@@ -683,9 +683,10 @@ export default {
   },
 
   head() {
-    const seoTitle = "Assessment by Platformengineers.io";
+    const seoTitle =
+      "Assessment Services for Application Performance Optimization | and Infrastructure cost assessment ";
     const seoDescription =
-      "Assessment for application performance and infrastructure cost efficiency";
+      "Let Platform Engineers assess your application and infrastructure to find areas for improvement and cost savings. Actionable assessment from Platform Engineers to improve your application's performance and reduce costs.";
     return {
       title: seoTitle,
       meta: [

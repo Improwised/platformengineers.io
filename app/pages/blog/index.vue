@@ -109,8 +109,10 @@ export default {
       height: "400px",
     });
 
-    const blogTitle = "Blog | Platform Engineers";
-    const blogDescription = "Blog | Platform Engineers";
+    const blogTitle =
+      "Blogs | Platform Engineering in the Multi-Cloud Era: A Guide to Success";
+    const blogDescription =
+      "Elevate your platform engineering game with this comprehensive guide. We cover key metrics for tracking progress, golden paths for internal platforms, and strategies for thriving in the multi-cloud era.";
     return {
       title: blogTitle,
       meta: [
