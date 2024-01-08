@@ -1,5 +1,5 @@
 <template>
-  <div v-if="home">
+  <div v-if="page">
     <div class="main-container">
       <div class="hero-bk">
         <Navigation />
@@ -10,8 +10,8 @@
                 class="col-md-6 col-12 d-flex align-items-center justify-content-center"
               >
                 <div>
-                  <h1>{{ home.tagline }}</h1>
-                  <p class="lead">{{ home.description }}</p>
+                  <h1>{{ page.title }}</h1>
+                  <div class="lead" v-html="page.description"></div>
                   <a
                     class="btn btn--primary type--uppercase b-30"
                     href="/contact-us"
@@ -25,8 +25,9 @@
                 class="col-md-6 col-12 d-flex align-items-center justify-content-center"
               >
                 <nuxt-img
-                  src="/img/l13.svg"
-                  alt="Platform Engineers"
+                  v-if="page && page.hero_image && page.hero_image.id"
+                  :src="$urls.assets(page.hero_image.id)"
+                  :alt="`${page.hero_image.title} | Platform Engineers`"
                   format="png"
                   loading="lazy"
                   height="456px"
@@ -40,7 +41,7 @@
 
       <Technologies />
 
-      <div class="py-5">
+      <div class="pt-5">
         <div
           class="px-3 px-sm-0 py-5 py-md-0 d-flex align-items-center justify-content-center text-white as-call-to-action-block flex-wrap flex-md-nowrap"
         >
@@ -60,46 +61,74 @@
         </div>
       </div>
 
-      <section class="wave-bk pt-0">
+      <section class="wave-bk border-bottom">
         <div class="container">
           <div class="row">
-            <div class="text-center col-md-8 offset-md-2 pb-5">
-              <h2>{{ home.services_title }}</h2>
-              <p class="lead">
-                {{ home.services_description }}
-              </p>
+            <div class="col-md-8 offset-md-2">
+              <h2 class="text-center m-0">{{ page.section_1_title }}</h2>
+              <div v-html="page.section_1_description"></div>
             </div>
+          </div>
+          <div class="row justify-content-center">
             <div
-              v-for="(service, index) in services"
+              v-for="(section, index) in page.section_1"
               :key="index"
-              class="col-md-6 col-lg-4 d-flex mt-5"
+              class="col-md-6 col-lg-6 d-flex mt-5"
             >
               <div
-                class="text-center w-100 p-5 bs-1 d-flex flex-column b-30 card-svg pos-r"
+                class="w-100 p-5 bs-11 d-flex flex-column b-30 card-svg pos-r"
               >
-                <div class="mb-4 zi-0">
-                  <nuxt-img
-                    :src="$urls.assets(service.icon_as_image)"
-                    :alt="service.title"
-                    :title="service.title"
-                    format="png"
-                    loading="lazy"
-                    height="80px"
-                  />
-                </div>
-                <a :href="`/services/${service.slug}`" class="t-hover zi-0">
-                  <h5 class="mb-0">{{ service.title }}</h5>
-                </a>
-                <p class="m-0 zi-0">
-                  {{ service.description }}
-                </p>
-                <a
-                  :href="`/services/${service.slug}`"
-                  class="d-lg-none mt-4 mb-0 text-center zi-0"
-                >
-                  Learn More
-                </a>
+                <h5 class="mb-0 zi-0 text-center">{{ section.title }}</h5>
+                <div class="zi-0" v-html="section.description"></div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section v-if="industriesNames && industriesNames.length" class="bg--">
+        <div class="container">
+          <div class="row pb-5">
+            <div class="col-md-8 offset-md-2">
+              <h2 class="m-0 text-center">{{ page.section_industry_title }}</h2>
+              <div v-html="page.section_industry_description"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              v-for="(industry, index) in industriesNames"
+              :key="index"
+              class="masonry__item col-lg-4 col-md-6"
+            >
+              <article class="b-30 bs-11">
+                <a
+                  :href="`/industries/${industry.slug}`"
+                  class="industry d-flex align-items-center justify-content-center p-4"
+                  style="height: 300px"
+                >
+                  <nuxt-img
+                    v-if="industry.image"
+                    :src="$urls.assets(industry.image)"
+                    :alt="industry.title"
+                    :title="industry.title"
+                    loading="lazy"
+                    format="png"
+                  />
+                </a>
+                <div class="feature__body px-4 pb-4 text-center">
+                  <a :href="`/industries/${industry.slug}`" class="t-hover">
+                    <h5>{{ industry.title }}</h5>
+                  </a>
+                  <p class="flex-grow-1 m-0">
+                    {{ industry.description }}
+                  </p>
+
+                  <p class="m-0"></p>
+                  <a :href="`/industries/${industry.slug}`" class="d-lg-none">
+                    Read More
+                  </a>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -108,73 +137,50 @@
       <section class="wave-bk-reverse bg--">
         <div class="container">
           <div class="row">
-            <div class="text-center col-md-8 offset-md-2 pb-5">
-              <h2>{{ home.whyus_title }}</h2>
-              <p class="lead">
-                {{ home.whyus_description }}
-              </p>
+            <div class="text-center col-md-8 offset-md-2">
+              <h2 class="m-0">{{ page.section_2_title }}</h2>
+              <div class="lead" v-html="page.section_2_description"></div>
             </div>
+          </div>
+          <div class="row justify-content-center">
             <div
-              v-for="(why, index) in whyUs"
+              v-for="(section, index) in page.section_2"
               :key="index"
               class="col-md-6 col-lg-4 d-flex mt-5"
             >
               <div
-                class="text-center w-100 p-5 bs-1 b-30 d-flex flex-column card-svg pos-r"
+                class="w-100 p-5 bs-1 d-flex flex-column b-30 card-svg pos-r"
               >
-                <div class="mb-4 zi-0">
-                  <nuxt-img
-                    :src="$urls.assets(why.image)"
-                    :alt="why.title"
-                    :title="why.title"
-                    format="png"
-                    loading="lazy"
-                    height="80px"
-                  />
-                </div>
-                <h5 class="mb-0 zi-0">{{ why.title }}</h5>
-                <p class="zi-0">
-                  {{ why.description }}
-                </p>
+                <h5 class="mb-0 zi-0 text-center">{{ section.title }}</h5>
+                <div
+                  class="zi-0 text-center"
+                  v-html="section.description"
+                ></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!--       <section class="space--xs bg--secondary">
-        <div class="container">
-          <div class="cta cta--horizontal text-center-xs row">
-            <div class="col-6 d-flex align-items-center">
-              <h4 class="m-0">Let's Connect</h4>
-            </div>
-            <div class="col-6 text-right text-center-xs">
-              <a
-                class="btn btn--primary type--uppercase b-30"
-                href="/contact-us"
-              >
-                <span class="btn__text">Contact Us</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
           class="container d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap"
         >
           <div>
-            <h3 class="mb-3 p-0 text-white">Let's talk about your project</h3>
-            <p class="text-white">
-              We would love to hear from you! If you're interested in improving
-              and scaling your project through our platform engineering
-              services, please don't hesitate to get in touch.
-            </p>
+            <h3 class="mb-3 p-0 text-white">{{ page.call_to_action_title }}</h3>
+            <div
+              class="text-white"
+              v-html="page.call_to_action_description"
+            ></div>
           </div>
           <div class="pt-3 pb-0 p-md-5">
-            <a class="btn btn--primary type--uppercase b-30" href="/contact-us">
-              <span class="btn__text"> Contact Us </span>
+            <a
+              class="btn btn--primary type--uppercase b-30"
+              :href="page.call_to_action_button_link"
+            >
+              <span class="btn__text">
+                {{ page.call_to_action_button_text }}
+              </span>
             </a>
           </div>
         </div>
@@ -194,26 +200,37 @@ export default {
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
-    const { data: home } = await app.$axios.$get(app.$urls.home);
-    const { data: services } = await app.$axios.$get(app.$urls.services);
-    const { data: whyUs } = await app.$axios.$get(app.$urls.whyUs);
+    const title = params.slug;
+    const page = await app.$axios.$get(app.$urls.landing_page_for_seo(title));
+
+    const { data: industriesNames } = await app.$axios.$get(
+      app.$urls.industriesNames
+    );
+    const { data: industries } = await app.$axios.$get(app.$urls.industries);
     return {
-      home,
-      services,
-      whyUs,
+      page: page.data[0],
+      industriesNames,
+      industries,
     };
   },
   head() {
+    const image =
+      this.page?.hero_image?.id &&
+      this.$img(this.$urls.assets(this.page.hero_image.id), {
+        format: "png",
+        height: "400px",
+      });
+
     return {
-      title: this.home && this.home.seo_title,
+      title: this.page && this.page.seo_title,
       meta: [
         {
           name: "description",
-          content: this.home && this.home.seo_description,
+          content: this.page && this.page.seo_description,
         },
         {
           name: "title",
-          content: this.home && this.home.seo_title,
+          content: this.page && this.page.seo_title,
         },
         {
           property: "og:type",
@@ -225,15 +242,15 @@ export default {
         },
         {
           property: "og:title",
-          content: this.home && this.home.seo_title,
+          content: this.page && this.page.seo_title,
         },
         {
           property: "og:description",
-          content: this.home && this.home.seo_description,
+          content: this.page && this.page.seo_description,
         },
         {
           property: "og:image",
-          content: process.env.BASE_URL + "/img/plateform-engineers.png",
+          content: process.env.BASE_URL + image,
         },
         {
           property: "twitter:card",
@@ -249,21 +266,21 @@ export default {
         },
         {
           property: "twitter:title",
-          content: this.home && this.home.seo_title,
+          content: this.page && this.page.seo_title,
         },
         {
           property: "twitter:description",
-          content: this.home && this.home.seo_description,
+          content: this.page && this.page.seo_description,
         },
         {
           property: "twitter:image",
-          content: process.env.BASE_URL + "/img/plateform-engineers.png",
+          content: process.env.BASE_URL + image,
         },
       ],
       link: [
         {
           rel: "canonical",
-          href: process.env.BASE_URL + "/",
+          href: process.env.BASE_URL + this.$route.path + "/",
         },
       ],
     };
@@ -319,12 +336,12 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.1;
   z-index: -1;
   background: url("/img/wave.svg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: bottom;
 }
 
 .wave-bk-reverse {
@@ -339,7 +356,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.1;
   z-index: -1;
   background: url("/img/wave-reverse.svg");
   background-size: cover;
@@ -416,5 +433,23 @@ export default {
 
 .as-color-o:hover {
   color: #ff900a;
+}
+</style>
+
+<style>
+.masonry__item {
+  display: flex;
+}
+
+.t-hover:hover {
+  text-decoration-color: #179bfd;
+}
+
+.t-hover:hover h5 {
+  color: #179bfd;
+}
+
+.bs-11 {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 </style>
