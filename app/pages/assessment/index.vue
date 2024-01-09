@@ -57,7 +57,7 @@
           </div>
           <div class="col-lg-6 py-3 py-sm-5">
             <strong class="as-color-o as-f-xxxl">IMPROVE PERFORMANCE</strong>
-            <h3>Performance-focused Application Assessment</h3>
+            <h3>Application Performance Assessment</h3>
             <p>
               Revitalize your applications with a
               <strong
@@ -120,7 +120,7 @@
         <div class="row d-flex align-items-center justify-content-center">
           <div class="col-lg-6 py-3 py-sm-5">
             <strong class="as-color-o as-f-xxxl">REDUCE COST</strong>
-            <h3>Cost-focused Infrastructure assessment</h3>
+            <h3>Infrastructure Cost Assessment</h3>
             <p>
               Unlock efficiency with insights into resource utilization,
               cost-conscious strategies, robust security measures, and
@@ -643,7 +643,60 @@
         </div>
       </div>
     </div>
+    <section v-if="industriesNames && industriesNames.length" class="bg--">
+      <div class="container">
+        <div class="row pb-5">
+          <div class="col-md-8 offset-md-2 text-center">
+            <h2 class="m-0">We Understand the Fundamentals!</h2>
+            <p>
+              Get clout by utilizing our industry exposure and proven
+              experience. We understand the nuances, regulatory requirements,
+              and significance of doing things correctly the first time around
+              having worked with a variety of clients. Whether it's a globally
+              distributed corporation with data centers or a rapidly growing
+              startup, we've got you covered!
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div
+            v-for="(industry, index) in industriesNames"
+            :key="index"
+            class="masonry__item col-lg-4 col-md-6"
+          >
+            <article class="b-30 bs-11">
+              <a
+                :href="`/industries/${industry.slug}`"
+                class="industry d-flex align-items-center justify-content-center p-4"
+                style="height: 300px"
+              >
+                <nuxt-img
+                  v-if="industry.image"
+                  :src="$urls.assets(industry.image)"
+                  :alt="industry.title"
+                  :title="industry.title"
+                  loading="lazy"
+                  format="png"
+                />
+              </a>
+              <div class="feature__body px-4 pb-4 text-center">
+                <a :href="`/industries/${industry.slug}`" class="t-hover">
+                  <h5>{{ industry.title }}</h5>
+                </a>
+                <p class="flex-grow-1 m-0">
+                  {{ industry.description }}
+                </p>
 
+                <p class="m-0"></p>
+                <a :href="`/industries/${industry.slug}`" class="d-lg-none">
+                  Read More
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- faqs -->
     <div class="as-faqs py-5" :style="`background-image: url(${feature})`">
       <div class="container">
@@ -740,6 +793,21 @@ export default {
     Navigation,
   },
   layout: "theme",
+  async asyncData({ app, params, payload }) {
+    const title = params.slug;
+    const page = await app.$axios.$get(app.$urls.landing_page_for_seo(title));
+
+    const { data: industriesNames } = await app.$axios.$get(
+      app.$urls.industriesNames
+    );
+    const { data: industries } = await app.$axios.$get(app.$urls.industries);
+
+    return {
+      page: page.data[0],
+      industriesNames,
+      industries,
+    };
+  },
   data() {
     return {
       faqs,
@@ -1182,5 +1250,58 @@ div.as-whyus .container {
   animation-name: fadeInLeft;
   animation-delay: 0.5s;
   animation-duration: 2s;
+}
+
+.bs-1 {
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
+    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+
+  /*  box-shadow: rgba(0, 0, 0, 0.3) -30px 0 30px 0; */
+
+  /*  box-shadow: -25px 0 20px -20px rgba(0, 0, 0, 0.45); */
+}
+
+.card-svg {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-svg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 0;
+  background: url("/img/card47.png") white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.as-home {
+  background-color: #151515;
+}
+
+.as-color-o:hover {
+  color: #ff900a;
+}
+
+.masonry__item {
+  display: flex;
+}
+
+.t-hover:hover {
+  text-decoration-color: #179bfd;
+}
+
+.t-hover:hover h5 {
+  color: #179bfd;
+}
+
+.bs-11 {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 </style>
