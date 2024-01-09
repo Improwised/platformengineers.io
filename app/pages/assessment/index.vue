@@ -59,8 +59,15 @@
             <strong class="as-color-o as-f-xxxl">IMPROVE PERFORMANCE</strong>
             <h3>Performance-focused Application Assessment</h3>
             <p>
-              Revitalize your applications with a focus on performance, scalable
-              architecture, and fortified reliability.
+              Revitalize your applications with a
+              <strong
+                ><a
+                  class="text-dark text-decoration-none font-weight-bold"
+                  target="_blank"
+                  href="https://platformengineers.io/services/platform-engineering"
+                  >focus on performance</a
+                ></strong
+              >, scalable architecture, and fortified reliability.
 
               <br />
               <br />
@@ -97,7 +104,14 @@
               </li>
               <li>
                 Provide observations on automated testing, suggest
-                considerations for continuous deployment strategies
+                considerations for
+                <a
+                  class="text-dark text-decoration-none font-weight-bold"
+                  target="_blank"
+                  href="https://platformengineers.io/services/ci-cd-implementation"
+                  >continuous deployment</a
+                >
+                strategies
               </li>
             </ul>
           </div>
@@ -109,8 +123,13 @@
             <h3>Cost-focused Infrastructure assessment</h3>
             <p>
               Unlock efficiency with insights into resource utilization,
-              cost-conscious strategies, robust security measures, and proactive
-              monitoring.
+              cost-conscious strategies, robust security measures, and
+              <a
+                class="text-dark text-decoration-none font-weight-bold"
+                target="_blank"
+                href="https://platformengineers.io/services/infrastructure-maintenance-and-support"
+                >proactive monitoring.</a
+              >
 
               <br />
               <br />
@@ -132,7 +151,15 @@
               <li>Evaluate security measures</li>
               <li>Review automation and IaC impact</li>
               <li>Evaluate monitoring</li>
-              <li>Analysis for predictive capacity planning</li>
+              <li>
+                Analysis for predictive
+                <a
+                  href="https://platformengineers.io/"
+                  class="text-dark text-decoration-none font-weight-bold"
+                  target="_blank"
+                  >capacity planning</a
+                >
+              </li>
             </ul>
           </div>
           <div
@@ -176,10 +203,47 @@
             <h2 class="m-0">Performance-focused Application Assessment</h2>
             <p class="lead">
               Evaluate the architectural design for optimal speed and
-              efficiency, considering key areas
+              efficiency, considering key areas.
             </p>
           </div>
-          <div class="col-md-6 col-lg-4 d-flex py-3 py-sm-5">
+
+          <div class="col-lg-8">
+            <div class="">
+              <p>
+                Slow response times and inconsistent performance result in lost
+                sales, irritated customers, and damaged brand reputations.
+                Performance evaluation can help with that. Performance
+                assessment Service will help in extensive technical knowledge to
+                analyze, diagnose, and optimize your application architecture.
+              </p>
+              <p class="">
+                From meticulous application performance analysis to in-depth
+                assessment platform utilization, we illuminate hidden
+                bottlenecks and inefficiencies that are causing problems to your
+                system.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="service-thumb">
+              <img src="img/choose_thumb1.png" alt="service-image" />
+              <div class="thumb-left wow fadeInLeft">
+                <img src="img/choose_left.png" alt="service-image" />
+              </div>
+              <div class="thumb-right wow fadeInLeft">
+                <img src="img/choose_right.png" alt="service-image" />
+              </div>
+              <div class="thumb-medile wow fadeInLeft">
+                <img
+                  src="img/choose_medile.png"
+                  class="loading-plane"
+                  alt="service-image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex py-3 pb-5">
             <div>
               <div class="mb-4 zi-0">
                 <nuxt-img
@@ -204,7 +268,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 d-flex py-3 py-sm-5">
+          <div class="col-md-6 col-lg-4 d-flex py-3 pb-5">
             <div>
               <div class="mb-4 zi-0">
                 <nuxt-img
@@ -227,7 +291,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 d-flex py-3 py-sm-5">
+          <div class="col-md-6 col-lg-4 d-flex py-3 pb-5">
             <div>
               <div class="mb-4 zi-0">
                 <nuxt-img
@@ -280,6 +344,44 @@
               Evaluate your infrastructure to optimize output while minimizing
               costs, addressing various aspects
             </p>
+          </div>
+          <div class="col-lg-8">
+            <div class="">
+              <p>
+                Utilize infrastructure cost optimization strategies using our
+                cloud cost management framework pinpoints optimization
+                opportunities, enabling you to optimize cloud infrastructure
+                spend with precision.
+              </p>
+              <p class="">
+                Through a comprehensive infrastructure cost assessment, we
+                diagnose overprovisioning and inefficiencies, empowering you to
+                fuel profitable growth. Embrace smarter infrastructure and
+                boundless possibilities.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="service-thumb">
+              <img src="img/choose_thumb2.png" alt="service-image" />
+              <div class="thumb-left2 wow fadeInLeft">
+                <img
+                  src="img/circle1.png"
+                  class="rotating"
+                  alt="service-image"
+                />
+              </div>
+              <div class="thumb-right2 wow fadeInLeft">
+                <img
+                  src="img/circle2.png"
+                  class="rotating"
+                  alt="service-image"
+                />
+              </div>
+              <!-- <div class="thumb-medile wow fadeInLeft">
+                <img src="img/choose_medile.png" alt="service-image" />
+              </div> -->
+            </div>
           </div>
           <div class="col-md-6 col-lg-4 d-flex py-3 py-sm-5">
             <div>
@@ -684,7 +786,7 @@ export default {
 
   head() {
     const seoTitle =
-      "Assessment Services for Application Performance Optimization | and Infrastructure cost assessment ";
+      "Assessment Services for Application Performance Optimization | Infrastructure cost assessment ";
     const seoDescription =
       "Let Platform Engineers assess your application and infrastructure to find areas for improvement and cost savings. Actionable assessment from Platform Engineers to improve your application's performance and reduce costs.";
     return {
@@ -1012,5 +1114,73 @@ div.as-whyus .container {
   .as-call-to-action-block h2 {
     font-size: 22px;
   }
+}
+
+.service-thumb {
+  position: relative;
+  height: 200px;
+}
+
+.service-thumb img {
+  height: auto;
+  max-width: none;
+  float: left;
+}
+
+.service-thumb .thumb-left {
+  top: 38%;
+  left: 10%;
+  animation-name: fadeInLeft;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+}
+
+.service-thumb .thumb-left,
+.service-thumb .thumb-left2,
+.service-thumb .thumb-right,
+.service-thumb .thumb-right2,
+.service-thumb .thumb-medile,
+.service-thumb .thumb-medile2 {
+  position: absolute;
+  height: 80px;
+}
+
+.service-thumb .thumb-left img,
+.service-thumb .thumb-left2 img,
+.service-thumb .thumb-right img,
+.service-thumb .thumb-right2 img,
+.service-thumb .thumb-medile img {
+  height: 100%;
+}
+
+.service-thumb .thumb-right {
+  top: 38%;
+  right: 45%;
+  animation-name: fadeInLeft;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+}
+
+.service-thumb .thumb-medile {
+  top: 8%;
+  left: 25%;
+  animation-name: fadeInUp;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+}
+
+.service-thumb .thumb-left2 {
+  top: 18%;
+  left: 12%;
+  animation: m 8s infinite linear;
+  transform-origin: 50% 120.7%;
+}
+
+.service-thumb .thumb-right2 {
+  top: 56%;
+  right: 46%;
+  animation-name: fadeInLeft;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
 }
 </style>
