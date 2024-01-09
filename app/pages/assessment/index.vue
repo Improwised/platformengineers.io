@@ -226,16 +226,16 @@
           </div>
           <div class="col-lg-4">
             <div class="service-thumb">
-              <img src="img/choose_thumb1.png" alt="service-image" />
+              <img src="/img/choose_thumb1.png" alt="service-image" />
               <div class="thumb-left wow fadeInLeft">
-                <img src="img/choose_left.png" alt="service-image" />
+                <img src="/img/choose_left.png" alt="service-image" />
               </div>
               <div class="thumb-right wow fadeInLeft">
-                <img src="img/choose_right.png" alt="service-image" />
+                <img src="/img/choose_right.png" alt="service-image" />
               </div>
               <div class="thumb-medile wow fadeInLeft">
                 <img
-                  src="img/choose_medile.png"
+                  src="/img/choose_medile.png"
                   class="loading-plane"
                   alt="service-image"
                 />
@@ -363,23 +363,23 @@
           </div>
           <div class="col-lg-4">
             <div class="service-thumb">
-              <img src="img/choose_thumb2.png" alt="service-image" />
+              <img src="/img/choose_thumb2.png" alt="service-image" />
               <div class="thumb-left2 wow fadeInLeft">
                 <img
-                  src="img/circle1.png"
+                  src="/img/circle1.png"
                   class="rotating"
                   alt="service-image"
                 />
               </div>
               <div class="thumb-right2 wow fadeInLeft">
                 <img
-                  src="img/circle2.png"
+                  src="/img/circle2.png"
                   class="rotating"
                   alt="service-image"
                 />
               </div>
               <!-- <div class="thumb-medile wow fadeInLeft">
-                <img src="img/choose_medile.png" alt="service-image" />
+                <img src="/img/choose_medile.png" alt="service-image" />
               </div> -->
             </div>
           </div>
