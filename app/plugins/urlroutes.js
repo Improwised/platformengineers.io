@@ -88,6 +88,9 @@ const urls = {
   //   `/items/blog?filter[status][_eq]=published&sort=sort,-id&limit=3&fields[]=*.*&filter[slug][_neq]=${title}&filter[tags][tags_id][_neq]=2`,
   // blogPageData: `/items/blog?filter[status][_eq]=published&sort=sort,-id&fields[]=*.*&filter[tags][tags_id][_neq]=2`,
   gallery: `/items/gallery?filter[status][_eq]=published&fields[]=*.*&sort=sort,-id`,
+  landing_pages_for_seo: `/items/pe_pages_seo`,
+  landing_page_for_seo: (title) =>
+    `/items/pe_pages_seo?filter[slug][_eq]=${title}&single=1&fields[]=*.*`,
 };
 
 export default function (context, inject) {
