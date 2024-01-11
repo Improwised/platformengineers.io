@@ -9485,3 +9485,10 @@ footer.footer-7 {
   color: rgba(8, 106, 216, 1);
   font-size: 12px;
 }
+
+section#shadow-host-companion
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
