@@ -2,7 +2,7 @@
   <div>
     <!-- TODO: Need to redesign page based on SEO expert Vision -->
     <div v-for="page in pages" :key="page.index">
-      <a :href="`/page/${page.slug}`">{{ page.slug }}</a>
+      <a :href="`/pages/${page.slug}`">{{ page.slug }}</a>
     </div>
   </div>
 </template>
