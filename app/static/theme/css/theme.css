@@ -9458,3 +9458,30 @@ footer.footer-7 {
   -webkit-transition: 0.5s linear;
   -moz-transition: 0.5s linear;
 }
+
+
+.info ul li {
+  font-weight: 600;
+  color: #232323;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  padding-left: 40px;
+}
+
+.info ul li::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "\e80c";
+  font-family: "stack-interface";
+  font-weight: 600;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  background: rgba(8, 106, 216, 0.1);
+  text-align: center;
+  border-radius: 50%;
+  color: rgba(8, 106, 216, 1);
+  font-size: 12px;
+}

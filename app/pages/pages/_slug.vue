@@ -60,27 +60,79 @@
           </div>
         </div>
       </div>
-
-      <section class="wave-bk border-bottom">
+      <section class="py-3">
         <div class="container">
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
-              <h2 class="text-center m-0">{{ page.section_1_title }}</h2>
+          <div
+            class="row d-flex align-items-center justify-content-center py-3 py-sm-5"
+          >
+            <div class="col-lg-6">
+              <strong class="as-color-o as-f-xxxl"
+                >Cloud Migration Management</strong
+              >
+              <h3>{{ page.section_1_title }}</h3>
               <div v-html="page.section_1_description"></div>
             </div>
-          </div>
-          <div class="row justify-content-center">
             <div
-              v-for="(section, index) in page.section_1"
-              :key="index"
-              class="col-md-6 col-lg-6 d-flex mt-5"
+              class="col-lg-6 d-flex align-items-center justify-content-center"
             >
-              <div
-                class="w-100 p-5 bs-11 d-flex flex-column b-30 card-svg pos-r"
-              >
-                <h5 class="mb-0 zi-0 text-center">{{ section.title }}</h5>
-                <div class="zi-0" v-html="section.description"></div>
+              <div class="thumb wow fadeInRight" data-wow-delay="0.6s">
+                <nuxt-img
+                  v-if="page.section1_image"
+                  :src="$urls.assets(page.section1_image.id)"
+                  :alt="page.section_1_title"
+                  :title="page.section_1_title"
+                  loading="lazy"
+                  format="png"
+                />
               </div>
+            </div>
+          </div>
+          <div
+            class="row d-flex align-items-center justify-content-center py-3 py-sm-5"
+          >
+            <div
+              class="col-lg-6 d-flex align-items-center justify-content-center"
+            >
+              <nuxt-img
+                v-if="page.section1_sub_image1"
+                :src="$urls.assets(page.section1_sub_image1.id)"
+                :alt="page.section1_sub_heading1"
+                :title="page.section1_sub_heading1"
+                loading="lazy"
+                format="png"
+              />
+            </div>
+            <div class="col-lg-6">
+              <strong class="as-color-o as-f-xxxl"
+                >Cloud Migration Management</strong
+              >
+
+              <h3>{{ page.section1_sub_heading1 }}</h3>
+              <div v-html="page.section1_sub_description1"></div>
+            </div>
+          </div>
+          <div
+            class="row d-flex align-items-center justify-content-center py-3 py-sm-5"
+          >
+            <div class="col-lg-6">
+              <strong class="as-color-o as-f-xxxl"
+                >Cloud Migration Management</strong
+              >
+
+              <h3>{{ page.section1_sub_heading2 }}</h3>
+              <div v-html="page.section1_sub_description2"></div>
+            </div>
+            <div
+              class="col-lg-6 d-flex align-items-center justify-content-center"
+            >
+              <nuxt-img
+                v-if="page.section1_sub_image2"
+                :src="$urls.assets(page.section1_sub_image2.id)"
+                :alt="page.section1_sub_heading2"
+                :title="page.section1_sub_heading2"
+                loading="lazy"
+                format="png"
+              />
             </div>
           </div>
         </div>
@@ -94,7 +146,7 @@
               <div v-html="page.section_industry_description"></div>
             </div>
           </div>
-          <div class="row">
+          <div class="row justify-content-center">
             <div
               v-for="(industry, index) in industriesNames"
               :key="index"
