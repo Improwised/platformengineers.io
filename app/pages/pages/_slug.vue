@@ -104,7 +104,7 @@
             </div>
             <div class="col-lg-6">
               <strong class="as-color-o as-f-xxxl"
-                >Cloud Migration Management</strong
+                >Cloud Engineering Services</strong
               >
 
               <h3>{{ page.section1_sub_heading1 }}</h3>
@@ -116,7 +116,7 @@
           >
             <div class="col-lg-6">
               <strong class="as-color-o as-f-xxxl"
-                >Cloud Migration Management</strong
+                >Cloud Migration Solutions</strong
               >
 
               <h3>{{ page.section1_sub_heading2 }}</h3>
