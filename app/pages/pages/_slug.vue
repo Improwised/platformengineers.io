@@ -138,6 +138,34 @@
         </div>
       </section>
 
+      <section class="wave-bk-reverse bg--">
+        <div class="container">
+          <div class="row">
+            <div class="text-center col-md-8 offset-md-2">
+              <h2 class="m-0">{{ page.section_2_title }}</h2>
+              <div class="lead" v-html="page.section_2_description"></div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div
+              v-for="(section, index) in page.section_2"
+              :key="index"
+              class="col-md-6 col-lg-4 d-flex mt-5"
+            >
+              <div
+                class="w-100 p-5 bs-1 d-flex flex-column b-30 card-svg pos-r"
+              >
+                <h5 class="mb-0 zi-0 text-center">{{ section.title }}</h5>
+                <div
+                  class="zi-0 text-center"
+                  v-html="section.description"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section v-if="industriesNames && industriesNames.length" class="bg--">
         <div class="container">
           <div class="row pb-5">
@@ -181,34 +209,6 @@
                   </a>
                 </div>
               </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="wave-bk-reverse bg--">
-        <div class="container">
-          <div class="row">
-            <div class="text-center col-md-8 offset-md-2">
-              <h2 class="m-0">{{ page.section_2_title }}</h2>
-              <div class="lead" v-html="page.section_2_description"></div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div
-              v-for="(section, index) in page.section_2"
-              :key="index"
-              class="col-md-6 col-lg-4 d-flex mt-5"
-            >
-              <div
-                class="w-100 p-5 bs-1 d-flex flex-column b-30 card-svg pos-r"
-              >
-                <h5 class="mb-0 zi-0 text-center">{{ section.title }}</h5>
-                <div
-                  class="zi-0 text-center"
-                  v-html="section.description"
-                ></div>
-              </div>
             </div>
           </div>
         </div>
