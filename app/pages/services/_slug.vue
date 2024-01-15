@@ -7,7 +7,12 @@
           <div
             class="col-md-6 d-flex align-items-center justify-content-center"
           >
-            <h2>{{ service.title }}</h2>
+            <div>
+              <h2>{{ service.title }}</h2>
+              <p class="lead">
+                {{ service.description }}
+              </p>
+            </div>
           </div>
           <div
             class="col-md-6 d-flex align-items-center justify-content-center"
