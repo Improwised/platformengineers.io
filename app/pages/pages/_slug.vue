@@ -66,9 +66,9 @@
             class="row d-flex align-items-center justify-content-center py-3 py-sm-5"
           >
             <div class="col-lg-6">
-              <strong class="as-color-o as-f-xxxl"
-                >Cloud Migration Management</strong
-              >
+              <strong class="as-color-o as-f-xxxl">{{
+                page.section1_sub_title
+              }}</strong>
               <h3>{{ page.section_1_title }}</h3>
               <div v-html="page.section_1_description"></div>
             </div>
@@ -103,9 +103,9 @@
               />
             </div>
             <div class="col-lg-6">
-              <strong class="as-color-o as-f-xxxl"
-                >Cloud Engineering Services</strong
-              >
+              <strong class="as-color-o as-f-xxxl">{{
+                page.section2_sub_title
+              }}</strong>
 
               <h3>{{ page.section1_sub_heading1 }}</h3>
               <div v-html="page.section1_sub_description1"></div>
@@ -115,9 +115,9 @@
             class="row d-flex align-items-center justify-content-center py-3 py-sm-5"
           >
             <div class="col-lg-6">
-              <strong class="as-color-o as-f-xxxl"
-                >Cloud Migration Solutions</strong
-              >
+              <strong class="as-color-o as-f-xxxl">{{
+                page.section3_sub_title
+              }}</strong>
 
               <h3>{{ page.section1_sub_heading2 }}</h3>
               <div v-html="page.section1_sub_description2"></div>
