@@ -1,5 +1,5 @@
 <template>
-  <footer class="space--sm footer-2 bg--dark">
+  <footer class="pt-4 pb-0 footer-2 bg--dark">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6 col-12 mb-5">
@@ -58,12 +58,12 @@
         </div>
         <!-- <div class="col-md-3 col-sm-6 col-12 mb-5"></div> -->
       </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <span class="type--fine-print"
-            >&copy; <span class="update-year"></span> Platform Engineers</span
-          >
-        </div>
+    </div>
+    <div class="sub-footer mt-3">
+      <div class="col-md-12 text-center">
+        <span class="type--fine-print"
+          >&copy; <span class="update-year"></span> Platform Engineers</span
+        >
       </div>
     </div>
   </footer>
