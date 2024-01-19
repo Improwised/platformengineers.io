@@ -40,7 +40,7 @@
 
       <Technologies />
 
-      <div class="py-5">
+      <section class="section-padding">
         <div
           class="px-3 px-sm-0 py-5 py-md-0 d-flex align-items-center justify-content-center text-white as-call-to-action-block flex-wrap flex-md-nowrap"
         >
@@ -58,14 +58,14 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <section class="wave-bk pt-0">
+      <section class="wave-bk section-padding">
         <div class="container">
           <div class="row">
             <div class="text-center col-md-8 offset-md-2 pb-5">
-              <h2>{{ home.services_title }}</h2>
-              <p class="lead">
+              <h2 class="mb-10">{{ home.services_title}}</h2>
+              <p class="para">
                 {{ home.services_description }}
               </p>
             </div>
@@ -105,12 +105,12 @@
         </div>
       </section>
 
-      <section class="wave-bk-reverse bg--">
+      <section class="wave-bk-reverse bg-- section-padding">
         <div class="container">
           <div class="row">
             <div class="text-center col-md-8 offset-md-2 pb-5">
-              <h2>{{ home.whyus_title }}</h2>
-              <p class="lead">
+              <h2 class="mb-10">{{ home.whyus_title }}</h2>
+              <p class="para">
                 {{ home.whyus_description }}
               </p>
             </div>
@@ -173,7 +173,10 @@
             </p>
           </div>
           <div class="pt-3 pb-0 p-md-5">
-            <a class="btn btn--primary type--uppercase b-30" href="/contact-us">
+            <a
+              class="type--uppercase btn my-0 my-md-4 px-5 as-call-to-action b-30"
+              href="/contact-us"
+            >
               <span class="btn__text"> Contact Us </span>
             </a>
           </div>
@@ -357,11 +360,11 @@ export default {
 }
 
 .t-hover:hover h5 {
-  color: #179bfd;
+  color: #8042e4;
 }
 
 .t-hover:hover {
-  text-decoration-color: #179bfd;
+  text-decoration-color: #8042e4;
 }
 
 .card-svg {
@@ -385,10 +388,17 @@ export default {
 }
 
 .as-call-to-action-block {
+  background: url(/img/as/call-to-action/background.svg),
+    linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%);
+}
+
+/* 
+.as-call-to-action-block {
   background-color: #093097;
   background-image: url("/img/as/call-to-action/background.svg");
 }
-
+ */
+ 
 .as-home {
   background-color: #151515;
 }

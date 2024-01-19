@@ -1,5 +1,5 @@
 <template>
-  <section id="toolBox" class="text-center technologies space--xs o_05 pb-0">
+  <section id="toolBox" class="text-center technologies space--xs o_05">
     <div class="container-fluid">
       <div class="row text-center justify-content-center">
         <div class="">

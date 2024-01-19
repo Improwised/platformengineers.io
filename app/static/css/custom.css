@@ -97,10 +97,37 @@ img.img-dim {
 }
 
 .btn--primary, .btn--primary:visited {
-  background-color: #1a59a2;
-  border-color: #1a59a2;  
-}
+  /* background-color: #1a59a2;
+  border-color: #1a59a2;   */
 
+  background: linear-gradient(to left,#5a66ef  0%, #8042e4 100%);
+  border-color: #8042e4;
+}
+.btn--primary:hover {
+  background: linear-gradient(to left,#8042e4  0%, #5a66ef 100%);
+}
 .lead {
   color: #303030;
+}
+.para
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+.mb-10
+{
+  margin-bottom: 10px;
+}
+.section-padding
+{
+  padding-top: 5.42857143em;
+    padding-bottom: 5.42857143em
+}
+
+.sub-footer
+{
+   background-color: #000;
+    padding-top: 10px;
+    
+    padding-bottom: 10px;
 }

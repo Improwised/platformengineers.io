@@ -12,7 +12,7 @@
           <div class="col-md-6 text-right">
             <nuxt-img
               src="/img/blog.png"
-              alt="Case Studies | Platform Engineers"
+              alt="Blog | Platform Engineers"
               format="png"
               loading="lazy"
               width="540px"
