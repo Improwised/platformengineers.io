@@ -41,16 +41,17 @@
                   :src="$urls.assets(blog.image.id)"
                   :alt="blog.title"
                   :title="blog.title"
-                  height="300px"
+                  height="300"
+                  width="300"
                   loading="lazy"
                   format="png"
                 />
               </a>
               <div class="feature__body p-4">
                 <a :href="`/blog/${blog.slug}`" class="t-hover">
-                  <h5 class="blog-title" :title="blog.title">
+                  <h2 class="blog-title h5" :title="blog.title">
                     {{ blog.title }}
-                  </h5>
+                  </h2>
                 </a>
                 <div class="d-flex align-items-center mt-1">
                   <div
@@ -63,6 +64,8 @@
                       :alt="blog.title"
                       :title="blog.title"
                       format="png"
+                      height="40"
+                      width="32"
                       class="p-0 m-0 rounded author-s"
                     />
                   </div>
@@ -78,7 +81,7 @@
                   </div>
                 </div>
                 <p class="m-0"></p>
-                <a :href="`/blog/${blog.slug}`" class="d-lg-none">
+                <a :href="`/blog/${blog.slug}`" class="d-lg-none color">
                   Read More
                 </a>
               </div>
@@ -240,5 +243,9 @@ export default {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.color {
+  color: #2971c6;
 }
 </style>

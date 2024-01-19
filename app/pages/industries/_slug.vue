@@ -53,7 +53,7 @@
               class="mt-5 text-center col-md-4 d-flex"
             >
               <div class="w-100 p-5 bs-1 card-svg b-30">
-                <h5 class="m-0">{{ usecase.title }}</h5>
+                <h3 class="m-0 h5">{{ usecase.title }}</h3>
                 <div>{{ usecase.description }}</div>
               </div>
             </div>
@@ -73,7 +73,7 @@
               class="mt-5 text-center col-md-4 d-flex"
             >
               <div class="w-100 p-5 bs-1 card-svg b-30">
-                <h5 class="m-0">{{ benefits.title }}</h5>
+                <h3 class="m-0 h5">{{ benefits.title }}</h3>
                 <div>{{ benefits.description }}</div>
               </div>
             </div>
@@ -96,7 +96,7 @@
             >
               <div class="boxed m-0 text-center">
                 <div class="svg mb-4" v-html="company.company_logo"></div>
-                <h6>{{ company.company_name }}</h6>
+                <h3 class="h6">{{ company.company_name }}</h3>
               </div>
             </div>
           </div>
@@ -127,16 +127,17 @@
                     :title="service.pe_services_id.title"
                     format="png"
                     loading="lazy"
-                    height="80px"
+                    height="80"
+                    width="80"
                   />
                 </div>
                 <a
                   :href="`/services/${service.pe_services_id.slug}`"
                   class="t-hover"
                 >
-                  <h5 class="m-0">
+                  <h3 class="m-0 h5">
                     {{ service.pe_services_id.title }}
-                  </h5>
+                  </h3>
                 </a>
                 <p class="m-0">
                   {{ service.pe_services_id.description }}
