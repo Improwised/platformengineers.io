@@ -64,7 +64,7 @@
         <div class="container">
           <div class="row">
             <div class="text-center col-md-8 offset-md-2 pb-5">
-              <h2 class="mb-10">{{ home.services_title}}</h2>
+              <h2 class="mb-10">{{ home.services_title }}</h2>
               <p class="para">
                 {{ home.services_description }}
               </p>
@@ -394,13 +394,13 @@ export default {
     linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%);
 }
 
-/* 
+/*
 .as-call-to-action-block {
   background-color: #093097;
   background-image: url("/img/as/call-to-action/background.svg");
 }
  */
- 
+
 .as-home {
   background-color: #151515;
 }
