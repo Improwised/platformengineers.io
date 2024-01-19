@@ -10,9 +10,10 @@
               format="png"
               loading="lazy"
               title="Linux"
-              height="40px"
+              height="40"
+              width="34"
             />
-            <h6>Linux</h6>
+            <h2 class="h6">Linux</h2>
           </div>
         </div>
         <div class="">
@@ -23,9 +24,10 @@
               format="png"
               loading="lazy"
               title="Docker"
-              height="40px"
+              height="40"
+              width="63"
             />
-            <h6>Docker</h6>
+            <h2 class="h6">Docker</h2>
           </div>
         </div>
         <div class="">
@@ -36,9 +38,10 @@
               format="png"
               loading="lazy"
               title="Kubernetes"
-              height="40px"
+              height="40"
+              width="40"
             />
-            <h6>Kubernetes</h6>
+            <h2 class="h6">Kubernetes</h2>
           </div>
         </div>
         <div class="">
@@ -49,9 +52,10 @@
               format="png"
               loading="lazy"
               title="Helm"
-              height="40px"
+              height="40"
+              width="38"
             />
-            <h6>Helm</h6>
+            <h2 class="h6">Helm</h2>
           </div>
         </div>
         <div class="">
@@ -62,9 +66,10 @@
               format="png"
               loading="lazy"
               title="Terraforms"
-              height="40px"
+              height="40"
+              width="35"
             />
-            <h6>Terraform</h6>
+            <h2 class="h6">Terraform</h2>
           </div>
         </div>
         <div class="">
@@ -75,9 +80,10 @@
               format="png"
               loading="lazy"
               title="Nginx"
-              height="40px"
+              height="40"
+              width="45"
             />
-            <h6>Nginx</h6>
+            <h2 class="h6">Nginx</h2>
           </div>
         </div>
         <div class="">
@@ -88,9 +94,10 @@
               format="png"
               loading="lazy"
               title="Amazon Web Services"
-              height="40px"
+              height="40"
+              width="68"
             />
-            <h6>Amazon Web Services</h6>
+            <h2 class="h6">Amazon Web Services</h2>
           </div>
         </div>
         <div class="">
@@ -101,9 +108,10 @@
               format="png"
               loading="lazy"
               title="Google Cloud Platform"
-              height="40px"
+              height="40"
+              width="45"
             />
-            <h6>Google Cloud Platform</h6>
+            <h2 class="h6">Google Cloud Platform</h2>
           </div>
         </div>
         <div class="">
@@ -114,9 +122,10 @@
               format="png"
               loading="lazy"
               title="Digital Ocean"
-              height="40px"
+              height="40"
+              width="40"
             />
-            <h6>DigitalOcean</h6>
+            <h2 class="h6">DigitalOcean</h2>
           </div>
         </div>
       </div>

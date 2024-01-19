@@ -85,10 +85,11 @@
                     format="png"
                     loading="lazy"
                     height="80px"
+                    width="80px"
                   />
                 </div>
                 <a :href="`/services/${service.slug}`" class="t-hover zi-0">
-                  <h5 class="mb-0">{{ service.title }}</h5>
+                  <h3 class="mb-0 h5">{{ service.title }}</h3>
                 </a>
                 <p class="m-0 zi-0">
                   {{ service.description }}
@@ -130,9 +131,10 @@
                     format="png"
                     loading="lazy"
                     height="80px"
+                    width="80px"
                   />
                 </div>
-                <h5 class="mb-0 zi-0">{{ why.title }}</h5>
+                <h3 class="mb-0 zi-0 h5">{{ why.title }}</h3>
                 <p class="zi-0">
                   {{ why.description }}
                 </p>
