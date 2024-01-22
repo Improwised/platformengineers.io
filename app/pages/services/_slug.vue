@@ -121,7 +121,7 @@
           >
             <div class="w-100 p-5 bs-1 card-svg b-30">
               <div class="svg mb-4" v-html="approach.image"></div>
-              <h5 class="mb-0">{{ approach.title }}</h5>
+              <h3 class="mb-0 h5">{{ approach.title }}</h3>
               <div v-html="approach.content"></div>
             </div>
           </div>
@@ -142,7 +142,7 @@
           >
             <div class="w-100 p-5 bs-1 card-svg b-30">
               <div class="svg mb-4" v-html="offering.image"></div>
-              <h5 class="mb-0">{{ offering.title }}</h5>
+              <h3 class="mb-0 h5">{{ offering.title }}</h3>
               <div v-html="offering.content"></div>
             </div>
           </div>

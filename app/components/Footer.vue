@@ -3,14 +3,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6 col-12 mb-5">
-          <h4 class="type--uppercase m-0 h6">Company</h4>
+          <h3 class="type--uppercase m-0 h6">Company</h3>
           <ul class="list--hover">
             <li class="">
               <a href="/about-us">About Us</a>
             </li>
           </ul>
           <!--  -->
-          <h5 class="type--uppercase m-0 h6">Resources</h5>
+          <h3 class="type--uppercase m-0 h6">Resources</h3>
           <ul class="list--hover">
             <li class="">
               <a href="/blog">Blog</a>
@@ -21,7 +21,7 @@
           </ul>
         </div>
         <div class="col-md-3 col-sm-6 col-12 mb-5">
-          <h6 class="type--uppercase m-0">Services</h6>
+          <h3 class="type--uppercase m-0 h6">Services</h3>
           <ul class="list--hover">
             <li v-for="(service, index) in $store.state.services" :key="index">
               <a :href="`/services/${service.slug}`">{{ service.title }}</a>
@@ -29,7 +29,7 @@
           </ul>
         </div>
         <div class="col-md-3 col-sm-6 col-12 mb-5">
-          <h6 class="type--uppercase m-0">Industries</h6>
+          <h3 class="type--uppercase m-0 h6">Industries</h3>
           <ul class="list--hover">
             <li
               v-for="(industry, index) in $store.state.industries"
@@ -40,13 +40,13 @@
           </ul>
         </div>
         <div class="col-md-3 col-sm-6 col-12 mb-5">
-          <h6 class="type--uppercase m-0">Support</h6>
+          <h3 class="type--uppercase m-0 h6">Support</h3>
           <ul class="list--hover">
             <li>
               <a href="/contact-us">Contact Us</a>
             </li>
           </ul>
-          <h6 class="type--uppercase m-0">Assessment</h6>
+          <h3 class="type--uppercase m-0 h6">Assessment</h3>
           <ul class="list--hover">
             <li>
               <a href="/assessment">Cost Assessment</a>

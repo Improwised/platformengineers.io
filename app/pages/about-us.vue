@@ -189,4 +189,12 @@ export default {
     border-radius: 0 0 30px 30px;
   }
 }
+
+div p a {
+  color: #0a5cbb;
+}
+
+div p strong a {
+  color: #0a5cbb;
+}
 </style>

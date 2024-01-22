@@ -22,6 +22,8 @@
                     :alt="blog.title"
                     :title="blog.title"
                     format="png"
+                    height="40"
+                    width="32"
                     class="p-0 m-0 rounded author-s"
                   />
                 </div>
