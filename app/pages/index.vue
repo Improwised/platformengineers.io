@@ -74,33 +74,13 @@
               :key="index"
               class="col-md-6 col-lg-4 d-flex mt-5"
             >
-              <div
-                class="text-center w-100 p-5 bs-1 d-flex flex-column b-30 card-svg pos-r"
-              >
-                <div class="mb-4 zi-0">
-                  <nuxt-img
-                    :src="$urls.assets(service.icon_as_image)"
-                    :alt="service.title"
-                    :title="service.title"
-                    format="png"
-                    loading="lazy"
-                    height="80px"
-                    width="80px"
-                  />
-                </div>
-                <a :href="`/services/${service.slug}`" class="t-hover zi-0">
-                  <h3 class="mb-0 h5">{{ service.title }}</h3>
-                </a>
-                <p class="m-0 zi-0">
-                  {{ service.description }}
-                </p>
-                <a
-                  :href="`/services/${service.slug}`"
-                  class="d-lg-none mt-4 mb-0 text-center zi-0"
-                >
-                  Learn More
-                </a>
-              </div>
+              <Card
+                :icon-image="service.icon_as_image"
+                :title="service.title"
+                link-redirect="services"
+                :slug="service.slug"
+                :description="service.description"
+              />
             </div>
           </div>
         </div>
@@ -191,11 +171,13 @@
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
+import Card from "@/components/common/Card.vue";
 
 export default {
   components: {
     Navigation,
     Technologies,
+    Card,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
