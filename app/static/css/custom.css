@@ -171,7 +171,7 @@ img.img-dim {
   height: 100%;
   opacity: 1;
   z-index: 0;
-  background: url("/img/card47.png") white;
+  background: url("../img/card47.png") white;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -219,7 +219,7 @@ t-hover:hover h5 {
   height: 100%;
   opacity: 0.1;
   z-index: -1;
-  background: url("/img/blog-bk-1.png");
+  background: url("../img/blog-bk-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -258,7 +258,7 @@ t-hover:hover h5 {
   height: 100%;
   opacity: 0.8;
   z-index: -1;
-  background: url("/img/bk-1212.png");
+  background: url("../img/bk-1212.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -278,7 +278,7 @@ t-hover:hover h5 {
   height: 100%;
   opacity: 0.1;
   z-index: -1;
-  background: url("/img/s2.svg");
+  background: url("../img/s2.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -307,7 +307,7 @@ t-hover:hover h5 {
   height: 100%;
   opacity: 0.5;
   z-index: -1;
-  background: url("/img/a9.jpg");
+  background: url("../img/a9.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
