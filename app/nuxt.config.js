@@ -1,5 +1,5 @@
 import head from "./config/head.js";
-
+import axios from 'axios'
 require("dotenv").config(); // eslint-disable-line nuxt/no-cjs-in-config
 
 const CompressionPlugin = require("compression-webpack-plugin"); // eslint-disable-line nuxt/no-cjs-in-config
@@ -100,6 +100,21 @@ export default {
     dir: "public",
     fallback: false,
     interval: 2000,
+    routes: async () => {
+      // const urlroutes = require('./plugins/urlroutes');s
+      // const dynamicRoutes = await urlroutes.$urls.landing_pages_for_seo;
+      try {
+        const { data: pages } = await axios.get(
+          process.env.DATA_URL + '/items/pe_pages_seo?filter[status][_eq]=published&fields=title,slug'
+        );
+        // Generate routes dynamically based on your API data
+        const routes = pages.data.map(item => `/pages/${item.slug}`);
+        return routes;
+      } catch (error) {
+        console.error('Error fetching landing pages:', error);
+        return [];
+      }
+    },
   },
 
   image: {

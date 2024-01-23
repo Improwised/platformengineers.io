@@ -162,9 +162,6 @@
         </div>
       </section> -->
 
-      <div v-for="page in pages" :key="page.index" class="d-none">
-        <a :href="`/pages/${page.slug}`">{{ page.slug }}</a>
-      </div>
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
           class="container d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap"
@@ -205,15 +202,11 @@ export default {
     const { data: home } = await app.$axios.$get(app.$urls.home);
     const { data: services } = await app.$axios.$get(app.$urls.services);
     const { data: whyUs } = await app.$axios.$get(app.$urls.whyUs);
-    const { data: pages } = await app.$axios.$get(
-      app.$urls.landing_pages_for_seo
-    );
 
     return {
       home,
       services,
       whyUs,
-      pages,
     };
   },
   head() {
