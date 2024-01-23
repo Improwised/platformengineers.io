@@ -105,7 +105,7 @@ export default {
       // const dynamicRoutes = await urlroutes.$urls.landing_pages_for_seo;
       try {
         const { data: pages } = await axios.get(
-          process.env.DATA_URL + '/items/pe_pages_seo?filter[status][_eq]=published&fields[]=*.*'
+          process.env.DATA_URL + '/items/pe_pages_seo?filter[status][_eq]=published&fields=title,slug'
         );
         // Generate routes dynamically based on your API data
         const routes = pages.data.map(item => `/pages/${item.slug}`);
