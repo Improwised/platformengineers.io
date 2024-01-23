@@ -261,41 +261,7 @@ export default {
 
 <style>
 .wave-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  z-index: -1;
   background: url("/img/wave.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-
-.wave-bk-reverse::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  z-index: -1;
-  background: url("/img/wave-reverse.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.t-hover:hover h5 {
-  color: #8042e4;
-}
-
-.t-hover:hover {
-  text-decoration-color: #8042e4;
 }
 
 .as-call-to-action-block {
