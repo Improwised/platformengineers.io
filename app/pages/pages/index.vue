@@ -1,11 +1,11 @@
 <template>
-  <div>Hello</div>
+  <div></div>
 </template>
 
 <script>
-// export default {
-//   asyncData({ redirect }) {
-//     return redirect("/");
-//   },
-// };
+export default {
+  asyncData({ redirect }) {
+    return redirect("/");
+  },
+};
 </script>
