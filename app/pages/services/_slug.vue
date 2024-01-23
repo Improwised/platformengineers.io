@@ -288,26 +288,6 @@ export default {
   }
 }
 
-.wave-bk {
-  overflow: hidden;
-  position: relative;
-}
-
-.wave-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.1;
-  z-index: -1;
-  background: url("/img/s2.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-
 .bs-1 {
   /*  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0; */
 

@@ -163,45 +163,14 @@ export default {
 </script>
 
 <style>
-.case-studies-bk {
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0 0 200px 200px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
-.case-studies-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  z-index: -1;
-  background: url("/img/bk-1212.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 @media only screen and (max-width: 600px) {
   .case-studies-bk {
     border-radius: 0 0 30px 30px;
   }
 }
 
-.t-hover:hover {
-  text-decoration-color: #179bfd;
-}
-
 .t-hover h5 {
   line-height: 1.5;
-}
-
-.t-hover:hover h5 {
-  color: #179bfd;
 }
 
 .bs-1 {

@@ -944,27 +944,6 @@ export default {
   }
 }
 
-.btn.as-call-to-action {
-  color: #212121;
-  height: auto;
-  padding: 10px;
-  outline: none;
-  border-width: 2px;
-  border-color: #ff900a;
-  background-color: #ff900a;
-}
-
-.btn.as-call-to-action:hover {
-  color: #212121;
-  outline: none;
-  border-color: #ff900a;
-  background-color: #ff900a;
-}
-
-.as-color-o {
-  color: #ff900a;
-}
-
 .as-f-xxxl {
   font-size: 0.8rem;
 }
@@ -1150,56 +1129,7 @@ div.as-whyus .container {
   }
 }
 
-.bs-1 {
-  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
-    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
-
-  /*  box-shadow: rgba(0, 0, 0, 0.3) -30px 0 30px 0; */
-
-  /*  box-shadow: -25px 0 20px -20px rgba(0, 0, 0, 0.45); */
-}
-
-.card-svg {
-  overflow: hidden;
-  position: relative;
-}
-
-.card-svg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  z-index: 0;
-  background: url("/img/card47.png") white;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-.as-home {
-  background-color: #151515;
-}
-
-.as-color-o:hover {
-  color: #ff900a;
-}
-
 .masonry__item {
   display: flex;
-}
-
-.t-hover:hover {
-  text-decoration-color: #179bfd;
-}
-
-.t-hover:hover h5 {
-  color: #179bfd;
-}
-
-.bs-11 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 </style>

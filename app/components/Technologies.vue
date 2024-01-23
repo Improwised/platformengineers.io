@@ -132,9 +132,3 @@
     </div>
   </section>
 </template>
-
-<style>
-.o_05 {
-  opacity: 0.5;
-}
-</style>

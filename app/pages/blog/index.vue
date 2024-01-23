@@ -184,45 +184,8 @@ export default {
 </script>
 
 <style>
-.blog-bk {
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0 0 200px 200px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
-.blog-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.1;
-  z-index: -1;
-  background: url("/img/blog-bk-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .blog-bk {
-    border-radius: 0 0 30px 30px;
-  }
-}
-
-.t-hover:hover {
-  text-decoration-color: #179bfd;
-}
-
 .t-hover h5 {
   line-height: 1.5 !important;
-}
-
-.t-hover:hover h5 {
-  color: #179bfd;
 }
 
 .bs-1 {
@@ -231,12 +194,6 @@ export default {
 
 .lh-1 {
   line-height: 1;
-}
-
-.author-s {
-  max-width: 40px;
-  max-height: 40px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
 }
 
 .blog-title {

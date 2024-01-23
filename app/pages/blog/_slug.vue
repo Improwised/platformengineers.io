@@ -283,43 +283,9 @@ export default {
 </script>
 
 <style>
-.blog-bk {
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0 0 200px 200px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
-.blog-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.1;
-  z-index: -1;
-  background: url("/img/blog-bk-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .blog-bk {
-    border-radius: 0 0 30px 30px;
-  }
-}
-
 .blog ul {
   list-style: inherit;
   padding: revert;
-}
-
-.wave-bk {
-  overflow: hidden;
-  position: relative;
 }
 
 .wave-bk::before {
@@ -395,12 +361,6 @@ export default {
 
 .blog blockquote {
   font-size: 1em;
-}
-
-.author-s {
-  max-width: 40px;
-  max-height: 40px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
 }
 
 .blog pre {

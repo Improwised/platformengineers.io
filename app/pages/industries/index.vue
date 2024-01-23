@@ -233,14 +233,6 @@ export default {
   display: flex;
 }
 
-.t-hover:hover {
-  text-decoration-color: #179bfd;
-}
-
-.t-hover:hover h5 {
-  color: #179bfd;
-}
-
 .bs-1 {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
