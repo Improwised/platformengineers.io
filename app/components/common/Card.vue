@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div
       class="text-center w-100 p-5 bs-1 d-flex flex-column b-30 card-svg pos-r"
     >
@@ -25,7 +24,6 @@
         Learn More
       </a>
     </div>
-  </div>
 </template>
 
 <script>
