@@ -128,6 +128,198 @@ img.img-dim {
 {
    background-color: #000;
     padding-top: 10px;
-    
+
     padding-bottom: 10px;
+}
+
+.btn.as-call-to-action {
+  color: #212121;
+  height: auto;
+  padding: 10px;
+  outline: none;
+  border-width: 2px;
+  border-color: #ff900a;
+  background-color: #ff900a;
+}
+
+.btn.as-call-to-action:hover {
+  color: #212121;
+  outline: none;
+  border-color: #ff900a;
+  background-color: #ff900a;
+}
+
+.as-color-o {
+  color: #ff900a;
+}
+
+.as-color-o:hover {
+  color: #ff900a;
+}
+
+.card-svg {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-svg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 0;
+  background: url("/img/card47.png") white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.bs-1 {
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
+    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+.as-home {
+  background-color: #151515;
+}
+
+/* .masonry__item {
+  display: flex;
+} */
+
+.t-hover:hover {
+  text-decoration-color: #179bfd;
+}
+
+t-hover:hover h5 {
+  color: #179bfd;
+}
+
+.bs-11 {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+}
+
+.blog-bk {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 0 200px 200px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+}
+
+.blog-bk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: -1;
+  background: url("/img/blog-bk-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-bk {
+    border-radius: 0 0 30px 30px;
+  }
+}
+
+.author-s {
+  max-width: 40px;
+  max-height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+}
+
+.t-hover:hover h5 {
+  color: #179bfd;
+}
+
+.case-studies-bk {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 0 200px 200px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+}
+
+.case-studies-bk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: -1;
+  background: url("/img/bk-1212.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wave-bk {
+  overflow: hidden;
+  position: relative;
+}
+
+.wave-bk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: -1;
+  background: url("/img/s2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.o_05 {
+  opacity: 0.5;
+}
+
+.hero-bk {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 0 150px 150px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+}
+
+.hero-bk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  background: url("/img/a9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-bk {
+    border-radius: 0 0 30px 30px;
+  }
+}
+
+.wave-bk-reverse {
+  overflow: hidden;
+  position: relative;
 }

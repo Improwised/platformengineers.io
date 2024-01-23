@@ -277,46 +277,6 @@ export default {
 </script>
 
 <style>
-.o_05 {
-  opacity: 0.5;
-}
-
-.hero-bk {
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0 0 150px 150px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
-}
-
-.hero-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  z-index: -1;
-  background: url("/img/a9.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .hero-bk {
-    border-radius: 0 0 30px 30px;
-  }
-}
-
-.wave-bk {
-  overflow: hidden;
-  position: relative;
-}
-
 .wave-bk::before {
   content: "";
   position: absolute;
@@ -330,11 +290,6 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
-}
-
-.wave-bk-reverse {
-  overflow: hidden;
-  position: relative;
 }
 
 .wave-bk-reverse::before {
@@ -352,15 +307,6 @@ export default {
   background-position: top center;
 }
 
-.bs-1 {
-  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
-    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
-
-  /*  box-shadow: rgba(0, 0, 0, 0.3) -30px 0 30px 0; */
-
-  /*  box-shadow: -25px 0 20px -20px rgba(0, 0, 0, 0.45); */
-}
-
 .t-hover:hover h5 {
   color: #8042e4;
 }
@@ -369,64 +315,8 @@ export default {
   text-decoration-color: #8042e4;
 }
 
-.card-svg {
-  overflow: hidden;
-  position: relative;
-}
-
-.card-svg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  z-index: 0;
-  background: url("/img/card47.png") white;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
 .as-call-to-action-block {
   background: url(/img/as/call-to-action/background.svg),
     linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%);
-}
-
-/*
-.as-call-to-action-block {
-  background-color: #093097;
-  background-image: url("/img/as/call-to-action/background.svg");
-}
- */
-
-.as-home {
-  background-color: #151515;
-}
-
-.btn.as-call-to-action {
-  color: #212121;
-  height: auto;
-  padding: 10px;
-  outline: none;
-  border-width: 2px;
-  border-color: #ff900a;
-  background-color: #ff900a;
-}
-
-.btn.as-call-to-action:hover {
-  color: #212121;
-  outline: none;
-  border-color: #ff900a;
-  background-color: #ff900a;
-}
-
-.as-color-o {
-  color: #ff900a;
-}
-
-.as-color-o:hover {
-  color: #ff900a;
 }
 </style>

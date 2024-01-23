@@ -329,29 +329,6 @@ export default {
 </script>
 
 <style>
-.case-studies-bk {
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0 0 200px 200px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
-.case-studies-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  z-index: -1;
-  background: url("/img/bk-1212.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 .img-align {
   text-align: right;
 }
@@ -369,11 +346,6 @@ export default {
 .case-studies ul {
   list-style: inherit;
   padding: revert;
-}
-
-.wave-bk {
-  overflow: hidden;
-  position: relative;
 }
 
 .wave-bk::before {

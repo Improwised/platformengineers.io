@@ -297,37 +297,9 @@ export default {
   }
 }
 
-.wave-bk {
-  overflow: hidden;
-  position: relative;
-}
-
-.wave-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.1;
-  z-index: -1;
-  background: url("/img/s2.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-
 .bs-1 {
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
     -25px 0 20px -20px rgba(0, 0, 0, 0.45);
-}
-
-.t-hover:hover h5 {
-  color: #179bfd;
-}
-
-.t-hover:hover {
-  text-decoration-color: #179bfd;
 }
 
 .card-svg {
