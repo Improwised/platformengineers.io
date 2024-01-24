@@ -4,9 +4,37 @@
       <div class="col-md-6 d-flex align-items-center justify-content-center">
         <div>
           <h2>{{ title }}</h2>
-          <p v-if="description" class="lead">
-            {{ description }}
+          <div v-if="description" class="lead" v-html="description"></div>
+          <p v-if="caseStudy" style="font-size: 16px; max-width: 300px">
+            {{ dateTime }}
           </p>
+          <div v-if="creator" class="d-flex align-items-center mt-3">
+            <div
+              class="d-flex align-items-center mr-2"
+              style="border-radius: 200px"
+            >
+              <nuxt-img
+                v-if="avtar"
+                :src="$urls.assets(avtar)"
+                :alt="title"
+                :title="title"
+                format="png"
+                height="40"
+                width="32"
+                class="p-0 m-0 rounded author-s"
+              />
+            </div>
+            <div>
+              <strong class="m-0 p-0 lh-1">
+                {{ firstName }}
+                {{ lastName }}
+              </strong>
+              <div class="lh-1">
+                {{ dateTime }} |
+                {{ timeToRead }}
+              </div>
+            </div>
+          </div>
           <div v-if="contactus">
             <a class="btn btn--primary type--uppercase b-30" href="/contact-us">
               <span class="btn__text"> Contact Us </span>
@@ -43,6 +71,27 @@ export default {
       type: String,
     },
     contactus: {
+      type: Boolean,
+    },
+    avtar: {
+      type: String,
+    },
+    firstName: {
+      type: String,
+    },
+    lastName: {
+      type: String,
+    },
+    dateTime: {
+      type: String,
+    },
+    timeToRead: {
+      type: String,
+    },
+    creator: {
+      type: Boolean,
+    },
+    caseStudy: {
       type: Boolean,
     },
   },

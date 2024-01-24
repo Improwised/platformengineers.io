@@ -2,31 +2,12 @@
   <div v-if="caseStudy" class="main-container case-studies">
     <div class="case-studies-bk">
       <Navigation />
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-md-6 d-flex align-items-center justify-content-center"
-          >
-            <div>
-              <h3>{{ caseStudy.title }}</h3>
-              <p style="font-size: 16px; max-width: 300px">
-                {{ caseStudy.date_created | formatDateTime }}
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 img-align">
-            <nuxt-img
-              v-if="caseStudy && caseStudy.image && caseStudy.image.id"
-              :src="$urls.assets(caseStudy.image.id)"
-              :alt="`${caseStudy.title} | Platform Engineers`"
-              format="png"
-              loading="lazy"
-              height="400px"
-              class="img-dim"
-            />
-          </div>
-        </div>
-      </div>
+      <Header
+        :title="caseStudy.title"
+        :image="$urls.assets(caseStudy.image.id)"
+        :case-study="true"
+        :date-time="caseStudy.date_created | formatDateTime"
+      />
     </div>
 
     <section
@@ -206,10 +187,12 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import Header from "@/components/common/Header.vue";
 
 export default {
   components: {
     Navigation,
+    Header,
   },
   filters: {
     truncate(text, length, suffix) {

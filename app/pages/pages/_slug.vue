@@ -4,38 +4,12 @@
       <div class="hero-bk">
         <Navigation />
         <section>
-          <div class="container">
-            <div class="row align-items-center justify-content-around">
-              <div
-                class="col-md-6 col-12 d-flex align-items-center justify-content-center"
-              >
-                <div>
-                  <h1>{{ page.title }}</h1>
-                  <div class="lead" v-html="page.description"></div>
-                  <a
-                    class="btn btn--primary type--uppercase b-30"
-                    href="/contact-us"
-                  >
-                    <span class="btn__text"> Contact Us </span>
-                  </a>
-                  <br />
-                </div>
-              </div>
-              <div
-                class="col-md-6 col-12 d-flex align-items-center justify-content-center"
-              >
-                <nuxt-img
-                  v-if="page && page.hero_image && page.hero_image.id"
-                  :src="$urls.assets(page.hero_image.id)"
-                  :alt="`${page.hero_image.title} | Platform Engineers`"
-                  format="png"
-                  loading="lazy"
-                  height="456px"
-                  class="img-dim"
-                />
-              </div>
-            </div>
-          </div>
+          <Header
+            :title="page.title"
+            :image="$urls.assets(page.hero_image.id)"
+            :description="page.description"
+            :contactus="true"
+          />
         </section>
       </div>
 
@@ -244,11 +218,13 @@
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
+import Header from "@/components/common/Header.vue";
 
 export default {
   components: {
     Navigation,
     Technologies,
+    Header,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {

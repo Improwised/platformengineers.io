@@ -4,39 +4,12 @@
       <div class="industry-bk">
         <Navigation />
         <div>
-          <div class="container">
-            <div class="row py-2">
-              <div
-                class="col-md-6 d-flex align-items-center justify-content-center my-5"
-              >
-                <div>
-                  <h1>{{ industries.title }}</h1>
-                  <p class="lead">
-                    {{ industries.description }}
-                  </p>
-                  <a
-                    class="btn btn--primary type--uppercase b-30"
-                    href="/contact-us"
-                  >
-                    <span class="btn__text"> Contact Us </span>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col-md-6 d-flex align-items-center justify-content-center"
-              >
-                <nuxt-img
-                  v-if="industries && industries.image"
-                  :src="$urls.assets(industries.image)"
-                  :alt="industries.title"
-                  :title="industries.title"
-                  format="png"
-                  loading="lazy"
-                  height="250px"
-                />
-              </div>
-            </div>
-          </div>
+          <Header
+            :title="industries.title"
+            :image="$urls.assets(industries.image)"
+            :contactus="true"
+            :description="industries.description"
+          />
         </div>
       </div>
 
@@ -108,10 +81,12 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import Header from "@/components/common/Header.vue";
 
 export default {
   components: {
     Navigation,
+    Header,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
