@@ -8,6 +8,7 @@
             :title="industry.title"
             :image="$urls.assets(industry.image.id)"
             :description="industry.description"
+            :contactus="true"
           />
         </section>
       </div>
@@ -149,7 +150,7 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
-import Header from "@/components/Header.vue";
+import Header from "@/components/common/Header.vue";
 
 export default {
   components: {
