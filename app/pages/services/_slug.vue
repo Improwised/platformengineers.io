@@ -2,34 +2,11 @@
   <div v-if="service" class="services">
     <div class="services-bk">
       <Navigation />
-      <div class="container">
-        <div class="row py-2">
-          <div
-            class="col-md-6 d-flex align-items-center justify-content-center"
-          >
-            <div>
-              <h2>{{ service.title }}</h2>
-              <p class="lead">
-                {{ service.description }}
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-md-6 d-flex align-items-center justify-content-center"
-          >
-            <nuxt-img
-              v-if="service && service.page_image && service.page_image.id"
-              :src="$urls.assets(service.page_image.id)"
-              :alt="service.title"
-              :title="service.title"
-              format="png"
-              loading="lazy"
-              height="400px"
-              class="img-dim"
-            />
-          </div>
-        </div>
-      </div>
+      <Header
+        :title="service.title"
+        :image="$urls.assets(service.page_image.id)"
+        :description="service.description"
+      />
     </div>
 
     <section>
@@ -173,10 +150,12 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import Header from "@/components/common/Header.vue";
 
 export default {
   components: {
     Navigation,
+    Header,
   },
   layout: "theme",
   async asyncData({ app, params }) {
