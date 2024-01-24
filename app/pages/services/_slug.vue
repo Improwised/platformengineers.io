@@ -2,7 +2,12 @@
   <div v-if="service" class="services">
     <div class="services-bk">
       <Navigation />
-      <div class="container">
+      <Header
+        :title="service.title"
+        :image="$urls.assets(service.page_image.id)"
+        :description="service.description"
+      />
+      <!-- <div class="container">
         <div class="row py-2">
           <div
             class="col-md-6 d-flex align-items-center justify-content-center"
@@ -29,7 +34,7 @@
             />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <section>
@@ -173,10 +178,12 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import Header from "@/components/Header.vue";
 
 export default {
   components: {
     Navigation,
+    Header,
   },
   layout: "theme",
   async asyncData({ app, params }) {

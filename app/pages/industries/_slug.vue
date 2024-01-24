@@ -4,7 +4,12 @@
       <div class="industry-bk">
         <Navigation />
         <section class="space--xs">
-          <div class="container">
+          <Header
+            :title="industry.title"
+            :image="$urls.assets(industry.image.id)"
+            :description="industry.description"
+          />
+          <!-- <div class="container">
             <div class="row py-2">
               <div
                 class="col-md-6 d-flex align-items-center justify-content-center"
@@ -37,7 +42,7 @@
                 />
               </div>
             </div>
-          </div>
+          </div> -->
         </section>
       </div>
 
@@ -178,10 +183,12 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import Header from "@/components/Header.vue";
 
 export default {
   components: {
     Navigation,
+    Header,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
