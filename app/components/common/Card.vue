@@ -2,7 +2,7 @@
     <div
       class="text-center w-100 p-5 bs-1 d-flex flex-column b-30 card-svg pos-r"
     >
-      <div class="mb-4 zi-0">
+      <div class="mb-4 zi-0" v-if="iconImage">
         <nuxt-img
           :src="$urls.assets(iconImage)"
           :alt="title"
@@ -13,11 +13,12 @@
           width="80px"
         />
       </div>
-      <a :href="`/services/${slug}`" class="t-hover zi-0">
+      <a  v-if="slug" :href="`/${linkRedirect}/${slug}`" class="t-hover zi-0">
         <h3 class="mb-0 h5">{{ title }}</h3>
       </a>
-      <p class="m-0 zi-0">{{ description }}monika</p>
-      <a
+      <h3 v-else class="mb-0 zi-0 h5">{{ title }}</h3>
+      <p v-if="description" class="m-0 zi-0">{{ description }}monika</p>
+      <a v-if="slug"
         :href="`/${linkRedirect}/${slug}`"
         class="d-lg-none mt-4 mb-0 text-center zi-0"
       >
@@ -37,12 +38,10 @@ export default {
       required: true,
     },
     linkRedirect: {
-      type: String,
-      required: true,
+      type: String
     },
     slug: {
       type: String,
-      required: true,
     },
     description: {
       type: String,

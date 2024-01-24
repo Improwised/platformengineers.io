@@ -100,25 +100,13 @@
               :key="index"
               class="col-md-6 col-lg-4 d-flex mt-5"
             >
-              <div
-                class="text-center w-100 p-5 bs-1 b-30 d-flex flex-column card-svg pos-r"
-              >
-                <div class="mb-4 zi-0">
-                  <nuxt-img
-                    :src="$urls.assets(why.image)"
-                    :alt="why.title"
-                    :title="why.title"
-                    format="png"
-                    loading="lazy"
-                    height="80px"
-                    width="80px"
-                  />
-                </div>
-                <h3 class="mb-0 zi-0 h5">{{ why.title }}</h3>
-                <p class="zi-0">
-                  {{ why.description }}
-                </p>
-              </div>
+              <Card
+                :icon-image="why.image"
+                :title="why.title"
+                link-redirect=""
+                slug=""
+                :description="why.description"
+              />
             </div>
           </div>
         </div>
@@ -258,7 +246,6 @@ export default {
   },
 };
 </script>
-
 <style>
 .wave-bk::before {
   background: url("/img/wave.svg");
