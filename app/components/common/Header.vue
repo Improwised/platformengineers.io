@@ -37,9 +37,6 @@
           </div>
           <div v-if="contactus">
             <Button text="Contact us" />
-            <!-- <a class="btn btn--primary type--uppercase b-30" href="/contact-us">
-              <span class="btn__text"> Contact Us </span>
-            </a> -->
           </div>
         </div>
       </div>

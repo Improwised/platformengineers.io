@@ -133,13 +133,6 @@
               <div class="cta">
                 <h2>Let's Dive Deeper into Your Needs – Ready to Talk?</h2>
                 <Button text="Contact us" />
-                <!-- <a
-                  class="btn btn--primary type--uppercase b-30"
-                  href="/contact-us"
-                  title="contact"
-                >
-                  <span class="btn__text"> Contact us </span>
-                </a> -->
               </div>
             </div>
           </div>
