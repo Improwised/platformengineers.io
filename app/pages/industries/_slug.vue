@@ -132,13 +132,7 @@
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
               <div class="cta">
                 <h2>Let's Dive Deeper into Your Needs – Ready to Talk?</h2>
-                <a
-                  class="btn btn--primary type--uppercase b-30"
-                  href="/contact-us"
-                  title="contact"
-                >
-                  <span class="btn__text"> Contact us </span>
-                </a>
+                <Button text="Contact us" />
               </div>
             </div>
           </div>
@@ -151,11 +145,13 @@
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
+import Button from "@/components/common/Button.vue";
 
 export default {
   components: {
     Navigation,
     Header,
+    Button,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {

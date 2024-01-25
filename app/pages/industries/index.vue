@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <List :list="industriesInfo" readmore="/industries/" :isShow="true" />
+      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
 
       <hr class="m-0" />
 
@@ -23,13 +23,7 @@
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
               <div class="cta">
                 <h2>Let's Dive Deeper into Your Needs – Ready to Talk?</h2>
-                <a
-                  class="btn btn--primary type--uppercase b-30"
-                  href="/contact-us"
-                  title="contact"
-                >
-                  <span class="btn__text"> Contact us </span>
-                </a>
+                <Button text="Contact us" />
               </div>
             </div>
           </div>
@@ -43,12 +37,14 @@
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
 import List from "@/components/common/List.vue";
+import Button from "@/components/common/Button.vue";
 
 export default {
   components: {
     Navigation,
     Header,
     List,
+    Button,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
