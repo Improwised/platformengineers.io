@@ -124,12 +124,7 @@
               </ul>
             </div>
             <div class="bar__module">
-              <a
-                class="btn btn--sm btn--primary type--uppercase b-30"
-                href="/contact-us"
-              >
-                <span class="btn__text">Contact Us</span>
-              </a>
+              <Button text="Contact us" />
             </div>
           </div>
         </div>
@@ -137,6 +132,13 @@
     </nav>
   </div>
 </template>
+
+<script>
+import Button from "./common/Button.vue";
+export default {
+  components: { Button },
+};
+</script>
 
 <style>
 .nav-container ul {

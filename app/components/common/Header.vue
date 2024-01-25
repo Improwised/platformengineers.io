@@ -36,9 +36,10 @@
             </div>
           </div>
           <div v-if="contactus">
-            <a class="btn btn--primary type--uppercase b-30" href="/contact-us">
+            <Button text="Contact us" />
+            <!-- <a class="btn btn--primary type--uppercase b-30" href="/contact-us">
               <span class="btn__text"> Contact Us </span>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -57,7 +58,9 @@
   </div>
 </template>
 <script>
+import Button from "./Button.vue";
 export default {
+  components: { Button },
   props: {
     title: {
       type: String,
