@@ -5,7 +5,8 @@
       <Header title="Case Studies" image="/img/c4.svg" />
     </div>
 
-    <section v-if="caseStudies && caseStudies.length" class="bg--secondary">
+    <List :list="caseStudies" readmore="/case-studies/" :datetime="true" />
+    <!-- <section v-if="caseStudies && caseStudies.length" class="bg--secondary">
       <div class="container">
         <div class="row">
           <div
@@ -43,18 +44,20 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
+import List from "@/components/common/List.vue";
 
 export default {
   components: {
     Navigation,
     Header,
+    List,
   },
   filters: {
     truncate(text, length, suffix) {

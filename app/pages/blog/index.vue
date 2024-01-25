@@ -5,7 +5,8 @@
       <Header title="Blog" image="/img/blog.png" />
     </div>
 
-    <section v-if="blogList && blogList.length" class="bg--">
+    <List :list="blogList" readmore="/blog/" :showavtar="true" />
+    <!-- <section v-if="blogList && blogList.length" class="bg--">
       <div class="container">
         <div class="row">
           <div
@@ -63,26 +64,28 @@
                   </div>
                 </div>
                 <p class="m-0"></p>
-                <a :href="`/blog/${blog.slug}`" class="d-lg-none color">
-                  Read More
-                </a>
               </div>
+              <a :href="`/blog/${blog.slug}`" class="d-lg-none color">
+                Read More
+              </a>
             </article>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
+import List from "@/components/common/List.vue";
 
 export default {
   components: {
     Navigation,
     Header,
+    List,
   },
   layout: "theme",
   async asyncData({ app, params }) {
@@ -172,21 +175,7 @@ export default {
   line-height: 1.5 !important;
 }
 
-.bs-1 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
 .lh-1 {
   line-height: 1;
-}
-
-.blog-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.color {
-  color: #2971c6;
 }
 </style>

@@ -140,14 +140,22 @@
         </div>
       </section>
 
-      <section v-if="industriesNames && industriesNames.length" class="bg--">
-        <div class="container">
-          <div class="row pb-5">
-            <div class="col-md-8 offset-md-2">
-              <h2 class="m-0 text-center">{{ page.section_industry_title }}</h2>
-              <div v-html="page.section_industry_description"></div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="m-0 text-center">{{ page.section_industry_title }}</h2>
+            <div v-html="page.section_industry_description"></div>
           </div>
+        </div>
+      </div>
+      <List
+        :list="industriesNames"
+        readmore="/industries/"
+        :industries="true"
+      />
+      <!-- <section v-if="industriesNames && industriesNames.length" class="bg--">
+        <div class="container">
+
           <div class="row justify-content-center">
             <div
               v-for="(industry, index) in industriesNames"
@@ -186,7 +194,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
@@ -219,12 +227,14 @@
 import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
 import Header from "@/components/common/Header.vue";
+import List from "@/components/common/List.vue";
 
 export default {
   components: {
     Navigation,
     Technologies,
     Header,
+    List,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {

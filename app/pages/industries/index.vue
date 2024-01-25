@@ -13,7 +13,12 @@
         </div>
       </div>
 
-      <section v-if="industriesNames && industriesNames.length" class="bg--">
+      <List
+        :list="industriesNames"
+        readmore="/industries/"
+        :industries="true"
+      />
+      <!-- <section v-if="industriesNames && industriesNames.length" class="bg--">
         <div class="container">
           <div class="row">
             <div
@@ -53,7 +58,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <hr class="m-0" />
 
@@ -82,11 +87,13 @@
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
+import List from "@/components/common/List.vue";
 
 export default {
   components: {
     Navigation,
     Header,
+    List,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
