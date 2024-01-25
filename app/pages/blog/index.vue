@@ -5,84 +5,20 @@
       <Header title="Blog" image="/img/blog.png" />
     </div>
 
-    <section v-if="blogList && blogList.length" class="bg--">
-      <div class="container">
-        <div class="row">
-          <div
-            v-for="(blog, index) in blogList"
-            :key="index"
-            class="masonry__item col-lg-4 col-md-6"
-          >
-            <article class="b-30 bs-1">
-              <a
-                :href="`/blog/${blog.slug}`"
-                class="block d-flex align-items-center justify-content-center"
-              >
-                <nuxt-img
-                  v-if="blog.image"
-                  :src="$urls.assets(blog.image.id)"
-                  :alt="blog.title"
-                  :title="blog.title"
-                  height="300"
-                  width="300"
-                  loading="lazy"
-                  format="png"
-                />
-              </a>
-              <div class="feature__body p-4">
-                <a :href="`/blog/${blog.slug}`" class="t-hover">
-                  <h2 class="blog-title h5" :title="blog.title">
-                    {{ blog.title }}
-                  </h2>
-                </a>
-                <div class="d-flex align-items-center mt-1">
-                  <div
-                    class="d-flex align-items-center mr-2"
-                    style="border-radius: 200px"
-                  >
-                    <nuxt-img
-                      v-if="blog.user_created.avatar"
-                      :src="$urls.assets(blog.user_created.avatar)"
-                      :alt="blog.title"
-                      :title="blog.title"
-                      format="png"
-                      height="40"
-                      width="32"
-                      class="p-0 m-0 rounded author-s"
-                    />
-                  </div>
-                  <div>
-                    <strong class="m-0 p-0 lh-1">
-                      {{ blog.user_created.first_name }}
-                      {{ blog.user_created.last_name }}
-                    </strong>
-                    <div class="lh-1">
-                      {{ blog.date_created | formatDateTime }} |
-                      {{ blog.time_to_read }}
-                    </div>
-                  </div>
-                </div>
-                <p class="m-0"></p>
-                <a :href="`/blog/${blog.slug}`" class="d-lg-none color">
-                  Read More
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+    <List :list="blogList" readmore="/blog/" :showavtar="true" />
   </div>
 </template>
 
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
+import List from "@/components/common/List.vue";
 
 export default {
   components: {
     Navigation,
     Header,
+    List,
   },
   layout: "theme",
   async asyncData({ app, params }) {
@@ -172,21 +108,7 @@ export default {
   line-height: 1.5 !important;
 }
 
-.bs-1 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
 .lh-1 {
   line-height: 1;
-}
-
-.blog-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.color {
-  color: #2971c6;
 }
 </style>

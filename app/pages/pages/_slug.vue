@@ -140,53 +140,15 @@
         </div>
       </section>
 
-      <section v-if="industriesNames && industriesNames.length" class="bg--">
-        <div class="container">
-          <div class="row pb-5">
-            <div class="col-md-8 offset-md-2">
-              <h2 class="m-0 text-center">{{ page.section_industry_title }}</h2>
-              <div v-html="page.section_industry_description"></div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div
-              v-for="(industry, index) in industriesNames"
-              :key="index"
-              class="masonry__item col-lg-4 col-md-6"
-            >
-              <article class="b-30 bs-11">
-                <a
-                  :href="`/industries/${industry.slug}`"
-                  class="industry d-flex align-items-center justify-content-center p-4"
-                  style="height: 300px"
-                >
-                  <nuxt-img
-                    v-if="industry.image"
-                    :src="$urls.assets(industry.image)"
-                    :alt="industry.title"
-                    :title="industry.title"
-                    loading="lazy"
-                    format="png"
-                  />
-                </a>
-                <div class="feature__body px-4 pb-4 text-center">
-                  <a :href="`/industries/${industry.slug}`" class="t-hover">
-                    <h5>{{ industry.title }}</h5>
-                  </a>
-                  <p class="flex-grow-1 m-0">
-                    {{ industry.description }}
-                  </p>
-
-                  <p class="m-0"></p>
-                  <a :href="`/industries/${industry.slug}`" class="d-lg-none">
-                    Read More
-                  </a>
-                </div>
-              </article>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="m-0 text-center">{{ page.section_industry_title }}</h2>
+            <div v-html="page.section_industry_description"></div>
           </div>
         </div>
-      </section>
+      </div>
+      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
 
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
@@ -219,25 +181,27 @@
 import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
 import Header from "@/components/common/Header.vue";
+import List from "@/components/common/List.vue";
 
 export default {
   components: {
     Navigation,
     Technologies,
     Header,
+    List,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
     const title = params.slug;
     const page = await app.$axios.$get(app.$urls.landing_page_for_seo(title));
 
-    const { data: industriesNames } = await app.$axios.$get(
+    const { data: industriesInfo } = await app.$axios.$get(
       app.$urls.industriesNames
     );
     const { data: industries } = await app.$axios.$get(app.$urls.industries);
     return {
       page: page.data[0],
-      industriesNames,
+      industriesInfo,
       industries,
     };
   },
