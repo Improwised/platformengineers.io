@@ -2,25 +2,7 @@
   <div class="main-container case-studies">
     <div class="case-studies-bk">
       <Navigation />
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-md-6 d-flex align-items-center justify-content-center"
-          >
-            <h1>Case Studies</h1>
-          </div>
-          <div class="col-md-6 text-right">
-            <nuxt-img
-              src="/img/c4.svg"
-              alt="Case Studies | Platform Engineers"
-              format="png"
-              loading="lazy"
-              height="400px"
-              class="img-dim"
-            />
-          </div>
-        </div>
-      </div>
+      <Header title="Case Studies" image="/img/c4.svg" />
     </div>
 
     <section v-if="caseStudies && caseStudies.length" class="bg--secondary">
@@ -67,10 +49,12 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import Header from "@/components/common/Header.vue";
 
 export default {
   components: {
     Navigation,
+    Header,
   },
   filters: {
     truncate(text, length, suffix) {

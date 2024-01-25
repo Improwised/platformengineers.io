@@ -2,57 +2,16 @@
   <div v-if="blog" class="main-container blog">
     <div class="blog-bk">
       <Navigation />
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-md-6 d-flex align-items-center justify-content-center"
-          >
-            <div>
-              <div>
-                <h2>{{ blog.title }}</h2>
-              </div>
-              <div class="d-flex align-items-center mt-3">
-                <div
-                  class="d-flex align-items-center mr-2"
-                  style="border-radius: 200px"
-                >
-                  <nuxt-img
-                    v-if="blog.user_created.avatar"
-                    :src="$urls.assets(blog.user_created.avatar)"
-                    :alt="blog.title"
-                    :title="blog.title"
-                    format="png"
-                    height="40"
-                    width="32"
-                    class="p-0 m-0 rounded author-s"
-                  />
-                </div>
-                <div>
-                  <strong class="m-0 p-0 lh-1">
-                    {{ blog.user_created.first_name }}
-                    {{ blog.user_created.last_name }}
-                  </strong>
-                  <div class="lh-1">
-                    {{ blog.date_created | formatDateTime }} |
-                    {{ blog.time_to_read }}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 img-align">
-            <nuxt-img
-              v-if="blog && blog.image && blog.image.id"
-              :src="$urls.assets(blog.image.id)"
-              :alt="`${blog.title} | Platform Engineers`"
-              format="png"
-              loading="lazy"
-              height="400px"
-              class="img-dim"
-            />
-          </div>
-        </div>
-      </div>
+      <Header
+        :title="blog.title"
+        :image="$urls.assets(blog.image.id)"
+        :avtar="blog.user_created.avatar"
+        :first-name="blog.user_created.first_name"
+        :last-name="blog.user_created.last_name"
+        :date-time="blog.date_created | formatDateTime"
+        :time-to-read="blog.time_to_read"
+        :creator="true"
+      />
     </div>
 
     <section class="bg-- wave-bk-1">
@@ -146,10 +105,12 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import Header from "@/components/common/Header.vue";
 
 export default {
   components: {
     Navigation,
+    Header,
   },
   filters: {
     truncate(text, length, suffix) {

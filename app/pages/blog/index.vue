@@ -2,25 +2,7 @@
   <div>
     <div class="blog-bk">
       <Navigation />
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-md-6 d-flex align-items-center justify-content-center"
-          >
-            <h1>Blog</h1>
-          </div>
-          <div class="col-md-6 text-right">
-            <nuxt-img
-              src="/img/blog.png"
-              alt="Blog | Platform Engineers"
-              format="png"
-              loading="lazy"
-              width="540px"
-              class="img-dim"
-            />
-          </div>
-        </div>
-      </div>
+      <Header title="Blog" image="/img/blog.png" />
     </div>
 
     <section v-if="blogList && blogList.length" class="bg--">
@@ -95,10 +77,12 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import Header from "@/components/common/Header.vue";
 
 export default {
   components: {
     Navigation,
+    Header,
   },
   layout: "theme",
   async asyncData({ app, params }) {
