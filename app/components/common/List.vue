@@ -45,12 +45,12 @@
               <div class="feature__body px-4 pb-4">
                 <a :href="`${readmore}${item.slug}`" class="t-hover">
                   <div v-if="industries" class="text-center">
-                    <h2 class="blog-title h5" :title="item.title">
+                    <h2 class="h5" :title="item.title">
                       {{ item.title }}
                     </h2>
                   </div>
                   <div v-else>
-                    <h2 class="blog-title h5 pt-4" :title="item.title">
+                    <h2 class="title h5 pt-4" :title="item.title">
                       {{ item.title }}
                     </h2>
                   </div>
@@ -125,7 +125,7 @@ export default {
 </script>
 
 <style>
-.blog-title {
+.title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
