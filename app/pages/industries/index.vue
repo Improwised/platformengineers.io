@@ -13,11 +13,7 @@
         </div>
       </div>
 
-      <List
-        :list="industriesNames"
-        readmore="/industries/"
-        :industries="true"
-      />
+      <List :list="industriesInfo" readmore="/industries/" :isShow="true" />
 
       <hr class="m-0" />
 
@@ -56,13 +52,13 @@ export default {
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
-    const { data: industriesNames } = await app.$axios.$get(
+    const { data: industriesInfo } = await app.$axios.$get(
       app.$urls.industriesNames
     );
     const { data: industries } = await app.$axios.$get(app.$urls.industries);
 
     return {
-      industriesNames,
+      industriesInfo,
       industries,
     };
   },

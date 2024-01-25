@@ -148,11 +148,7 @@
           </div>
         </div>
       </div>
-      <List
-        :list="industriesNames"
-        readmore="/industries/"
-        :industries="true"
-      />
+      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
 
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
@@ -199,13 +195,13 @@ export default {
     const title = params.slug;
     const page = await app.$axios.$get(app.$urls.landing_page_for_seo(title));
 
-    const { data: industriesNames } = await app.$axios.$get(
+    const { data: industriesInfo } = await app.$axios.$get(
       app.$urls.industriesNames
     );
     const { data: industries } = await app.$axios.$get(app.$urls.industries);
     return {
       page: page.data[0],
-      industriesNames,
+      industriesInfo,
       industries,
     };
   },
