@@ -6,45 +6,6 @@
     </div>
 
     <List :list="caseStudies" readmore="/case-studies/" :datetime="true" />
-    <!-- <section v-if="caseStudies && caseStudies.length" class="bg--secondary">
-      <div class="container">
-        <div class="row">
-          <div
-            v-for="(caseStudie, index) in caseStudies"
-            :key="index"
-            class="masonry__item col-lg-4 col-md-6"
-          >
-            <article class="b-30 bs-1">
-              <a
-                :href="`/case-studies/${caseStudie.slug}`"
-                class="block d-flex align-items-center justify-content-center"
-              >
-                <nuxt-img
-                  v-if="caseStudie.image"
-                  :src="$urls.assets(caseStudie.image.id)"
-                  :alt="caseStudie.title"
-                  :title="caseStudie.title"
-                  height="245"
-                  loading="lazy"
-                  format="png"
-                />
-              </a>
-              <div class="feature__body p-4">
-                <a :href="`/case-studies/${caseStudie.slug}`" class="t-hover">
-                  <h5>{{ caseStudie.title }}</h5>
-                </a>
-                <p class="m-0">
-                  {{ caseStudie.date_created | formatDateTime }}
-                </p>
-                <a :href="`/case-studies/${caseStudie.slug}`" class="d-lg-none">
-                  Read More
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section> -->
   </div>
 </template>
 

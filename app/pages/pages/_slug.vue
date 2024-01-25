@@ -153,48 +153,6 @@
         readmore="/industries/"
         :industries="true"
       />
-      <!-- <section v-if="industriesNames && industriesNames.length" class="bg--">
-        <div class="container">
-
-          <div class="row justify-content-center">
-            <div
-              v-for="(industry, index) in industriesNames"
-              :key="index"
-              class="masonry__item col-lg-4 col-md-6"
-            >
-              <article class="b-30 bs-11">
-                <a
-                  :href="`/industries/${industry.slug}`"
-                  class="industry d-flex align-items-center justify-content-center p-4"
-                  style="height: 300px"
-                >
-                  <nuxt-img
-                    v-if="industry.image"
-                    :src="$urls.assets(industry.image)"
-                    :alt="industry.title"
-                    :title="industry.title"
-                    loading="lazy"
-                    format="png"
-                  />
-                </a>
-                <div class="feature__body px-4 pb-4 text-center">
-                  <a :href="`/industries/${industry.slug}`" class="t-hover">
-                    <h5>{{ industry.title }}</h5>
-                  </a>
-                  <p class="flex-grow-1 m-0">
-                    {{ industry.description }}
-                  </p>
-
-                  <p class="m-0"></p>
-                  <a :href="`/industries/${industry.slug}`" class="d-lg-none">
-                    Read More
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section> -->
 
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
