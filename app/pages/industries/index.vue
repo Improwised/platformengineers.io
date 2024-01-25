@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <List :list="industriesInfo" readmore="/industries/" :isShow="true" />
+      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
 
       <hr class="m-0" />
 
