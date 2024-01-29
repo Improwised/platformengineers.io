@@ -48,9 +48,6 @@
       <div class="container">
         <div class="row">
           <SectionHeading :title="service.process_title" />
-          <!-- <div class="text-center col-md-8 offset-md-2 pb-5">
-            <h2 class="p-0 m-0">{{ service.process_title }}</h2>
-          </div> -->
           <div
             v-for="(_process, index) in service.process"
             :key="index"
@@ -82,9 +79,6 @@
       <div class="container">
         <div class="row">
           <SectionHeading :title="service.approach_title" />
-          <!-- <div class="text-center col-md-8 offset-md-2 pb-5">
-            <h2 class="p-0 m-0">{{ service.approach_title }}</h2>
-          </div> -->
           <div
             v-for="(approach, index) in service.approach_cards"
             :key="index"
@@ -105,9 +99,6 @@
       <div class="container">
         <div class="row">
           <SectionHeading :title="service.offering_title" />
-          <!-- <div class="text-center col-md-8 offset-md-2 pb-5">
-            <h2 class="p-0 m-0">{{ service.offering_title }}</h2>
-          </div> -->
           <div
             v-for="(offering, index) in service.offering_cards"
             :key="index"
