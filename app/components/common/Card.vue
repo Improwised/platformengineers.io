@@ -70,3 +70,40 @@ export default {
   },
 };
 </script>
+<style>
+.bs-1 {
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
+    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+.svg svg {
+  width: 100%;
+  height: 80px;
+}
+
+.list-style-content ul {
+  list-style: inherit;
+  padding: revert;
+}
+
+.card-svg {
+  overflow: hidden;
+  position: relative;
+  background: transparent !important;
+}
+
+.card-svg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -1;
+  background: url("/img/card47.png") white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+</style>

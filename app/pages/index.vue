@@ -78,8 +78,6 @@
               <Card
                 :icon-image="why.image"
                 :title="why.title"
-                link-redirect=""
-                slug=""
                 :description="why.description"
               />
             </div>
