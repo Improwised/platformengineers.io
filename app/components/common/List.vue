@@ -8,7 +8,7 @@
             :key="index"
             class="masonry__item col-lg-4 col-md-6"
           >
-            <article class="b-30 bs-1">
+            <article class="b-30 bs-11">
               <div v-if="isShow">
                 <a
                   :href="`${readmore}${item.slug}`"
@@ -90,7 +90,10 @@
                     {{ item.date_created | formatDateTime }}
                   </div>
                 </div>
-                <a :href="`${readmore}${item.slug}`" class="d-lg-none color">
+                <a
+                  :href="`${readmore}${item.slug}`"
+                  class="d-lg-none color-theme"
+                >
                   Read More
                 </a>
               </div>
@@ -131,11 +134,7 @@ export default {
   text-overflow: ellipsis;
 }
 
-.bs-1 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
-.color {
-  color: #2971c6;
+.masonry__item {
+  display: flex;
 }
 </style>

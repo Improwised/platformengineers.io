@@ -24,10 +24,7 @@
               :key="index"
               class="mt-5 text-center col-md-4 d-flex"
             >
-              <div class="w-100 p-5 bs-1 card-svg b-30">
-                <h3 class="m-0 h5">{{ usecase.title }}</h3>
-                <div>{{ usecase.description }}</div>
-              </div>
+              <Card :title="usecase.title" :description="usecase.description" />
             </div>
           </div>
         </div>
@@ -44,10 +41,10 @@
               :key="index"
               class="mt-5 text-center col-md-4 d-flex"
             >
-              <div class="w-100 p-5 bs-1 card-svg b-30">
-                <h3 class="m-0 h5">{{ benefits.title }}</h3>
-                <div>{{ benefits.description }}</div>
-              </div>
+              <Card
+                :title="benefits.title"
+                :description="benefits.description"
+              />
             </div>
           </div>
         </div>
@@ -89,38 +86,13 @@
               :key="index"
               class="col-md-6 col-lg-4 d-flex mt-5"
             >
-              <div
-                class="text-center w-100 p-5 bs-1 d-flex flex-column b-30 card-svg"
-              >
-                <div class="mb-4">
-                  <nuxt-img
-                    :src="$urls.assets(service.pe_services_id.icon_as_image)"
-                    :alt="service.pe_services_id.title"
-                    :title="service.pe_services_id.title"
-                    format="png"
-                    loading="lazy"
-                    height="80"
-                    width="80"
-                  />
-                </div>
-                <a
-                  :href="`/services/${service.pe_services_id.slug}`"
-                  class="t-hover"
-                >
-                  <h3 class="m-0 h5">
-                    {{ service.pe_services_id.title }}
-                  </h3>
-                </a>
-                <p class="m-0">
-                  {{ service.pe_services_id.description }}
-                </p>
-                <a
-                  :href="`/services/${service.pe_services_id.slug}`"
-                  class="d-lg-none mt-4 mb-0 text-center"
-                >
-                  Learn More
-                </a>
-              </div>
+              <Card
+                :icon-image="service.pe_services_id.icon_as_image"
+                :title="service.pe_services_id.title"
+                link-redirect="services"
+                :slug="service.pe_services_id.slug"
+                :description="service.pe_services_id.description"
+              />
             </div>
           </div>
         </div>
@@ -146,12 +118,14 @@
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
 import Button from "@/components/common/Button.vue";
+import Card from "@/components/common/Card.vue";
 
 export default {
   components: {
     Navigation,
     Header,
     Button,
+    Card,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
@@ -238,59 +212,9 @@ export default {
 </script>
 
 <style>
-.industry-bk {
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0 0 200px 200px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
 .industry-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  z-index: -1;
-  background: url("/img/a112.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .industry-bk {
-    border-radius: 0 0 30px 30px;
-  }
-}
-
-.bs-1 {
-  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
-    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
-}
-
-.card-svg {
-  overflow: hidden;
-  position: relative;
-  background: transparent !important;
-}
-
-.card-svg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  z-index: -1;
-  background: url("/img/card47.png") white;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
+  opacity: 0.1;
+  background: url("/img/blog-bk-1.png");
 }
 
 .svg svg {
