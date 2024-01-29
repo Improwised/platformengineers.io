@@ -7,9 +7,8 @@
       class="svg mb-4"
       v-html="iconImage"
     ></div>
-    <div v-else-if="iconImage" class="mb-4 zi-0">
+    <div v-if="imageType != 'svg-text' && iconImage != ''" class="mb-4 zi-0">
       <nuxt-img
-        v-if="iconImage"
         :src="$urls.assets(iconImage)"
         :alt="title"
         :title="title"
