@@ -8,7 +8,7 @@
       v-html="iconImage"
     ></div>
     <div v-else-if="iconImage" class="mb-4 zi-0">
-      <nuxt-img
+      <NuxtImg
         :src="$urls.assets(iconImage)"
         :alt="title"
         :title="title"
@@ -49,9 +49,11 @@ export default {
   props: {
     iconImage: {
       type: String,
+      default: "",
     },
     imageType: {
       type: String,
+      default: "",
     },
     title: {
       type: String,
@@ -59,9 +61,11 @@ export default {
     },
     linkRedirect: {
       type: String,
+      default: "",
     },
     slug: {
       type: String,
+      default: "",
     },
     description: {
       type: String,
