@@ -8,7 +8,8 @@
       v-html="iconImage"
     ></div>
     <div v-else-if="iconImage" class="mb-4 zi-0">
-      <NuxtImg
+      <nuxt-img
+        v-if="iconImage"
         :src="$urls.assets(iconImage)"
         :alt="title"
         :title="title"
