@@ -133,8 +133,4 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.masonry__item {
-  display: flex;
-}
 </style>
