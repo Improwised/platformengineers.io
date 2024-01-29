@@ -223,9 +223,4 @@ export default {
 .wave-bk::before {
   background: url("/img/wave.svg");
 }
-
-.as-call-to-action-block {
-  background: url(/img/as/call-to-action/background.svg),
-    linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%);
-}
 </style>

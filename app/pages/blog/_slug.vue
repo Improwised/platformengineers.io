@@ -17,7 +17,7 @@
     <section class="bg-- wave-bk-1">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 offset-lg-1 bs-1 p-5 b-30 bg-white">
+          <div class="col-lg-10 offset-lg-1 bs-11 p-5 b-30 bg-white">
             <div
               v-if="blog.content"
               class="fc-lead ul-list"
@@ -250,22 +250,8 @@ export default {
 }
 
 .wave-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0.04;
-  z-index: -1;
   background: url("/img/s2.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-
-.bs-1 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 
 .blog-svg {
@@ -304,20 +290,6 @@ export default {
   opacity: 0.1;
   z-index: -1;
   background: url("/img/s2.svg");
-}
-
-.img-align {
-  text-align: right;
-}
-
-@media only screen and (max-width: 600px) {
-  .blog-bk {
-    border-radius: 0 0 30px 30px;
-  }
-
-  .img-align {
-    text-align: center;
-  }
 }
 
 .blog blockquote {

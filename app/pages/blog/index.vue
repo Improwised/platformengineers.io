@@ -104,10 +104,6 @@ export default {
 </script>
 
 <style>
-.t-hover h5 {
-  line-height: 1.5 !important;
-}
-
 .lh-1 {
   line-height: 1;
 }

@@ -284,38 +284,13 @@ export default {
 
 <style>
 .wave-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0.1;
-  z-index: -1;
   background: url("/img/wave.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom;
 }
 
 .wave-bk-reverse::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.1;
-  z-index: -1;
+  opacity: 0.3;
   background: url("/img/wave-reverse.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.as-call-to-action-block {
-  background-color: #093097;
-  background-image: url("/img/as/call-to-action/background.svg");
 }
 
 .masonry__item {

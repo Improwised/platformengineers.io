@@ -157,10 +157,6 @@ export default {
   overflow: hidden;
   position: relative;
   border-radius: 0 0 200px 200px;
-
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset; */
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 

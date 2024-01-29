@@ -116,12 +116,4 @@ export default {
     border-radius: 0 0 30px 30px;
   }
 }
-
-.t-hover h5 {
-  line-height: 1.5;
-}
-
-.bs-1 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
 </style>

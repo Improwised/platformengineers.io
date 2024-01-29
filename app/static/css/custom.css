@@ -409,3 +409,23 @@ img.img-dim {
 .color-theme {
   color: #8042e4;
 }
+
+.img-align {
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .img-align {
+    text-align: center;
+  }
+}
+.t-hover h5 {
+  line-height: 1.5 !important;
+}
+.as-call-to-action-block {
+  background: url(/img/as/call-to-action/background.svg),
+    linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%);
+}
+

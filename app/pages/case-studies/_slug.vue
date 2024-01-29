@@ -312,18 +312,13 @@ export default {
 </script>
 
 <style>
-.img-align {
-  text-align: right;
-}
+
 
 @media only screen and (max-width: 600px) {
   .case-studies-bk {
     border-radius: 0 0 30px 30px;
   }
 
-  .img-align {
-    text-align: center;
-  }
 }
 
 .case-studies ul {
@@ -332,17 +327,7 @@ export default {
 }
 
 .wave-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0.04;
-  z-index: -1;
   background: url("/img/s2.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
 }
 </style>
