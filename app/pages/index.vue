@@ -38,10 +38,12 @@
       <section class="wave-bk section-padding">
         <div class="container">
           <div class="row">
-            <SectionHeading
-              :title="home.services_title"
-              :description="home.services_description"
-            />
+            <div class="text-center col-md-8 offset-md-2 pb-5">
+              <h2 class="mb-10">{{ home.services_title }}</h2>
+              <p class="para">
+                {{ home.services_description }}
+              </p>
+            </div>
             <div
               v-for="(service, index) in services"
               :key="index"
@@ -62,10 +64,12 @@
       <section class="wave-bk-reverse bg-- section-padding">
         <div class="container">
           <div class="row">
-            <SectionHeading
-              :title="home.whyus_title"
-              :description="home.whyus_description"
-            />
+            <div class="text-center col-md-8 offset-md-2 pb-5">
+              <h2 class="mb-10">{{ home.whyus_title }}</h2>
+              <p class="para">
+                {{ home.whyus_description }}
+              </p>
+            </div>
             <div
               v-for="(why, index) in whyUs"
               :key="index"
@@ -130,7 +134,6 @@ import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
 import Card from "@/components/common/Card.vue";
 import Header from "@/components/common/Header.vue";
-import SectionHeading from "@/components/common/SectionHeading.vue";
 
 export default {
   components: {
@@ -138,7 +141,6 @@ export default {
     Technologies,
     Card,
     Header,
-    SectionHeading,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {

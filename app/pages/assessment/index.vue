@@ -609,19 +609,60 @@
         </div>
       </div>
     </div>
-    <div class="row pt-5">
-      <SectionHeading
-        title="We Understand the Fundamentals!"
-        description="Get clout by utilizing our industry exposure and proven experience.
-            We understand the nuances, regulatory requirements, and significance
-            of doing things correctly the first time around having worked with a
-            variety of clients. Whether it's a globally distributed corporation
-            with data centers or a rapidly growing startup, we've got you
-            covered!"
-      />
-    </div>
-    <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+    <section v-if="industriesNames && industriesNames.length" class="bg--">
+      <div class="container">
+        <div class="row pb-5">
+          <div class="col-md-8 offset-md-2 text-center">
+            <h2 class="m-0">We Understand the Fundamentals!</h2>
+            <p>
+              Get clout by utilizing our industry exposure and proven
+              experience. We understand the nuances, regulatory requirements,
+              and significance of doing things correctly the first time around
+              having worked with a variety of clients. Whether it's a globally
+              distributed corporation with data centers or a rapidly growing
+              startup, we've got you covered!
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div
+            v-for="(industry, index) in industriesNames"
+            :key="index"
+            class="masonry__item col-lg-4 col-md-6"
+          >
+            <article class="b-30 bs-11">
+              <a
+                :href="`/industries/${industry.slug}`"
+                class="industry d-flex align-items-center justify-content-center p-4"
+                style="height: 300px"
+              >
+                <nuxt-img
+                  v-if="industry.image"
+                  :src="$urls.assets(industry.image)"
+                  :alt="industry.title"
+                  :title="industry.title"
+                  loading="lazy"
+                  format="png"
+                />
+              </a>
+              <div class="feature__body px-4 pb-4 text-center">
+                <a :href="`/industries/${industry.slug}`" class="t-hover">
+                  <h5>{{ industry.title }}</h5>
+                </a>
+                <p class="flex-grow-1 m-0">
+                  {{ industry.description }}
+                </p>
 
+                <p class="m-0"></p>
+                <a :href="`/industries/${industry.slug}`" class="d-lg-none">
+                  Read More
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- faqs -->
     <div class="as-faqs py-5" :style="`background-image: url(${feature})`">
       <div class="container">
@@ -710,30 +751,26 @@
 </template>
 
 <script>
-import List from "@/components/common/List.vue";
-import SectionHeading from "@/components/common/SectionHeading.vue";
 import Navigation from "@/components/Navigation.vue";
 import faqs from "@/static/js/faqs.js";
 
 export default {
   components: {
     Navigation,
-    List,
-    SectionHeading,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
     const title = params.slug;
     const page = await app.$axios.$get(app.$urls.landing_page_for_seo(title));
 
-    const { data: industriesInfo } = await app.$axios.$get(
+    const { data: industriesNames } = await app.$axios.$get(
       app.$urls.industriesNames
     );
     const { data: industries } = await app.$axios.$get(app.$urls.industries);
 
     return {
       page: page.data[0],
-      industriesInfo,
+      industriesNames,
       industries,
     };
   },

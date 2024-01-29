@@ -115,10 +115,10 @@
       <section class="wave-bk-reverse bg--">
         <div class="container">
           <div class="row">
-            <SectionHeading
-              :title="page.section_2_title"
-              :description="page.section_2_description"
-            />
+            <div class="text-center col-md-8 offset-md-2">
+              <h2 class="m-0">{{ page.section_2_title }}</h2>
+              <div class="lead" v-html="page.section_2_description"></div>
+            </div>
           </div>
           <div class="row justify-content-center">
             <div
@@ -142,10 +142,10 @@
 
       <div class="container">
         <div class="row">
-          <SectionHeading
-            :title="page.section_industry_title"
-            :description="page.section_industry_description"
-          />
+          <div class="col-md-8 offset-md-2">
+            <h2 class="m-0 text-center">{{ page.section_industry_title }}</h2>
+            <div v-html="page.section_industry_description"></div>
+          </div>
         </div>
       </div>
       <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
@@ -178,7 +178,6 @@
 </template>
 
 <script>
-import SectionHeading from "../../components/common/SectionHeading.vue";
 import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
 import Header from "@/components/common/Header.vue";
@@ -190,7 +189,6 @@ export default {
     Technologies,
     Header,
     List,
-    SectionHeading,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
