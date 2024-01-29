@@ -352,7 +352,7 @@ img.img-dim {
   height: 100%;
   opacity: 0.8;
   z-index: -1;
-  background: url("/img/a112.jpg");
+  background: url("../img/a112.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
