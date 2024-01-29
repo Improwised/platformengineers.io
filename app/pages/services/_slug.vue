@@ -35,18 +35,12 @@
                 : '4'
             } d-flex`"
           >
-            <div class="w-100 p-5 bs-1 card-svg b-30">
-              <div class="svg mb-4" v-html="feature.image"></div>
-              <h5 class="text-center mb-0">{{ feature.title }}</h5>
-              <div
-                :class="`ul-list list-style-content ${
-                  $route.params.slug !== 'kubernetes-consulting-services'
-                    ? 'text-center'
-                    : ''
-                }`"
-                v-html="feature.description"
-              ></div>
-            </div>
+            <Card
+              :icon-image="feature.image"
+              :title="feature.title"
+              image-type="svg-text"
+              :description="feature.description"
+            />
           </div>
         </div>
       </div>
@@ -96,11 +90,12 @@
             :key="index"
             class="mt-5 text-center col-md-4 d-flex"
           >
-            <div class="w-100 p-5 bs-1 card-svg b-30">
-              <div class="svg mb-4" v-html="approach.image"></div>
-              <h3 class="mb-0 h5">{{ approach.title }}</h3>
-              <div v-html="approach.content"></div>
-            </div>
+            <Card
+              :icon-image="approach.image"
+              :title="approach.title"
+              image-type="svg-text"
+              :description="approach.content"
+            />
           </div>
         </div>
       </div>
@@ -117,11 +112,12 @@
             :key="index"
             class="mt-5 text-center col-md-4 d-flex"
           >
-            <div class="w-100 p-5 bs-1 card-svg b-30">
-              <div class="svg mb-4" v-html="offering.image"></div>
-              <h3 class="mb-0 h5">{{ offering.title }}</h3>
-              <div v-html="offering.content"></div>
-            </div>
+            <Card
+              :icon-image="offering.image"
+              :title="offering.title"
+              image-type="svg-text"
+              :description="offering.content"
+            />
           </div>
         </div>
       </div>
@@ -146,12 +142,14 @@
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
 import Button from "@/components/common/Button.vue";
+import Card from "@/components/common/Card.vue";
 
 export default {
   components: {
     Navigation,
     Header,
     Button,
+    Card,
   },
   layout: "theme",
   async asyncData({ app, params }) {
@@ -234,49 +232,6 @@ export default {
 </script>
 
 <style>
-.services-bk {
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  border-radius: 0 0 200px 200px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
-.services-bk::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  z-index: -1;
-  background: url("/img/a112.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .services-bk {
-    border-radius: 0 0 30px 30px;
-  }
-}
-
-.bs-1 {
-  /*  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0; */
-
-  /* box-shadow: -25px 0 20px -20px rgba(0, 0, 0, 0.45),
-    0 25px 20px -20px rgba(0, 0, 0, 0.45); */
-  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
-    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
-}
-
-.svg svg {
-  width: 100%;
-  height: 80px;
-}
-
 .process-3 {
   z-index: 0;
 }
@@ -296,45 +251,5 @@ export default {
 .process-3 li .process__number {
   width: 2.71428571em;
   height: 2.71428571em;
-}
-
-.p-45 {
-  display: block;
-  height: 10px;
-  width: 10px;
-  background-color: #4a90e2;
-  top: 0;
-  border-radius: 20px;
-}
-
-.list-style-content ul {
-  list-style: inherit;
-  padding: revert;
-}
-
-._process-step svg {
-  width: 100%;
-  height: 80px;
-}
-
-.card-svg {
-  overflow: hidden;
-  position: relative;
-  background: transparent !important;
-}
-
-.card-svg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  z-index: -1;
-  background: url("/img/card47.png") white;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
 }
 </style>
