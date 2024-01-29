@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{488:function(n,t,e){"use strict";e.r(t);var r={asyncData:function(n){return(0,n.redirect)("/")}},c=e(45),component=Object(c.a)(r,(function(){var n=this.$createElement;return(this._self._c||n)("div")}),[],!1,null,null,null);t.default=component.exports}}]);
-//# sourceMappingURL=9aaf00b.js.map
