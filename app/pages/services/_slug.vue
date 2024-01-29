@@ -35,18 +35,14 @@
                 : '4'
             } d-flex`"
           >
-            <div class="w-100 p-5 bs-1 card-svg b-30">
-              <div class="svg mb-4" v-html="feature.image"></div>
-              <h5 class="text-center mb-0">{{ feature.title }}</h5>
-              <div
-                :class="`ul-list list-style-content ${
-                  $route.params.slug !== 'kubernetes-consulting-services'
-                    ? 'text-center'
-                    : ''
-                }`"
-                v-html="feature.description"
-              ></div>
-            </div>
+            <Card
+              :icon-image="feature.image"
+              :title="feature.title"
+              image-type="svg-text"
+              link-redirect=""
+              slug=""
+              :description="feature.description"
+            />
           </div>
         </div>
       </div>
@@ -96,11 +92,14 @@
             :key="index"
             class="mt-5 text-center col-md-4 d-flex"
           >
-            <div class="w-100 p-5 bs-1 card-svg b-30">
-              <div class="svg mb-4" v-html="approach.image"></div>
-              <h3 class="mb-0 h5">{{ approach.title }}</h3>
-              <div v-html="approach.content"></div>
-            </div>
+            <Card
+              :icon-image="approach.image"
+              :title="approach.title"
+              image-type="svg-text"
+              link-redirect=""
+              slug=""
+              :description="approach.content"
+            />
           </div>
         </div>
       </div>
@@ -117,11 +116,14 @@
             :key="index"
             class="mt-5 text-center col-md-4 d-flex"
           >
-            <div class="w-100 p-5 bs-1 card-svg b-30">
-              <div class="svg mb-4" v-html="offering.image"></div>
-              <h3 class="mb-0 h5">{{ offering.title }}</h3>
-              <div v-html="offering.content"></div>
-            </div>
+            <Card
+              :icon-image="offering.image"
+              :title="offering.title"
+              image-type="svg-text"
+              link-redirect=""
+              slug=""
+              :description="offering.content"
+            />
           </div>
         </div>
       </div>
@@ -146,12 +148,14 @@
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
 import Button from "@/components/common/Button.vue";
+import Card from "@/components/common/Card.vue";
 
 export default {
   components: {
     Navigation,
     Header,
     Button,
+    Card
   },
   layout: "theme",
   async asyncData({ app, params }) {
