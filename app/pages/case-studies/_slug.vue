@@ -312,13 +312,10 @@ export default {
 </script>
 
 <style>
-
-
 @media only screen and (max-width: 600px) {
   .case-studies-bk {
     border-radius: 0 0 30px 30px;
   }
-
 }
 
 .case-studies ul {
