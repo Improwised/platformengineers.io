@@ -221,6 +221,10 @@ export default {
 </script>
 <style>
 .wave-bk::before {
+  opacity: 0.3;
   background: url("/img/wave.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 </style>

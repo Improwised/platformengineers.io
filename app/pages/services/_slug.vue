@@ -23,9 +23,7 @@
     <section v-if="service.features" class="border-top wave-bk bg--">
       <div class="container">
         <div class="row">
-          <div class="text-center col-md-8 offset-md-2 pb-5">
-            <h2 class="p-0 m-0">{{ service.features_title }}</h2>
-          </div>
+          <SectionHeading :title="service.features_title" />
           <div
             v-for="(feature, index) in service.features"
             :key="index"
@@ -49,9 +47,7 @@
     <section v-if="service.process" class="border-top">
       <div class="container">
         <div class="row">
-          <div class="text-center col-md-8 offset-md-2 pb-5">
-            <h2 class="p-0 m-0">{{ service.process_title }}</h2>
-          </div>
+          <SectionHeading :title="service.process_title" />
           <div
             v-for="(_process, index) in service.process"
             :key="index"
@@ -82,9 +78,7 @@
     <section v-if="service.approach_cards" class="wave-bk border-top bg--">
       <div class="container">
         <div class="row">
-          <div class="text-center col-md-8 offset-md-2 pb-5">
-            <h2 class="p-0 m-0">{{ service.approach_title }}</h2>
-          </div>
+          <SectionHeading :title="service.approach_title" />
           <div
             v-for="(approach, index) in service.approach_cards"
             :key="index"
@@ -104,9 +98,7 @@
     <section v-if="service.offering_cards" class="wave-bk border-top bg--">
       <div class="container">
         <div class="row">
-          <div class="text-center col-md-8 offset-md-2 pb-5">
-            <h2 class="p-0 m-0">{{ service.offering_title }}</h2>
-          </div>
+          <SectionHeading :title="service.offering_title" />
           <div
             v-for="(offering, index) in service.offering_cards"
             :key="index"
@@ -143,6 +135,7 @@ import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
 import Button from "@/components/common/Button.vue";
 import Card from "@/components/common/Card.vue";
+import SectionHeading from "@/components/common/SectionHeading.vue";
 
 export default {
   components: {
@@ -150,6 +143,7 @@ export default {
     Header,
     Button,
     Card,
+    SectionHeading,
   },
   layout: "theme",
   async asyncData({ app, params }) {
