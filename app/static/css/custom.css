@@ -425,7 +425,7 @@ img.img-dim {
   line-height: 1.5 !important;
 }
 .as-call-to-action-block {
-  background: url(/img/as/call-to-action/background.svg),
+  background: url(../img/as/call-to-action/background.svg),
     linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%);
 }
 
