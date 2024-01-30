@@ -15,7 +15,7 @@
 
       <Technologies />
 
-      <section class="section-padding">
+      <section class="space--xxs">
         <div
           class="px-3 px-sm-0 py-5 py-md-0 d-flex align-items-center justify-content-center text-white as-call-to-action-block flex-wrap flex-md-nowrap"
         >
@@ -81,7 +81,7 @@
         </div>
       </section>
 
-      <!--       <section class="space--xs bg--secondary">
+      <!--       <section class="section-padding bg--secondary">
         <div class="container">
           <div class="cta cta--horizontal text-center-xs row">
             <div class="col-6 d-flex align-items-center">
@@ -99,7 +99,7 @@
         </div>
       </section> -->
 
-      <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
+      <section class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
           class="container d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap"
         >
@@ -120,7 +120,7 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>

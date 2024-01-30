@@ -2,6 +2,7 @@
   <div class="main-container about-us">
     <div class="about-bk">
       <Navigation />
+
       <div>
         <div class="container">
           <div class="row py-2">
@@ -10,10 +11,10 @@
             >
               <div>
                 <h1>{{ aboutUs.title }}</h1>
-                <p class="m-0" style="font-size: 18px; color: #724fe9">
+                <p class="m-0 color-theme lead">
                   Powering innovation with expertise
                 </p>
-                <p style="font-size: 16px; max-width: 300px">
+                <p class="lead" style="max-width: 300px">
                   Our platform engineers are driven to solve your challenges and
                   build tomorrow's solutions.
                 </p>
@@ -36,7 +37,7 @@
       </div>
     </div>
 
-    <section v-if="aboutUs" class="text-center bg--secondary">
+    <section v-if="aboutUs" class="text-center bg--secondary section-padding">
       <div class="container">
         <div class="row">
           <div
@@ -47,7 +48,7 @@
       </div>
     </section>
 
-    <section class="text-center">
+    <section class="text-center section-padding">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">

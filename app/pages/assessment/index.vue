@@ -177,11 +177,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- features: Performance-focused Application Assessment -->
-    <div
-      class="as-features py-3 py-sm-5"
+    <section
+      class="as-features section-padding"
       :style="`background-image: url(${feature})`"
     >
       <div class="container">
@@ -300,11 +300,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- features: Infrastructure Assessment -->
-    <div
-      class="as-features py-3 py-sm-5"
+    <section
+      class="as-features section-padding"
       :style="`background-image: url(${feature})`"
     >
       <div class="container">
@@ -420,7 +420,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- pricing -->
     <div>
@@ -441,60 +441,39 @@
             >
               <div>
                 <p>
-                  This assessment, facilitated by the PlatformEngineers, is a
-                  unique offering in the market, setting it apart with
-                  distinctive technical capabilities not found elsewhere.
+                  Check out the <a href="/assessment/#faqs">FAQs</a> if you
+                  still have questions.
                 </p>
-                <hr />
-                <div
-                  class="d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap"
+              </div>
+            </div>
+          </div>
+          <div
+            id="as-pricing"
+            class="col-lg-4 d-flex align-items-center justify-content-center as-p-block p-3 p-sm-5"
+            :style="`background-image: url(${pricing})`"
+          >
+            <div class="d-flex align-items-center justify-content-center">
+              <div class="text-center">
+                <span class="badge badge-warning">Limited-time offer</span>
+                <br />
+                <br />
+                <h2
+                  class="m-0 p-0 text-white"
+                  style="font-size: 4rem; line-height: 1"
                 >
-                  <div class="d-flex align-items-center">
-                    <nuxt-img
-                      src="/img/as/pricing/check.png"
-                      alt="No Hidden Fees | Pricing | platformengineers"
-                      title="No Hidden Fees | Pricing | platformengineers"
-                      format="png"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      quality="80"
-                    />
-                    &nbsp;&nbsp;No Hidden Fees
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <nuxt-img
-                      src="/img/as/pricing/check.png"
-                      alt="Money back guarantee | Pricing | platformengineers"
-                      title="Money back guarantee | Pricing | platformengineers"
-                      format="png"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      quality="80"
-                    />
-                    &nbsp;&nbsp;Money back guarantee
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <nuxt-img
-                      src="/img/as/pricing/check.png"
-                      alt="Get Tax invoice | Pricing | platformengineers"
-                      title="Get Tax invoice | Pricing | platformengineers"
-                      format="png"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      quality="80"
-                    />
-                    &nbsp;&nbsp;Get Tax invoice
-                  </div>
-                </div>
-                <div class="text-center pt-5">
-                  <p>
-                    Check out the <a href="/assessment/#faqs">FAQs</a> if you
-                    still have questions.
-                  </p>
-                </div>
+                  $250
+                </h2>
+                <p class="m-0" style="font-size: 1.3rem; color: gray">
+                  <s>$1000</s> / 75% off
+                </p>
+                <br />
+                <a
+                  href="https://calendly.com/platform-engineers/30min"
+                  class="btn px-5 as-call-to-action b-30 m-0"
+                  target="_blank"
+                >
+                  SCHEDULE A CALL
+                </a>
               </div>
             </div>
             <div
@@ -604,8 +583,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row pt-5">
+    </section>
+
+    <section class="section-padding">
       <SectionHeading
         title="We Understand the Fundamentals!"
         description="Get clout by utilizing our industry exposure and proven experience.
@@ -615,10 +595,14 @@
             with data centers or a rapidly growing startup, we've got you
             covered!"
       />
-    </div>
-    <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+
+      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+    </section>
     <!-- faqs -->
-    <div class="as-faqs py-5" :style="`background-image: url(${feature})`">
+    <div
+      class="as-faqs section-padding"
+      :style="`background-image: url(${feature})`"
+    >
       <div class="container">
         <div class="row">
           <SectionHeading
@@ -680,7 +664,7 @@
     <!-- Call to Action -->
     <div
       class="d-flex align-items-center justify-content-center as-call-to-action-block"
-      :style="`background-image: url(${callToAction})`"
+      :style="`background: url(${callToAction}),linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%)`"
     >
       <div
         class="d-flex align-items-center align-self-stretch p-3 p-sm-5 text-center"
