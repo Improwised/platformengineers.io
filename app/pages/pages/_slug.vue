@@ -286,11 +286,17 @@ export default {
 .wave-bk::before {
   opacity: 0.1;
   background: url("/img/wave.svg");
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 .wave-bk-reverse::before {
   opacity: 0.3;
   background: url("/img/wave-reverse.svg");
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .masonry__item {
