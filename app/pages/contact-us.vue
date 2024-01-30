@@ -20,7 +20,7 @@
     <section class="bg-- contact-us-form-bk">
       <div class="container">
         <div
-          class="row justify-content-between bs-1 p-5 br-30 lead fc-lead bg-white"
+          class="row justify-content-between bs-11 p-5 br-30 lead fc-lead bg-white"
         >
           <div
             class="col-lg-6 text-center d-flex align-items-center justify-content-center py-5"
@@ -260,10 +260,6 @@ export default {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-}
-
-.bs-1 {
-  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 
 .br-30 {
