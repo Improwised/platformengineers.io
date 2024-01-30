@@ -39,7 +39,7 @@
 
     <!-- Why Us -->
     <div class="py-3 py-sm-5 as-whyus">
-      <h2 class="text-center">Why Assessment</h2>
+      <SectionHeading title="Why Assessment" />
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
           <div
@@ -200,11 +200,11 @@
               />
             </div>
             <br />
-            <h2 class="m-0">Performance-focused Application Assessment</h2>
-            <p class="lead">
-              Evaluate the architectural design for optimal speed and
-              efficiency, considering key areas.
-            </p>
+            <SectionHeading
+              title="Performance-focused Application Assessment"
+              description="Evaluate the architectural design for optimal speed and
+              efficiency, considering key areas."
+            />
           </div>
           <div class="col-md-12 col-lg-12 d-flex py-3 py-sm-5">
             <div class="info">
@@ -323,11 +323,11 @@
               />
             </div>
             <br />
-            <h2 class="m-0">Cost-focused Infrastructure Assessment</h2>
-            <p class="lead">
-              Evaluate your infrastructure to optimize output while minimizing
-              costs, addressing various aspects
-            </p>
+            <SectionHeading
+              title="Cost-focused Infrastructure Assessment"
+              description="Evaluate your infrastructure to optimize output while minimizing
+              costs, addressing various aspects"
+            />
           </div>
 
           <div class="col-md-12 col-lg-12 d-flex py-3 py-sm-5">
@@ -427,15 +427,13 @@
       <div class="as-pricing py-3 py-sm-5">
         <div class="container">
           <div class="row py-3 py-sm-5">
-            <div class="text-center col-md-8 offset-md-2">
-              <h2 class="m-0">Pricing</h2>
-              <p class="lead">
-                We prioritize genuine human connections and believe in
+            <SectionHeading
+              title="Pricing"
+              description="We prioritize genuine human connections and believe in
                 understanding your needs through meaningful conversations before
                 any financial commitment. It's our commitment to ensure a
-                personalized and satisfactory experience.
-              </p>
-            </div>
+                personalized and satisfactory experience."
+            />
           </div>
           <div class="row as-pricing-row text-white">
             <div
@@ -533,9 +531,7 @@
 
           <!-- process -->
           <div class="row pt-3 pt-sm-5">
-            <div class="text-center col-md-8 offset-md-2 pt-3 pt-sm-5">
-              <h2 class="m-0">Process</h2>
-            </div>
+            <SectionHeading title="Process" />
           </div>
 
           <div class="row d-block d-sm-none pb-3 pb-sm-5">
@@ -625,14 +621,12 @@
     <div class="as-faqs py-5" :style="`background-image: url(${feature})`">
       <div class="container">
         <div class="row">
-          <div class="text-center col-md-8 offset-md-2 py-5">
-            <h2 class="m-0">FAQs</h2>
-            <p class="lead">
-              Explore our FAQs for quick answers to common questions. Find
+          <SectionHeading
+            title="FAQs"
+            description="Explore our FAQs for quick answers to common questions. Find
               information on service, offering, features, payments,
-              deliverables.
-            </p>
-          </div>
+              deliverables."
+          />
           <div class="pb-5">
             <div
               v-for="(faq, index) in faqs"
