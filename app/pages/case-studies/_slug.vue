@@ -329,5 +329,8 @@ export default {
 .wave-bk::before {
   opacity: 0.04;
   background: url("/img/s2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 </style>
