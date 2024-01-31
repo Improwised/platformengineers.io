@@ -12,7 +12,7 @@
 
     <section
       v-if="caseStudy.client_info_title"
-      class="bg-- border-bottom wave-bk"
+      class="bg-- border-bottom wave-bk section-padding"
     >
       <div class="container">
         <div class="row">
@@ -27,7 +27,10 @@
       </div>
     </section>
 
-    <section v-if="caseStudy.goal_title" class="bg-- border-bottom wave-bk">
+    <section
+      v-if="caseStudy.goal_title"
+      class="bg-- border-bottom wave-bk section-padding"
+    >
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -38,7 +41,10 @@
       </div>
     </section>
 
-    <section v-if="caseStudy.solution_title" class="bg-- border-bottom wave-bk">
+    <section
+      v-if="caseStudy.solution_title"
+      class="bg-- border-bottom wave-bk section-padding"
+    >
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -54,7 +60,7 @@
 
     <section
       v-if="caseStudy.technologies_title"
-      class="bg-- border-bottom wave-bk"
+      class="bg-- border-bottom wave-bk section-padding"
     >
       <div class="container">
         <div class="row">
@@ -81,7 +87,10 @@
       </div>
     </section>
 
-    <section v-if="caseStudy.outcome_title" class="bg-- border-bottom wave-bk">
+    <section
+      v-if="caseStudy.outcome_title"
+      class="bg-- border-bottom wave-bk section-padding"
+    >
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -95,7 +104,7 @@
       </div>
     </section>
 
-    <section v-if="caseStudy.conclusion_title" class="bg--">
+    <section v-if="caseStudy.conclusion_title" class="bg-- section-padding">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">

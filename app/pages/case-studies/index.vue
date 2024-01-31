@@ -4,8 +4,9 @@
       <Navigation />
       <Header title="Case Studies" image="/img/c4.svg" />
     </div>
-
-    <List :list="caseStudies" readmore="/case-studies/" :datetime="true" />
+    <section class="section-padding">
+      <List :list="caseStudies" readmore="/case-studies/" :datetime="true" />
+    </section>
   </div>
 </template>
 

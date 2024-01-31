@@ -14,7 +14,7 @@
       />
     </div>
 
-    <section class="bg-- wave-bk-1">
+    <section class="bg-- wave-bk-1 section-padding">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 offset-lg-1 bs-11 p-5 b-30 bg-white">

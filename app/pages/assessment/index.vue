@@ -38,7 +38,7 @@
     </div>
 
     <!-- Why Us -->
-    <div class="py-3 py-sm-5 as-whyus">
+    <section class="section-padding as-whyus">
       <SectionHeading title="Why Assessment" />
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
@@ -177,16 +177,16 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- features: Performance-focused Application Assessment -->
-    <div
-      class="as-features py-3 py-sm-5"
+    <section
+      class="as-features section-padding"
       :style="`background-image: url(${feature})`"
     >
       <div class="container">
         <div class="row">
-          <div class="text-center col-md-10 offset-md-1 py-3 py-sm-5">
+          <div class="text-center col-md-10 offset-md-1 py-3">
             <div class="text-center">
               <nuxt-img
                 src="/img/as/features/architecture/icon.svg"
@@ -206,7 +206,7 @@
               efficiency, considering key areas."
             />
           </div>
-          <div class="col-md-12 col-lg-12 d-flex py-3 py-sm-5">
+          <div class="col-md-12 col-lg-12 d-flex py-3">
             <div class="info">
               <ul>
                 <li>
@@ -300,11 +300,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- features: Infrastructure Assessment -->
-    <div
-      class="as-features py-3 py-sm-5"
+    <section
+      class="as-features section-padding"
       :style="`background-image: url(${feature})`"
     >
       <div class="container">
@@ -420,11 +420,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- pricing -->
-    <div>
-      <div class="as-pricing py-3 py-sm-5">
+    <section class="section-padding">
+      <div class="as-pricing">
         <div class="container">
           <div class="row py-3 py-sm-5">
             <SectionHeading
@@ -435,7 +435,7 @@
                 personalized and satisfactory experience."
             />
           </div>
-          <div class="row as-pricing-row text-white">
+          <div class="row as-pricing-row text-white mb-5">
             <div
               class="col-lg-8 p-3 p-sm-5 d-flex align-items-center justify-content-center"
             >
@@ -604,21 +604,30 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row pt-5">
-      <SectionHeading
-        title="We Understand the Fundamentals!"
-        description="Get clout by utilizing our industry exposure and proven experience.
+    </section>
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <SectionHeading
+            title="We Understand the Fundamentals!"
+            description="Get clout by utilizing our industry exposure and proven experience.
             We understand the nuances, regulatory requirements, and significance
             of doing things correctly the first time around having worked with a
             variety of clients. Whether it's a globally distributed corporation
             with data centers or a rapidly growing startup, we've got you
             covered!"
-      />
-    </div>
-    <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+          />
+        </div>
+      </div>
+
+      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+    </section>
+
     <!-- faqs -->
-    <div class="as-faqs py-5" :style="`background-image: url(${feature})`">
+    <section
+      class="as-faqs section-padding"
+      :style="`background-image: url(${feature})`"
+    >
       <div class="container">
         <div class="row">
           <SectionHeading
@@ -675,12 +684,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Call to Action -->
     <div
       class="d-flex align-items-center justify-content-center as-call-to-action-block"
-      :style="`background-image: url(${callToAction})`"
+      :style="`background: url(${callToAction}),linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%)`"
     >
       <div
         class="d-flex align-items-center align-self-stretch p-3 p-sm-5 text-center"
@@ -1071,7 +1080,6 @@ div.as-whyus .container {
 .as-call-to-action-block {
   margin: 15px;
   border-radius: 15px;
-  background-color: #093097;
 }
 
 @media only screen and (max-width: 767px) {
