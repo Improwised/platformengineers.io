@@ -138,4 +138,8 @@ export default {
   opacity: 0.1;
   background: url("/img/blog-bk-1.png");
 }
+
+.masonry__item {
+  display: flex;
+}
 </style>
