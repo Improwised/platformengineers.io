@@ -8,6 +8,35 @@
             <li class="">
               <a href="/about-us">About Us</a>
             </li>
+            <div class="d-flex mt-2 icons">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61555276800801"
+                  title="Platform Engineers facebook page"
+                  target="_blank"
+                >
+                  <i class="socicon socicon-facebook icon icon--xs"></i>
+                </a>
+              </li>
+              <li class="px-2">
+                <a
+                  href="https://twitter.com/platform_engr"
+                  title="Platform Engineers twitter account"
+                  target="_blank"
+                >
+                  <i class="socicon socicon-twitter icon icon--xs"></i>
+                </a>
+              </li>
+              <li class="px-1">
+                <a
+                  href="https://www.linkedin.com/company/platform-engineers/mycompany/"
+                  title="Platform Engineers linkedin page"
+                  target="_blank"
+                >
+                  <i class="socicon socicon-linkedin icon icon--xs"></i>
+                </a>
+              </li>
+            </div>
           </ul>
           <!--  -->
           <h3 class="type--uppercase m-0 h6">Resources</h3>
@@ -68,3 +97,13 @@
     </div>
   </footer>
 </template>
+
+<style scoped>
+.d-flex li a:hover i {
+  color: #8139ea;
+}
+
+.icons {
+  margin-left: -5px;
+}
+</style>
