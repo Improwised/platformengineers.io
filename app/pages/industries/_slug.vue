@@ -13,7 +13,10 @@
         </section>
       </div>
 
-      <section v-if="industry.common_usecases_title" class="wave-bk bg--">
+      <section
+        v-if="industry.common_usecases_title"
+        class="wave-bk bg-- section-padding"
+      >
         <div class="container">
           <div class="row">
             <SectionHeading :title="industry.common_usecases_title" />
@@ -28,7 +31,10 @@
         </div>
       </section>
 
-      <section v-if="industry.benefits_title" class="wave-bk border-top bg--">
+      <section
+        v-if="industry.benefits_title"
+        class="wave-bk border-top bg-- section-padding"
+      >
         <div class="container">
           <div class="row">
             <SectionHeading :title="industry.benefits_title" />
@@ -49,7 +55,7 @@
       <section
         v-if="industry && industry.companies && industry.companies.length"
         id="toolBox"
-        class="text-center technologies border-top"
+        class="text-center technologies border-top section-padding"
       >
         <SectionHeading :title="industry.companies_title" />
         <div class="container-fluid o_05">
@@ -68,7 +74,7 @@
         </div>
       </section>
 
-      <section class="wave-bk border-top bg--">
+      <section class="wave-bk border-top bg-- section-padding">
         <div class="container">
           <div class="row">
             <SectionHeading
@@ -92,7 +98,7 @@
         </div>
       </section>
 
-      <section class="text-center border-top bg--">
+      <section class="text-center border-top bg-- section-padding">
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">

@@ -38,7 +38,7 @@
     </div>
 
     <!-- Why Us -->
-    <div class="py-3 py-sm-5 as-whyus">
+    <section class="section-padding as-whyus">
       <SectionHeading title="Why Assessment" />
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
@@ -186,7 +186,7 @@
     >
       <div class="container">
         <div class="row">
-          <div class="text-center col-md-10 offset-md-1 py-3 py-sm-5">
+          <div class="text-center col-md-10 offset-md-1 py-3">
             <div class="text-center">
               <nuxt-img
                 src="/img/as/features/architecture/icon.svg"
@@ -206,7 +206,7 @@
               efficiency, considering key areas."
             />
           </div>
-          <div class="col-md-12 col-lg-12 d-flex py-3 py-sm-5">
+          <div class="col-md-12 col-lg-12 d-flex py-3">
             <div class="info">
               <ul>
                 <li>
@@ -423,8 +423,8 @@
     </section>
 
     <!-- pricing -->
-    <div>
-      <div class="as-pricing py-3 py-sm-5">
+    <section class="section-padding">
+      <div class="as-pricing">
         <div class="container">
           <div class="row py-3 py-sm-5">
             <SectionHeading
@@ -435,45 +435,66 @@
                 personalized and satisfactory experience."
             />
           </div>
-          <div class="row as-pricing-row text-white">
+          <div class="row as-pricing-row text-white mb-5">
             <div
               class="col-lg-8 p-3 p-sm-5 d-flex align-items-center justify-content-center"
             >
               <div>
                 <p>
-                  Check out the <a href="/assessment/#faqs">FAQs</a> if you
-                  still have questions.
+                  This assessment, facilitated by the PlatformEngineers, is a
+                  unique offering in the market, setting it apart with
+                  distinctive technical capabilities not found elsewhere.
                 </p>
-              </div>
-            </div>
-          </div>
-          <div
-            id="as-pricing"
-            class="col-lg-4 d-flex align-items-center justify-content-center as-p-block p-3 p-sm-5"
-            :style="`background-image: url(${pricing})`"
-          >
-            <div class="d-flex align-items-center justify-content-center">
-              <div class="text-center">
-                <span class="badge badge-warning">Limited-time offer</span>
-                <br />
-                <br />
-                <h2
-                  class="m-0 p-0 text-white"
-                  style="font-size: 4rem; line-height: 1"
+                <hr />
+                <div
+                  class="d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap"
                 >
-                  $250
-                </h2>
-                <p class="m-0" style="font-size: 1.3rem; color: gray">
-                  <s>$1000</s> / 75% off
-                </p>
-                <br />
-                <a
-                  href="https://calendly.com/platform-engineers/30min"
-                  class="btn px-5 as-call-to-action b-30 m-0"
-                  target="_blank"
-                >
-                  SCHEDULE A CALL
-                </a>
+                  <div class="d-flex align-items-center">
+                    <nuxt-img
+                      src="/img/as/pricing/check.png"
+                      alt="No Hidden Fees | Pricing | platformengineers"
+                      title="No Hidden Fees | Pricing | platformengineers"
+                      format="png"
+                      loading="lazy"
+                      width="16"
+                      height="16"
+                      quality="80"
+                    />
+                    &nbsp;&nbsp;No Hidden Fees
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <nuxt-img
+                      src="/img/as/pricing/check.png"
+                      alt="Money back guarantee | Pricing | platformengineers"
+                      title="Money back guarantee | Pricing | platformengineers"
+                      format="png"
+                      loading="lazy"
+                      width="16"
+                      height="16"
+                      quality="80"
+                    />
+                    &nbsp;&nbsp;Money back guarantee
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <nuxt-img
+                      src="/img/as/pricing/check.png"
+                      alt="Get Tax invoice | Pricing | platformengineers"
+                      title="Get Tax invoice | Pricing | platformengineers"
+                      format="png"
+                      loading="lazy"
+                      width="16"
+                      height="16"
+                      quality="80"
+                    />
+                    &nbsp;&nbsp;Get Tax invoice
+                  </div>
+                </div>
+                <div class="text-center pt-5">
+                  <p>
+                    Check out the <a href="/assessment/#faqs">FAQs</a> if you
+                    still have questions.
+                  </p>
+                </div>
               </div>
             </div>
             <div
@@ -584,22 +605,26 @@
         </div>
       </div>
     </section>
-
     <section class="section-padding">
-      <SectionHeading
-        title="We Understand the Fundamentals!"
-        description="Get clout by utilizing our industry exposure and proven experience.
+      <div class="container">
+        <div class="row">
+          <SectionHeading
+            title="We Understand the Fundamentals!"
+            description="Get clout by utilizing our industry exposure and proven experience.
             We understand the nuances, regulatory requirements, and significance
             of doing things correctly the first time around having worked with a
             variety of clients. Whether it's a globally distributed corporation
             with data centers or a rapidly growing startup, we've got you
             covered!"
-      />
+          />
+        </div>
+      </div>
 
       <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
     </section>
+
     <!-- faqs -->
-    <div
+    <section
       class="as-faqs section-padding"
       :style="`background-image: url(${feature})`"
     >
@@ -659,7 +684,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Call to Action -->
     <div
@@ -1055,7 +1080,6 @@ div.as-whyus .container {
 .as-call-to-action-block {
   margin: 15px;
   border-radius: 15px;
-  background-color: #093097;
 }
 
 @media only screen and (max-width: 767px) {

@@ -9,7 +9,7 @@
       />
     </div>
 
-    <section>
+    <section class="section-padding">
       <div class="container">
         <div class="row">
           <div
@@ -20,7 +20,10 @@
       </div>
     </section>
 
-    <section v-if="service.features" class="border-top wave-bk bg--">
+    <section
+      v-if="service.features"
+      class="border-top section-padding wave-bk bg--"
+    >
       <div class="container">
         <div class="row">
           <SectionHeading :title="service.features_title" />
@@ -44,7 +47,7 @@
       </div>
     </section>
 
-    <section v-if="service.process" class="border-top">
+    <section v-if="service.process" class="border-top section-padding">
       <div class="container">
         <div class="row">
           <SectionHeading :title="service.process_title" />
@@ -75,7 +78,10 @@
       </div>
     </section>
 
-    <section v-if="service.approach_cards" class="wave-bk border-top bg--">
+    <section
+      v-if="service.approach_cards"
+      class="wave-bk border-top bg-- section-padding"
+    >
       <div class="container">
         <div class="row">
           <SectionHeading :title="service.approach_title" />
@@ -95,7 +101,10 @@
       </div>
     </section>
 
-    <section v-if="service.offering_cards" class="wave-bk border-top bg--">
+    <section
+      v-if="service.offering_cards"
+      class="wave-bk border-top bg-- section-padding"
+    >
       <div class="container">
         <div class="row">
           <SectionHeading :title="service.offering_title" />
@@ -115,7 +124,7 @@
       </div>
     </section>
 
-    <section class="text-center border-top bg--">
+    <section class="text-center border-top bg-- section-padding">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">

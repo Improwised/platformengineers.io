@@ -4,8 +4,9 @@
       <Navigation />
       <Header title="Blog" image="/img/blog.png" />
     </div>
-
-    <List :list="blogList" readmore="/blog/" :showavtar="true" />
+    <section class="section-padding">
+      <List :list="blogList" readmore="/blog/" :showavtar="true" />
+    </section>
   </div>
 </template>
 

@@ -2,11 +2,18 @@
   <div class="main-container">
     <div class="contact-us-bk">
       <Navigation />
-      <section class="text-center">
+      <!-- <Header
+        class="section-padding"
+        title="Let's talk about your project"
+        description="We would love to hear from you! If you're interested in
+                improving and scaling your project through our platform
+                engineering services, please don't hesitate to get in touch."
+      /> -->
+      <section class="text-center section-padding">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 col-lg-6">
-              <h1>Let's talk about your project</h1>
+            <div class="col-md-9 col-lg-8">
+              <h2>Let's talk about your project</h2>
               <p class="lead">
                 We would love to hear from you! If you're interested in
                 improving and scaling your project through our platform
@@ -17,7 +24,7 @@
         </div>
       </section>
     </div>
-    <section class="bg-- contact-us-form-bk">
+    <section class="bg-- contact-us-form-bk section-padding">
       <div class="container">
         <div
           class="row justify-content-between bs-11 p-5 br-30 lead fc-lead bg-white"
@@ -107,7 +114,6 @@
 </template>
 <script>
 import Navigation from "@/components/Navigation.vue";
-
 export default {
   components: {
     Navigation,

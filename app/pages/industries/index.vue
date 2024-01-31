@@ -12,12 +12,13 @@
           />
         </div>
       </div>
-
-      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+      <section class="section-padding">
+        <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+      </section>
 
       <hr class="m-0" />
 
-      <section class="text-center border-top bg--">
+      <section class="text-center border-top bg-- section-padding">
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
