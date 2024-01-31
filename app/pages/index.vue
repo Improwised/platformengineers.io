@@ -8,7 +8,7 @@
             :title="home.tagline"
             :contactus="true"
             :description="home.description"
-            image="/img/l13.svg"
+            image="/img/l13.webp"
           />
         </section>
       </div>
