@@ -48,6 +48,8 @@
           loading="lazy"
           height="400px"
           class="img-dim"
+          decoding="async"
+          style="color:transparent"
         />
       </div>
     </div>
