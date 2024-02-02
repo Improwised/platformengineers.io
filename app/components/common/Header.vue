@@ -45,11 +45,10 @@
           v-if="image"
           :src="image"
           :alt="`${title} | Platform Engineers`"
-          loading="lazy"
           height="400px"
           class="img-dim"
           decoding="async"
-          style="color:transparent"
+          style="color: transparent"
         />
       </div>
     </div>
