@@ -148,21 +148,21 @@ const _link = [
     href: "https://script.hotjar.com",
     rel: "preconnect",
   },
-  {
-    href: "https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i&display=swap",
-    rel: "stylesheet",
-    lazyload: true,
-  },
-  {
-    href: "https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500&display=swap",
-    rel: "stylesheet",
-    lazyload: true,
-  },
-  {
-    href: "https://fonts.googleapis.com/icon?family=Material+Icons&display=swap",
-    rel: "stylesheet",
-    lazyload: true,
-  },
+  // {
+  //   href: "https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i&display=swap",
+  //   rel: "stylesheet",
+  //   lazyload: true,
+  // },
+  // {
+  //   href: "https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500&display=swap",
+  //   rel: "stylesheet",
+  //   lazyload: true,
+  // },
+  // {
+  //   href: "https://fonts.googleapis.com/icon?family=Material+Icons&display=swap",
+  //   rel: "stylesheet",
+  //   lazyload: true,
+  // },
   {
     rel: "apple-touch-icon",
     sizes: "57x57",

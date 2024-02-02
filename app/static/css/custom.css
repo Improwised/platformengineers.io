@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
+
 html,
 body {
   font-size: 16px;
@@ -423,4 +427,3 @@ img.img-dim {
   background: url(../img/as/call-to-action/background.svg),
     linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%);
 }
-
