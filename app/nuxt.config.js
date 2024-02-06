@@ -99,7 +99,7 @@ export default {
 
   generate: {
     dir: "public",
-    
+    subFolders: false,
     fallback: false,
     interval: 2000,
     routes: async () => {
