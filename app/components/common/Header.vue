@@ -45,6 +45,7 @@
           v-if="image"
           :src="image"
           :alt="`${title} | Platform Engineers`"
+          height="400"
           class="img-dim"
           decoding="async"
           style="color: transparent"
