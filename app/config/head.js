@@ -119,7 +119,6 @@ const prodLinks = [
     href: "/dist/index.min.css",
     rel: "stylesheet",
     type: "text/css",
-    lazyload: true,
   },
 ];
 
