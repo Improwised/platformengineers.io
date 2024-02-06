@@ -5,6 +5,7 @@ require("dotenv").config(); // eslint-disable-line nuxt/no-cjs-in-config
 const CompressionPlugin = require("compression-webpack-plugin"); // eslint-disable-line nuxt/no-cjs-in-config
 
 export default {
+
   target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -17,7 +18,6 @@ export default {
   plugins: [
     { src: "~/plugins/urlroutes" },
     { src: "~/plugins/download.js", mode: "server" },
-    { src: "~/plugins/hotjar.js", mode: "client" }
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -95,9 +95,11 @@ export default {
       config.devtool = "source-map";
     },
   },
+  
 
   generate: {
     dir: "public",
+    
     fallback: false,
     interval: 2000,
     routes: async () => {
