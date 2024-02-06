@@ -133,19 +133,7 @@ const _link = [
     rel: "preconnect",
   },
   {
-    href: "https://vars.hotjar.com",
-    rel: "preconnect",
-  },
-  {
-    href: "https://static.hotjar.com",
-    rel: "preconnect",
-  },
-  {
     href: "https://www.gstatic.com",
-    rel: "preconnect",
-  },
-  {
-    href: "https://script.hotjar.com",
     rel: "preconnect",
   },
   // {
