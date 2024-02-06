@@ -46,6 +46,7 @@
           :src="image"
           :alt="`${title} | Platform Engineers`"
           height="400"
+          format="png"
           class="img-dim"
           decoding="async"
           style="color: transparent"
