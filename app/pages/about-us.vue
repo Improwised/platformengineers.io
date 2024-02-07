@@ -168,8 +168,7 @@ export default {
   height: 100%;
   opacity: 0.3;
   z-index: -1;
-  background: url("/img/bk/bg-3.jpg");
-  background: url("/img/a2.jpg");
+  background: url("/img/a2.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
