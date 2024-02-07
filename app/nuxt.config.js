@@ -61,7 +61,6 @@ export default {
     defaults: {
       lastmod: new Date(),
     },
-    trailingSlash: true,
   },
 
   publicRuntimeConfig: {
