@@ -24,10 +24,8 @@
               class="col-md-6 d-flex align-items-center justify-content-center"
             >
               <nuxt-img
-                src="/img/about-us-2.svg"
+                src="/img/about-us-2.webp"
                 alt="About us | Platform Engineers"
-                format="png"
-                loading="lazy"
                 height="400px"
                 class="img-dim"
               />
