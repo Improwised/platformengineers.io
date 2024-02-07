@@ -4,12 +4,35 @@
       <div class="hero-bk">
         <Navigation />
         <section>
-          <Header
-            :title="home.tagline"
-            :contactus="true"
-            :description="home.description"
-            image="/img/l13.webp"
-          />
+          <div class="container">
+            <div class="row align-items-center justify-content-around">
+              <div
+                class="col-md-6 col-12 d-flex align-items-center justify-content-center"
+              >
+                <div>
+                  <h1>{{ home.tagline }}</h1>
+                  <p class="lead">{{ home.description }}</p>
+                  <a
+                    class="btn btn--primary type--uppercase b-30"
+                    href="/contact-us"
+                  >
+                    <span class="btn__text"> Contact Us </span>
+                  </a>
+                  <br />
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-12 d-flex align-items-center justify-content-center"
+              >
+                <nuxt-img
+                  src="/img/l13.webp"
+                  alt="Platform Engineers"              
+                  height="456"
+                  class="img-dim"
+                />
+              </div>
+            </div>
+          </div>
         </section>
       </div>
 
@@ -129,7 +152,6 @@
 import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
 import Card from "@/components/common/Card.vue";
-import Header from "@/components/common/Header.vue";
 import SectionHeading from "@/components/common/SectionHeading.vue";
 
 export default {
@@ -137,7 +159,6 @@ export default {
     Navigation,
     Technologies,
     Card,
-    Header,
     SectionHeading,
   },
   layout: "theme",
