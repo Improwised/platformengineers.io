@@ -27,7 +27,7 @@
                 <nuxt-img
                   src="/img/l13.webp"
                   alt="Platform Engineers"
-                  height="456"
+                 
                   class="img-dim"
                 />
               </div>
