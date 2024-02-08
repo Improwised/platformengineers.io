@@ -78,8 +78,8 @@ export default {
     };
   },
   head() {
-    const image = this.$img("/img/about-us-2.svg", {
-      format: "png",
+    const image = this.$img("/img/about-us-2.webp", {
+      format: "webp",
       height: "400px",
     });
 
