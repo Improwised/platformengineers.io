@@ -19,8 +19,6 @@
                   :src="$urls.assets(item.image)"
                   :alt="item.title"
                   :title="item.title"
-                  loading="lazy"
-                  format="png"
                 />
               </a>
             </div>
@@ -36,8 +34,6 @@
                   :title="item.title"
                   height="300"
                   width="300"
-                  loading="lazy"
-                  format="png"
                 />
               </a>
             </div>
