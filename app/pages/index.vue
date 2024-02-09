@@ -24,7 +24,7 @@
               <div
                 class="col-md-6 col-12 d-flex align-items-center justify-content-center"
               >
-                <nuxt-img
+                <img
                   src="/img/l13.webp"
                   alt="Platform Engineers"
                   class="img-dim"
