@@ -20,10 +20,8 @@
       />
     </div>
     <div v-else>
-    
-      <link rel="preload" href="/dist/index.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="/dist/index.min.css"></noscript>
-
+       <link rel="stylesheet" type="text/css"  href="/dist/index.min.css"/>
+  
     </div>
     <a
       id="start"
