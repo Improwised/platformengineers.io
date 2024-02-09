@@ -1,5 +1,5 @@
 import Vue from "vue";
-const moment = require("moment");
+import moment from 'moment';
 
 export function titlecase(value) {
   if (!value) return value;
