@@ -27,7 +27,10 @@
                 <img
                   src="/img/l13.webp"
                   alt="Platform Engineers"
-                  class="img-dim"
+                  class=""
+                  height="240"
+                  width="300"
+
                 />
               </div>
             </div>
