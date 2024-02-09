@@ -24,13 +24,10 @@
               <div
                 class="col-md-6 col-12 d-flex align-items-center justify-content-center"
               >
-                <img
+               <nuxt-img
                   src="/img/l13.webp"
                   alt="Platform Engineers"
-                  class=""
-                  height="240"
-                  width="300"
-
+                  class="img-dim"
                 />
               </div>
             </div>
