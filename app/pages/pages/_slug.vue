@@ -25,7 +25,7 @@
           </h3>
           <div class="p-0 p-md-5">
             <a
-              href="/assessment"
+              href="/assessment/"
               class="btn my-0 my-md-4 px-5 as-call-to-action b-30"
               title="Assessment by platformengineers"
             >
@@ -164,7 +164,7 @@
           <div class="pt-3 pb-0 p-md-5">
             <a
               class="btn btn--primary type--uppercase b-30"
-              :href="page.call_to_action_button_link"
+              :href="page.call_to_action_button_link +'/'"
             >
               <span class="btn__text">
                 {{ page.call_to_action_button_text }}

@@ -2,7 +2,7 @@
   <div>
     <a
       class="btn btn--primary type--uppercase b-30"
-      href="/contact-us"
+      href="/contact-us/"
       title="contact"
     >
       <span class="btn__text"> {{ text }} </span>

@@ -14,7 +14,7 @@
                   <p class="lead">{{ home.description }}</p>
                   <a
                     class="btn btn--primary type--uppercase b-30"
-                    href="/contact-us"
+                    href="/contact-us/"
                   >
                     <span class="btn__text"> Contact Us </span>
                   </a>
@@ -47,7 +47,7 @@
           </h3>
           <div class="p-0 p-md-5">
             <a
-              href="/assessment"
+              href="/assessment/"
               class="btn my-0 my-md-4 px-5 as-call-to-action b-30"
               title="Assessment by platformengineers"
             >
@@ -112,7 +112,7 @@
             <div class="col-6 text-right text-center-xs">
               <a
                 class="btn btn--primary type--uppercase b-30"
-                href="/contact-us"
+                href="/contact-us/"
               >
                 <span class="btn__text">Contact Us</span>
               </a>
@@ -136,7 +136,7 @@
           <div class="pt-3 pb-0 p-md-5">
             <a
               class="type--uppercase btn my-0 my-md-4 px-5 as-call-to-action b-30"
-              href="/contact-us"
+              href="/contact-us/"
             >
               <span class="btn__text"> Contact Us </span>
             </a>

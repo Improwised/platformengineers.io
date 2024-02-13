@@ -58,7 +58,7 @@
                   <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="/about-us">About Us</a>
+                  <a href="/about-us/">About Us</a>
                 </li>
                 <li class="dropdown">
                   <span class="dropdown__trigger">Services</span>
@@ -70,16 +70,16 @@
                         >
                           <ul class="menu-vertical">
                             <li>
-                              <a href="/assessment">Cost Assessment</a>
+                              <a href="/assessment/">Cost Assessment</a>
                             </li>
                             <li>
-                              <a href="/assessment">Performance Assessment</a>
+                              <a href="/assessment/">Performance Assessment</a>
                             </li>
                             <li
                               v-for="(service, index) in $store.state.services"
                               :key="index"
                             >
-                              <a :href="`/services/${service.slug}`">{{
+                              <a :href="`/services/${service.slug}/`">{{
                                 service.title
                               }}</a>
                             </li>
@@ -104,7 +104,7 @@
                                 .industries"
                               :key="index"
                             >
-                              <a :href="`/industries/${industry.slug}`">{{
+                              <a :href="`/industries/${industry.slug}/`">{{
                                 industry.title
                               }}</a>
                             </li>
@@ -119,7 +119,7 @@
                   <a href="/blog">Blog</a>
                 </li>
                 <li class="">
-                  <a href="/case-studies">Case Studies</a>
+                  <a href="/case-studies/">Case Studies</a>
                 </li>
               </ul>
             </div>

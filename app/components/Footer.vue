@@ -6,7 +6,7 @@
           <h3 class="type--uppercase m-0 h6">Company</h3>
           <ul class="list--hover">
             <li class="">
-              <a href="/about-us">About Us</a>
+              <a href="/about-us/">About Us</a>
             </li>
             <div class="d-flex mt-2 icons">
               <li>
@@ -42,10 +42,10 @@
           <h3 class="type--uppercase m-0 h6">Resources</h3>
           <ul class="list--hover">
             <li class="">
-              <a href="/blog">Blog</a>
+              <a href="/blog/">Blog</a>
             </li>
             <li class="">
-              <a href="/case-studies">Case Studies</a>
+              <a href="/case-studies/">Case Studies</a>
             </li>
           </ul>
         </div>
@@ -53,7 +53,7 @@
           <h3 class="type--uppercase m-0 h6">Services</h3>
           <ul class="list--hover">
             <li v-for="(service, index) in $store.state.services" :key="index">
-              <a :href="`/services/${service.slug}`">{{ service.title }}</a>
+              <a :href="`/services/${service.slug}/`">{{ service.title }}</a>
             </li>
           </ul>
         </div>
@@ -64,7 +64,7 @@
               v-for="(industry, index) in $store.state.industries"
               :key="index"
             >
-              <a :href="`/industries/${industry.slug}`">{{ industry.title }}</a>
+              <a :href="`/industries/${industry.slug}/`">{{ industry.title }}</a>
             </li>
           </ul>
         </div>
@@ -72,16 +72,16 @@
           <h3 class="type--uppercase m-0 h6">Support</h3>
           <ul class="list--hover">
             <li>
-              <a href="/contact-us">Contact Us</a>
+              <a href="/contact-us/">Contact Us</a>
             </li>
           </ul>
           <h3 class="type--uppercase m-0 h6">Assessment</h3>
           <ul class="list--hover">
             <li>
-              <a href="/assessment">Cost Assessment</a>
+              <a href="/assessment/">Cost Assessment</a>
             </li>
             <li>
-              <a href="/assessment">Performance Assessment</a>
+              <a href="/assessment/">Performance Assessment</a>
             </li>
           </ul>
         </div>

@@ -64,7 +64,7 @@
                 ><a
                   class="text-dark text-decoration-none font-weight-bold"
                   target="_blank"
-                  href="https://platformengineers.io/services/platform-engineering"
+                  href="https://platformengineers.io/services/platform-engineering/"
                   >focus on performance</a
                 ></strong
               >, scalable architecture, and fortified reliability.
@@ -108,7 +108,7 @@
                 <a
                   class="text-dark text-decoration-none font-weight-bold"
                   target="_blank"
-                  href="https://platformengineers.io/services/ci-cd-implementation"
+                  href="https://platformengineers.io/services/ci-cd-implementation/"
                   >continuous deployment</a
                 >
                 strategies
@@ -127,7 +127,7 @@
               <a
                 class="text-dark text-decoration-none font-weight-bold"
                 target="_blank"
-                href="https://platformengineers.io/services/infrastructure-maintenance-and-support"
+                href="https://platformengineers.io/services/infrastructure-maintenance-and-support/"
                 >proactive monitoring.</a
               >
 

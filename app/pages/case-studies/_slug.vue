@@ -221,7 +221,7 @@ export default {
   data() {
     if (process.client) {
       return {
-        baseUrlPath: window.location.href, // this.$route.fullPath,
+        baseUrlPath: window.location.href+"/", // this.$route.fullPath,
       };
     } else {
       return {
