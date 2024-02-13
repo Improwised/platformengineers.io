@@ -61,6 +61,7 @@ export default {
     defaults: {
       lastmod: new Date(),
     },
+    trailingSlash: true,
   },
 
   publicRuntimeConfig: {
@@ -94,11 +95,10 @@ export default {
       config.devtool = "source-map";
     },
   },
-  
+
 
   generate: {
     dir: "public",
-    subFolders: false,
     fallback: false,
     interval: 2000,
     routes: async () => {
