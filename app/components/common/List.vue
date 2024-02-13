@@ -10,7 +10,7 @@
           <article class="b-30 bs-11">
             <div v-if="isShow">
               <a
-                :href="`${readmore}${item.slug}`"
+                :href="`${readmore}${item.slug}/`"
                 class="industry d-flex align-items-center justify-content-center p-4"
                 style="height: 300px"
               >
@@ -24,7 +24,7 @@
             </div>
             <div v-else>
               <a
-                :href="`${readmore}${item.slug}`"
+                :href="`${readmore}${item.slug}/`"
                 class="block d-flex align-items-center justify-content-center"
               >
                 <nuxt-img
@@ -38,7 +38,7 @@
               </a>
             </div>
             <div class="feature__body px-4 pb-4">
-              <a :href="`${readmore}${item.slug}`" class="t-hover">
+              <a :href="`${readmore}${item.slug}/`" class="t-hover">
                 <div v-if="isShow" class="text-center">
                   <h2 class="h5" :title="item.title">
                     {{ item.title }}
@@ -86,7 +86,7 @@
                 </div>
               </div>
               <a
-                :href="`${readmore}${item.slug}`"
+                :href="`${readmore}${item.slug}/`"
                 class="d-lg-none color-theme"
               >
                 Read More

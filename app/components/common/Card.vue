@@ -18,7 +18,7 @@
         width="80px"
       />
     </div>
-    <a v-if="slug" :href="`/${linkRedirect}/${slug}`" class="t-hover zi-0">
+    <a v-if="slug" :href="`/${linkRedirect}/${slug}/`" class="t-hover zi-0">
       <h3 class="mb-0 h5">{{ title }}</h3>
     </a>
     <!-- zi-0 -->
@@ -36,7 +36,7 @@
     <!-- <p v-if="description" class="m-0 zi-0">{{ description }}</p> -->
     <a
       v-if="slug"
-      :href="`/${linkRedirect}/${slug}`"
+      :href="`/${linkRedirect}/${slug}/`"
       class="d-lg-none mt-4 mb-0 text-center zi-0"
     >
       Learn More
