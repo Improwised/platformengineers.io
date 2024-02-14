@@ -116,7 +116,7 @@
                 </li>
 
                 <li class="">
-                  <a href="/blog">Blog</a>
+                  <a href="/blog/">Blog</a>
                 </li>
                 <li class="">
                   <a href="/case-studies/">Case Studies</a>
