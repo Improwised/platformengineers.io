@@ -1,1 +1,105 @@
-document.addEventListener("DOMContentLoaded",()=>{function e(e){$("#errorMessages").css("display","block");var s='<ul id="messages">';$.each(e,function(e,a){s=s+"<li><b>"+a+"</b></li>"}),s+="</ul>",$("#errorMessages").append(s)}function s(){$("#errorMessages").remove(),$("#success").css("display","block"),$("#success").show().delay(5e3).fadeOut()}function a(){t()}function t(){$("#contactus-submit").trigger("reset"),$("#success").css("display","none"),$("#errorMessages ul").remove(),$("#errorMessages").css("display","none"),$("#btn-submit").html("Send Inquiry"),$("#btn-submit").attr("disabled",!1)}t(),$(function(){$("#contactus-submit").submit(function(t){t.preventDefault();var r,n=[];if(t.target.name.value||n.push("Name is required"),t.target.email.value||n.push("Email is required"),t.target.message.value||n.push("Message is required"),t.target.email.value&&(r=t.target.email.value,!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(r).toLowerCase()))&&n.push("Invalid email"),n&&n.length)$("#errorMessages ul").remove(),$("#errorMessages").css("display","none"),e(n);else{var i=t.currentTarget.action;$("#btn-submit").html("Sending..."),$("#btn-submit").attr("disabled",!0),grecaptcha.ready(function(){grecaptcha.execute("6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg",{action:"platformengineers_contactus_form"}).then(function(r){$.ajax({url:i,type:"post",data:JSON.stringify({name:t.target.name.value,email:t.target.email.value,message:t.target.message.value,recaptcha_response:r}),success:function(t){let{statusCode:r,body:n}=t;if(201===r)a(),s();else{let{error:i}=JSON.parse(n);e(i||["Something went wrong. Please try again"])}},error:function(s){a(),e((s.responseJSON?s.responseJSON.error:void 0)||["Something went wrong. Please try again"])}})})})}})})});
+document.addEventListener('DOMContentLoaded', () => {
+setInitial();
+
+$(function() {
+  //hang on event of form with id=myform
+  $("#contactus-submit").submit(function(e) {
+
+    function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    //prevent Default functionality
+    e.preventDefault();
+
+    var errors = [];
+
+    !e.target['name'].value ? errors.push('Name is required') : undefined;
+
+    !e.target['email'].value ? errors.push('Email is required') : undefined;
+
+    !e.target['message'].value ? errors.push('Message is required') : undefined;
+
+    // !e.target['g-recaptcha-response'].value ? errors.push('Please verify the recaptcha') : undefined;
+
+    e.target['email'].value && !validateEmail(e.target['email'].value) ? errors.push('Invalid email') : undefined;
+
+    if (errors && errors.length) {
+      $('#errorMessages ul').remove();
+      $('#errorMessages').css('display', 'none');
+      showErrors(errors);
+    } else {
+
+      //get the action-url of the form
+      var actionurl = e.currentTarget.action;
+
+      $("#btn-submit").html('Sending...');
+      $("#btn-submit").attr("disabled", true);
+
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6Lfe5kwlAAAAAIMs9H9qX2E9X7qdK3PbdRwP6iFg', {action: 'platformengineers_contactus_form'}).then(function(token) {
+          $.ajax({
+            url: actionurl,
+            type: 'post',
+            data: JSON.stringify({
+              name: e.target['name'].value,
+              email: e.target['email'].value,
+              message: e.target['message'].value,
+              recaptcha_response: token
+            }),
+            success: function(data) {
+              const { statusCode, body } = data; 
+              if( statusCode === 201 ) {
+                setToDefault();
+                showSuccess();
+              } else {
+                const { error: errors } = JSON.parse(body);
+                showErrors(errors || ['Something went wrong. Please try again']);
+              }
+            },
+            error: function(err) {
+              setToDefault();
+              var errors = err.responseJSON ? err.responseJSON.error : undefined;
+              showErrors(errors || ['Something went wrong. Please try again']);
+            }
+          });
+        });
+      });
+    }
+  });
+});
+
+
+function showErrors(errors) {
+  $('#errorMessages').css('display', 'block');
+
+  var content = '<ul id="messages">';
+  $.each(errors,function (i,val){
+  content = content + '<li>' + '<b>' +val + '</b>' +'</li>'
+  });
+  content = content + '</ul>';
+
+  $("#errorMessages").append(content);
+}
+
+function showSuccess() {
+  $('#errorMessages').remove();
+  $('#success').css('display', 'block');
+  $("#success").show().delay(5000).fadeOut();
+}
+
+function setToDefault() {
+  // grecaptcha.reset(widgetId1);
+  setInitial();
+}
+
+function setInitial() {
+  $('#contactus-submit').trigger("reset");
+  $('#success').css('display', 'none');
+  $('#errorMessages ul').remove();
+  $('#errorMessages').css('display', 'none');
+  $("#btn-submit").html('Send Inquiry');
+  $("#btn-submit").attr("disabled", false);
+}
+});
