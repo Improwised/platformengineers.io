@@ -31,7 +31,6 @@
     <nuxt />
     <Footer />
     <backToTop />
-    <script src="/theme/js/jquery-3.1.1.min.js"></script>
     <script src="/theme/js/scripts.js"></script>
     <script src="/js/contactus.js"></script>
   </div>
