@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 setInitial();
 
 $(function() {
@@ -101,3 +102,4 @@ function setInitial() {
   $("#btn-submit").html('Send Inquiry');
   $("#btn-submit").attr("disabled", false);
 }
+});

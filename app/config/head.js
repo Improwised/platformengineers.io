@@ -228,15 +228,6 @@ const _link = [
 
 const devScripts = [
   {
-    src: "/js/jquery-3.5.1.min.js",
-    body: true,
-  },
-
-  {
-    src: "/js/isotope.min.js",
-    body: true,
-  },
-  {
     src: "/js/scripts.js",
     body: true,
   },
