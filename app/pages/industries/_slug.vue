@@ -51,7 +51,20 @@
           </div>
         </div>
       </section>
-
+      <section
+        v-if="industry && industry.h1_heading && industry.h1_heading.length"
+        id=""
+        class="text-center border-top section-padding"
+      >
+        <div class="container">
+          <div class="row">
+            <SectionHeading
+              :title="industry.h1_heading"
+              :description="industry.h1_description"
+            />
+          </div>
+        </div>
+      </section>
       <section
         v-if="industry && industry.companies && industry.companies.length"
         id="toolBox"
