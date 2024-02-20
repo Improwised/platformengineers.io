@@ -230,11 +230,7 @@ const devScripts = [
   {
     src: "/js/scripts.js",
     body: true,
-  },
-  {
-    src: "/js/contactus.js",
-    body: true,
-  },
+  }
 ];
 
 const prodScripts = [
