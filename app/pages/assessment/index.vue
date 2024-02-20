@@ -784,8 +784,7 @@ export default {
   },
 
   head() {
-    const seoTitle =
-      "Assessment Services for Application Performance Optimization | Infrastructure cost assessment ";
+    const seoTitle = "Application Infrastructure cost & performance assessment";
     const seoDescription =
       "Let Platform Engineers assess your application and infrastructure to find areas for improvement and cost savings. Actionable assessment from Platform Engineers to improve your application's performance and reduce costs.";
     return {
