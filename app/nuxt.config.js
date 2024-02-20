@@ -18,8 +18,9 @@ export default {
   plugins: [
     { src: "~/plugins/jquery-plugin.js" },
     { src: "~/plugins/urlroutes" },
+    { src: "~/plugins/contactus.js",mode:"client"},
     { src: "~/plugins/download.js", mode: "server" },
-      ],
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

@@ -32,7 +32,6 @@
     <Footer />
     <backToTop />
     <script src="/theme/js/scripts.js"></script>
-    <script src="/js/contactus.js"></script>
   </div>
 </template>
 
