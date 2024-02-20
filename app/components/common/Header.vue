@@ -3,7 +3,7 @@
     <div class="row py-2">
       <div class="col-md-6 d-flex align-items-center justify-content-center">
         <div>
-          <h2>{{ title }}</h2>
+          <h1 class="h2">{{ title }}</h1>
           <div v-if="description" class="lead" v-html="description"></div>
           <p v-if="caseStudy" style="font-size: 16px; max-width: 300px">
             {{ dateTime }}
