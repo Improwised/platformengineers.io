@@ -13,7 +13,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-9 col-lg-8">
-              <h2>Let's talk about your project</h2>
+              <h1 class="h2">Let's talk about your project</h1>
               <p class="lead">
                 We would love to hear from you! If you're interested in
                 improving and scaling your project through our platform
