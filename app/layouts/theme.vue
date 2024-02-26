@@ -31,7 +31,6 @@
     <nuxt />
     <Footer />
     <backToTop />
-    <script src="/theme/js/scripts.js"></script>
   </div>
 </template>
 

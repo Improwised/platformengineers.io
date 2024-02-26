@@ -226,13 +226,6 @@ const _link = [
 
 // ===================================
 
-const devScripts = [
-  {
-    src: "/js/scripts.js",
-    body: true,
-  }
-];
-
 const prodScripts = [
   {
     src: "/dist/index.min.js",

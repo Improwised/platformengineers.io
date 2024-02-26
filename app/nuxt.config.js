@@ -18,6 +18,7 @@ export default {
   plugins: [
     { src: "~/plugins/jquery-plugin.js" },
     { src: "~/plugins/urlroutes" },
+    { src: "~/plugins/scripts-plugin.js",mode:"client"},
     { src: "~/plugins/contactus.js",mode:"client"},
     { src: "~/plugins/download.js", mode: "server" },
   ],
