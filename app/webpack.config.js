@@ -1,9 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const PurgeCSSPlugin = require("purgecss-webpack-plugin"); // Add this line
-const glob = require("glob-all"); // Add this line
-
 
 module.exports = {
   mode: "production",
@@ -62,17 +59,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "index.min.css",
-    }),
-    new PurgeCSSPlugin({
-      paths: glob.sync([
-        path.join(__dirname, './layouts/**/*.vue'),
-        path.join(__dirname, './components/**/*.vue'),
-        path.join(__dirname, './pages/**/*.vue'),
-        path.join(__dirname, './plugins/**/*.js'),
-      
-      ]),
-      styleExtensions: ['.css'],
-      whitelist: ["html", "body"],
     }),
   ],
 };
