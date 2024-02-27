@@ -1,8 +1,8 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const { PurgeCSSPlugin }  = require("purgecss-webpack-plugin"); // Add this line for purge
-const glob = require("glob-all"); // Add this line for purge
+const PurgeCSSPlugin = require("purgecss-webpack-plugin"); // Add this line
+const glob = require("glob-all"); // Add this line
 
 
 module.exports = {
