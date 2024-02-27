@@ -97,6 +97,7 @@ export default {
     extend(config, ctx) {
       config.devtool = "source-map";
     },
+    postcss: null,
   },
 
 
