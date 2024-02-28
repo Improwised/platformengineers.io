@@ -51,7 +51,12 @@ export default {
     // sitemap
     "@nuxtjs/sitemap",
     "vue-social-sharing/nuxt",
+    "nuxt-purgecss"
   ],
+  purgecss: {
+    enabled: true, // Always enable purgecss
+    safelist: ['my-class'], // Add my-class token to the safelist (e.g. .my-class)
+  },
 
   robots: {
     UserAgent: "*",
