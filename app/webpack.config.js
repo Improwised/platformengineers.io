@@ -15,7 +15,14 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      chunks: "all",
+      cacheGroups: {
+        styles: {
+          name: "styles",
+          type: "css/mini-extract",
+          chunks: "all",
+          enforce: true,
+        },
+      },
     }, 
     minimize: true,
     minimizer: [
