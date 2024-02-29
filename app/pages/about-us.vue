@@ -23,15 +23,11 @@
             <div
               class="col-md-6 d-flex align-items-center justify-content-center"
             >
-            <img src="/img/about-us-2.webp" alt="About us | Platform Engineers"
-                height="400px"
-                class="img-dim" />
-              <!-- <nuxt-img
+            <nuxt-img
                 src="/img/about-us-2.webp"
                 alt="About us | Platform Engineers"
-                height="400px"
                 class="img-dim"
-              /> -->
+              />
             </div>
           </div>
         </div>
