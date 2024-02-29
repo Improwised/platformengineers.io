@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "./static/dist"),
-    filename: "[name].min.css",
+    filename: "[name].min.js",
   },
   optimization: {
     splitChunks: {
