@@ -15,15 +15,8 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: "styles",
-          type: "css/mini-extract",
-          chunks: "all",
-          enforce: true,
-        },
-      },
-    }, 
+      chunks: "all",
+    },
     minimize: true,
     minimizer: [
       new CssMinimizerPlugin({
@@ -65,9 +58,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // filename: "index.min.css",
-      filename: '[name].css', // [name] will be replaced by the chunk name
-      chunkFilename: '[id].css',
+      filename: "index.min.css",
     }),
   ],
 };
