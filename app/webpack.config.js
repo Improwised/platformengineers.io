@@ -8,7 +8,6 @@ module.exports = {
     maxEntrypointSize: 2000000,
     maxAssetSize: 2000000,
   },
-  entry: "./static/bundel1.js",
   entry:  {
     main: "./static/bundel1.js",
     fontsicon: "./static/bundel2.js",
