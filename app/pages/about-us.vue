@@ -23,7 +23,7 @@
             <div
               class="col-md-6 d-flex align-items-center justify-content-center"
             >
-            <nuxt-img
+            <img
                 src="/img/about-us-2.webp"
                 alt="About us | Platform Engineers"
                 class="img-dim"
