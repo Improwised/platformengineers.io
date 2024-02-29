@@ -23,7 +23,8 @@ module.exports = {
     minimize: true,
     minimizer: [
       new CssMinimizerPlugin({
-        test: "index.min.css",
+        // test: "[name].min.css",
+        test: /\.min\.css$/i,
         parallel: false,
       }),
     ],
