@@ -158,7 +158,7 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
 }
 
-/*
+
 .about-bk::before {
   content: "";
   position: absolute;
@@ -173,7 +173,7 @@ export default {
   background-size: 100%;
   background-position: center;
 }
-*/
+
 @media only screen and (max-width: 600px) {
   .about-bk {
     border-radius: 0 0 30px 30px;
