@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "./static/dist"),
-    filename: "index.min.js",
+    filename: "[name].min.css",
   },
   optimization: {
     splitChunks: {
@@ -61,7 +61,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "index.min.css",
+      filename: "[name].min.css",
     }),
   ],
 };
