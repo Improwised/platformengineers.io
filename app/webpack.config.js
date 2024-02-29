@@ -8,13 +8,14 @@ module.exports = {
     maxEntrypointSize: 2000000,
     maxAssetSize: 2000000,
   },
-  entry:  {
-    main: "./static/bundel1.js",
-    fontsicon: "./static/bundel2.js",
-  },
+  entry : "./static/bundel1.js",
+  // entry:  {
+  //   main: "./static/bundel1.js",
+  //   fontsicon: "./static/bundel2.js",
+  // },
   output: {
     path: path.resolve(__dirname, "./static/dist"),
-    filename: "[name].min.js",
+    filename: "index.min.js",
   },
   optimization: {
     splitChunks: {
@@ -23,8 +24,8 @@ module.exports = {
     minimize: true,
     minimizer: [
       new CssMinimizerPlugin({
-        // test: "[name].min.css",
-        test: /\.min\.css$/i,
+        test: "index.min.css",
+        // test: /\.min\.css$/i,
         parallel: false,
       }),
     ],
@@ -62,7 +63,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].min.css",
+      filename: "index.min.css",
     }),
   ],
 };
