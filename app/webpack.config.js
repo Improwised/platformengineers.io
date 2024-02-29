@@ -8,7 +8,11 @@ module.exports = {
     maxEntrypointSize: 2000000,
     maxAssetSize: 2000000,
   },
-  entry: "./static/bundel.js",
+  entry: "./static/bundel1.js",
+  entry:  {
+    main: "./static/bundel1.js",
+    fontsicon: "./static/bundel2.js",
+  },
   output: {
     path: path.resolve(__dirname, "./static/dist"),
     filename: "index.min.js",
