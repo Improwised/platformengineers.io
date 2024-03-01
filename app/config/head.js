@@ -102,6 +102,24 @@ const devLinks = [
     media: "all",
   },
   {
+    href: "/css/open-sans.css",
+    rel: "stylesheet",
+    type: "text/css",
+    media: "all",
+  },
+  {
+    href: "/css/rubikLato.css",
+    rel: "stylesheet",
+    type: "text/css",
+    media: "all",
+  },
+  {
+    href: "/css/materialicon.css",
+    rel: "stylesheet",
+    type: "text/css",
+    media: "all",
+  },
+  {
     href: "/css/index.css",
     rel: "stylesheet",
     type: "text/css",
