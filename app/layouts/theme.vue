@@ -20,7 +20,8 @@
       />
     </div>
     <div v-else>
-      <link rel="stylesheet" type="text/css" href="/dist/index.min.css" />
+      <link rel="stylesheet" type="text/css" href="/dist/main.min.css" />
+      <link rel="stylesheet" type="text/css" href="/dist/fontsicon.min.css" />
     </div>
     <a
       id="start"
