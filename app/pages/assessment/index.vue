@@ -118,7 +118,7 @@
         </div>
 
         <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-lg-6 py-3 py-sm-5">
+          <div class="col-lg-6 py-3 py-sm-5 possition-order">
             <strong class="as-color-o as-f-xxxl">REDUCE COST</strong>
             <h3>Infrastructure Cost Assessment</h3>
             <p>
