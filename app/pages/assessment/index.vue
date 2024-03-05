@@ -52,6 +52,7 @@
               format="png"
               loading="lazy"
               width="514"
+              height="410"
               quality="80"
             />
           </div>
@@ -172,6 +173,7 @@
               format="png"
               loading="lazy"
               width="522"
+              height="410"
               quality="80"
             />
           </div>
