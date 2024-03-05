@@ -32,10 +32,10 @@ jobs:
     - name: static generate
       run: npm run generate
     - name: update CNAME
-      run: echo "" > public/CNAME
+      run: echo "platformengineers.io" > public/CNAME
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        external_repository: Improwised/build-infra-cloud-website
+        personal_token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        external_repository: Improwised/platformengineers.io-dev
         publish_dir: ./app/public
