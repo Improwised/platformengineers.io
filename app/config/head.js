@@ -247,7 +247,7 @@ const structuredLdJsonData = {
 // ===================================
 
 export default function (mode) {
-  if (mode === 'development') {
+  if (mode === 'development' || mode === 'staging' ) {
     return null;
   }
 
