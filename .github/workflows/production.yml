@@ -40,5 +40,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-        external_repository: Improwised/platformengineers.io-dev
+        external_repository: Improwised/platformengineers.io-prod
         publish_dir: ./app/public
