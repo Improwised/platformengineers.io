@@ -247,6 +247,10 @@ const structuredLdJsonData = {
 // ===================================
 
 export default function (mode) {
+  if (mode === 'development' || mode === 'staging' ) {
+    return null;
+  }
+
   return {
     title: constants.title,
     htmlAttrs,
