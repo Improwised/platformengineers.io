@@ -24,11 +24,9 @@
             class="col-lg-6 d-flex align-items-center justify-content-center"
           >
             <nuxt-img
-              src="/img/as/hero/main.png"
+              src="/img/as/hero/main.webp"
               alt="Assessment by platformengineers"
               title="Assessment by platformengineers"
-              format="png"
-              loading="lazy"
               width="540"
               quality="80"
             />
@@ -746,14 +744,12 @@ export default {
       faqs,
       isFaqsVisible: "",
 
-      hero: this.$img("/img/as/hero/background.png", {
-        format: "png",
+      hero: this.$img("/img/as/hero/background.webp", {
         quality: "80",
         height: "543",
       }),
 
-      feature: this.$img("/img/as/features/background.jpg", {
-        format: "png",
+      feature: this.$img("/img/as/features/background.webp", {
         width: "1875",
       }),
 
