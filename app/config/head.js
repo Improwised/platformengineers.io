@@ -275,8 +275,13 @@ const structuredLdJsonData = {
 // ===================================
 
 export default function (mode) {
-  if (mode === 'development' || mode === 'staging' ) {
-    return null;
+  if (mode === "development" || mode === "staging") {
+    return {
+      title: constants.title,
+      htmlAttrs,
+      meta,
+      link: _link,
+    };
   }
 
   return {
@@ -287,7 +292,7 @@ export default function (mode) {
     script: [
       {
         type: "application/ld+json",
-        json: structuredLdJsonData
+        json: structuredLdJsonData,
       },
       {
         src: "https://www.googletagmanager.com/gtag/js?id=G-LRC7N9VH4L",
@@ -296,7 +301,7 @@ export default function (mode) {
       {
         src: "/google-tag.js",
         body: true,
-      }
+      },
     ],
   };
 }
