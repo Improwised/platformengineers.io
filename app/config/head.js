@@ -102,6 +102,24 @@ const devLinks = [
     media: "all",
   },
   {
+    href: "/css/open-sans.css",
+    rel: "stylesheet",
+    type: "text/css",
+    media: "all",
+  },
+  {
+    href: "/css/rubikLato.css",
+    rel: "stylesheet",
+    type: "text/css",
+    media: "all",
+  },
+  {
+    href: "/css/materialicon.css",
+    rel: "stylesheet",
+    type: "text/css",
+    media: "all",
+  },
+  {
     href: "/css/index.css",
     rel: "stylesheet",
     type: "text/css",
@@ -116,7 +134,12 @@ const devLinks = [
 
 const prodLinks = [
   {
-    href: "/dist/index.min.css",
+    href: "/dist/main.min.css",
+    rel: "stylesheet",
+    type: "text/css",
+  },
+  {
+    href: "/dist/fontsicon.min.css",
     rel: "stylesheet",
     type: "text/css",
   },
@@ -228,7 +251,12 @@ const _link = [
 
 const prodScripts = [
   {
-    src: "/dist/index.min.js",
+    src: "/dist/main.min.js",
+    async: true,
+    body: true,
+  },
+  {
+    src: "/dist/fontsicon.min.js",
     async: true,
     body: true,
   },
