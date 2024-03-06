@@ -11,8 +11,6 @@
                 title="Platform Engineers"
                 format="png"
                 loading="lazy"
-                width="68"
-                height="55"
               />
             </a>
           </div>
