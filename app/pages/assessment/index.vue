@@ -620,7 +620,7 @@
         </div>
       </div>
 
-      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+      <IndustriesList :list="industriesInfo" readmore="/industries/" />
     </section>
 
     <!-- faqs -->
@@ -712,16 +712,16 @@
 </template>
 
 <script>
+import IndustriesList from "@/components/common/IndustriesList.vue";
 import Navigation from "@/components/Navigation.vue";
 import faqs from "@/static/js/faqs.js";
-import List from "@/components/common/List.vue";
 import SectionHeading from "@/components/common/SectionHeading.vue";
 
 export default {
   components: {
     Navigation,
-    List,
     SectionHeading,
+    IndustriesList,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {

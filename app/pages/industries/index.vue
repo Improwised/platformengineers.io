@@ -13,7 +13,7 @@
         </div>
       </div>
       <section class="section-padding">
-        <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+        <IndustriesList :list="industriesInfo" readmore="/industries/" />
       </section>
 
       <hr class="m-0" />
@@ -35,17 +35,17 @@
 </template>
 
 <script>
+import IndustriesList from "../../components/common/IndustriesList.vue";
 import Navigation from "@/components/Navigation.vue";
 import Header from "@/components/common/Header.vue";
-import List from "@/components/common/List.vue";
 import Button from "@/components/common/Button.vue";
 
 export default {
   components: {
     Navigation,
     Header,
-    List,
     Button,
+    IndustriesList,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {

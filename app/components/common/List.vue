@@ -8,21 +8,7 @@
           class="masonry__item col-lg-4 col-md-6"
         >
           <article class="b-30 bs-11">
-            <div v-if="isShow">
-              <a
-                :href="`${readmore}${item.slug}/`"
-                class="industry d-flex align-items-center justify-content-center p-4"
-                style="height: 300px"
-              >
-                <nuxt-img
-                  v-if="item.image"
-                  :src="$urls.assets(item.image)"
-                  :alt="item.title"
-                  :title="item.title"
-                />
-              </a>
-            </div>
-            <div v-else>
+            <div>
               <a
                 :href="`${readmore}${item.slug}/`"
                 class="block d-flex align-items-center justify-content-center"
@@ -39,20 +25,12 @@
             </div>
             <div class="feature__body px-4 pb-4">
               <a :href="`${readmore}${item.slug}/`" class="t-hover">
-                <div v-if="isShow" class="text-center">
-                  <h2 class="h5" :title="item.title">
-                    {{ item.title }}
-                  </h2>
-                </div>
-                <div v-else>
+                <div>
                   <h2 class="title h5 pt-4" :title="item.title">
                     {{ item.title }}
                   </h2>
                 </div>
               </a>
-              <p v-if="isShow" class="flex-grow-1 m-0 text-center">
-                {{ item.description }}
-              </p>
               <div v-if="showavtar" class="d-flex align-items-center mt-1">
                 <div
                   class="d-flex align-items-center mr-2"
@@ -112,9 +90,6 @@ export default {
       type: Boolean,
     },
     datetime: {
-      type: Boolean,
-    },
-    isShow: {
       type: Boolean,
     },
   },
