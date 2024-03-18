@@ -148,7 +148,7 @@
           />
         </div>
       </div>
-      <List :list="industriesInfo" readmore="/industries/" :is-show="true" />
+      <IndustriesList :list="industriesInfo" readmore="/industries/" />
 
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
@@ -164,7 +164,7 @@
           <div class="pt-3 pb-0 p-md-5">
             <a
               class="btn btn--primary type--uppercase b-30"
-              :href="page.call_to_action_button_link +'/'"
+              :href="page.call_to_action_button_link + '/'"
             >
               <span class="btn__text">
                 {{ page.call_to_action_button_text }}
@@ -181,16 +181,16 @@
 import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
 import Header from "@/components/common/Header.vue";
-import List from "@/components/common/List.vue";
 import SectionHeading from "@/components/common/SectionHeading.vue";
+import IndustriesList from "@/components/common/IndustriesList.vue";
 
 export default {
   components: {
     Navigation,
     Technologies,
     Header,
-    List,
     SectionHeading,
+    IndustriesList,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
