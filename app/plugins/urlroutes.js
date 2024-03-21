@@ -90,7 +90,7 @@ const urls = {
   gallery: `/items/gallery?filter[status][_eq]=published&fields[]=*.*&sort=sort,-id`,
   landing_pages_for_seo: `/items/pe_pages_seo?filter[status][_eq]=published&fields[]=*.*`,
   landing_page_for_seo: (title) =>
-    `/items/pe_pages_seo?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields[]=*.*`,
+    `/items/pe_pages_seo?filter[status][_eq]=published&filter[slug][_eq]=${title}&single=1&fields[]=*.*,industries.pe_industry_id.slug,industries.pe_industry_id.title,industries.pe_industry_id.description,industries.pe_industry_id.image`,
 };
 
 export default function (context, inject) {

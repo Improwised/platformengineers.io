@@ -15,7 +15,7 @@ export const mutations = {
     state.services = services;
   },
   industries(state, industries) {
-    state.industries = industries;
+    state.industries = industries.slice(0, 5);
   },
   generate(state, generate) {
     state.generate = generate;

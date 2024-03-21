@@ -7,41 +7,80 @@
           :key="index"
           class="masonry__item col-lg-4 col-md-6"
         >
-          <article class="b-30 bs-11">
-            <div>
-              <a
-                :href="`${readmore}${item.slug}/`"
-                class="industry d-flex align-items-center justify-content-center p-4"
-                style="height: 300px"
-              >
-                <nuxt-img
-                  v-if="item.image"
-                  :src="$urls.assets(item.image)"
-                  :alt="item.title"
-                  :title="item.title"
-                />
-              </a>
-            </div>
+          <div v-if="relationship" class="d-flex">
+            <article class="b-30 bs-11">
+              <div>
+                <a
+                  :href="`${readmore}${item.pe_industry_id.slug}/`"
+                  class="industry d-flex align-items-center justify-content-center p-4"
+                  style="height: 300px"
+                >
+                  <nuxt-img
+                    v-if="item.pe_industry_id.image"
+                    :src="$urls.assets(item.pe_industry_id.image)"
+                    :alt="item.pe_industry_id.title"
+                    :title="item.pe_industry_id.title"
+                  />
+                </a>
+              </div>
 
-            <div class="feature__body px-4 pb-4">
-              <a :href="`${readmore}${item.slug}/`" class="t-hover">
-                <div class="text-center">
-                  <h2 class="h5" :title="item.title">
-                    {{ item.title }}
-                  </h2>
-                </div>
-              </a>
-              <p class="flex-grow-1 m-0 text-center">
-                {{ item.description }}
-              </p>
-              <a
-                :href="`${readmore}${item.slug}/`"
-                class="d-lg-none color-theme"
-              >
-                Read More
-              </a>
-            </div>
-          </article>
+              <div class="feature__body px-4 pb-4">
+                <a :href="`${readmore}${item.slug}/`" class="t-hover">
+                  <div class="text-center">
+                    <h2 class="h5" :title="item.pe_industry_id.title">
+                      {{ item.pe_industry_id.title }}
+                    </h2>
+                  </div>
+                </a>
+                <p class="flex-grow-1 m-0 text-center">
+                  {{ item.pe_industry_id.description }}
+                </p>
+                <a
+                  :href="`${readmore}${item.pe_industry_id.slug}/`"
+                  class="d-lg-none color-theme"
+                >
+                  Read More
+                </a>
+              </div>
+            </article>
+          </div>
+          <div v-else class="d-flex">
+            <article class="b-30 bs-11">
+              <div>
+                <a
+                  :href="`${readmore}${item.slug}/`"
+                  class="industry d-flex align-items-center justify-content-center p-4"
+                  style="height: 300px"
+                >
+                  <nuxt-img
+                    v-if="item.image"
+                    :src="$urls.assets(item.image)"
+                    :alt="item.title"
+                    :title="item.title"
+                  />
+                </a>
+              </div>
+
+              <div class="feature__body px-4 pb-4">
+                <a :href="`${readmore}${item.slug}/`" class="t-hover">
+                  <div class="text-center">
+                    <h2 class="h5" :title="item.title">
+                      {{ item.title }}
+                    </h2>
+                  </div>
+                </a>
+                <p class="flex-grow-1 m-0 text-center">
+                  {{ item.description }}
+                </p>
+                <a
+                  :href="`${readmore}${item.slug}/`"
+                  class="d-lg-none color-theme"
+                >
+                  Read More
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </div>
@@ -56,6 +95,9 @@ export default {
     },
     readmore: {
       type: String,
+    },
+    relationship: {
+      type: Boolean,
     },
   },
 };
