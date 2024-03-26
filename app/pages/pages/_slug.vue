@@ -148,7 +148,6 @@
           />
         </div>
       </div>
-      <IndustriesList :list="industriesInfo" readmore="/industries/" />
 
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
@@ -182,7 +181,6 @@ import Navigation from "@/components/Navigation.vue";
 import Technologies from "@/components/Technologies.vue";
 import Header from "@/components/common/Header.vue";
 import SectionHeading from "@/components/common/SectionHeading.vue";
-import IndustriesList from "@/components/common/IndustriesList.vue";
 
 export default {
   components: {
@@ -190,7 +188,6 @@ export default {
     Technologies,
     Header,
     SectionHeading,
-    IndustriesList,
   },
   layout: "theme",
   async asyncData({ app, params, payload }) {
