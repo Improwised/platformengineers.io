@@ -140,15 +140,6 @@
         </div>
       </section>
 
-      <div class="container">
-        <div class="row">
-          <SectionHeading
-            :title="page.section_industry_title"
-            :description="page.section_industry_description"
-          />
-        </div>
-      </div>
-
       <div class="px-3 px-sm-0 py-5 as-call-to-action-block as-home">
         <div
           class="container d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap"
