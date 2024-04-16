@@ -241,9 +241,9 @@
                   quality="80"
                 />
               </div>
-              <h5 class="mb-0 zi-0">
+              <h3 class="h5 mb-0 zi-0">
                 Application-Centric Performance Evaluation
-              </h5>
+              </h3>
               <p class="zi-0">
                 Channel efforts exclusively towards assessing and enhancing the
                 performance of your application. Recommend targeted
@@ -266,7 +266,7 @@
                   quality="80"
                 />
               </div>
-              <h5 class="mb-0 zi-0">Database Server Efficiency</h5>
+              <h3 class="h5 mb-0 zi-0">Database Server Efficiency</h3>
               <p class="zi-0">
                 Direct attention to strategies aimed at elevating the
                 performance of your database server within the application
@@ -289,7 +289,9 @@
                   quality="80"
                 />
               </div>
-              <h5 class="mb-0 zi-0">Safeguarding Applications for Recovery</h5>
+              <h3 class="h5 mb-0 zi-0">
+                Safeguarding Applications for Recovery
+              </h3>
               <p class="zi-0">
                 Examine your backups and recommend steps to fortify your app's
                 disaster recovery. Ensure your applications can handle
@@ -363,7 +365,7 @@
                   quality="80"
                 />
               </div>
-              <h5 class="mb-0 zi-0">Cost-Effective Resource Utilization</h5>
+              <h3 class="mb-0 zi-0 h5">Cost-Effective Resource Utilization</h3>
               <p class="zi-0">
                 Evaluate resource utilization to enhance efficiency while
                 identifying cost-saving opportunities. Ensure your
@@ -386,7 +388,7 @@
                   quality="80"
                 />
               </div>
-              <h5 class="mb-0 zi-0">Security and Compliance</h5>
+              <h3 class="h5 mb-0 zi-0">Security and Compliance</h3>
               <p class="zi-0">
                 Verify security measures through policy enforcement and
                 permissions, coupled with a comprehensive check for regulatory
@@ -409,7 +411,7 @@
                   quality="80"
                 />
               </div>
-              <h5 class="mb-0 zi-0">Real-Time Monitoring</h5>
+              <h3 class="mb-0 zi-0 h5">Real-Time Monitoring</h3>
               <p class="zi-0">
                 Assess real-time metric tracking for actionable insights and
                 review existing alerting configurations. Ensure efficient
@@ -539,7 +541,7 @@
               <div class="process-2 row">
                 <div class="col-md-3">
                   <div class="process__item">
-                    <h5>Start Assessment</h5>
+                    <h3 class="h5">Start Assessment</h3>
                     <p>
                       Begin by clicking "Schedule a Call." Complete a brief form
                       and arrange a 15-minute Google Calendar call to delve into
@@ -550,7 +552,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="process__item">
-                    <h5>NDA process - Privacy assurance</h5>
+                    <h3 class="h5">NDA process - Privacy assurance</h3>
                     <p>
                       After our assessment call, we will proceed to the signing
                       of the NDA. We respect the confidentiality of your
@@ -564,7 +566,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="process__item">
-                    <h5>Provide Prerequisites & Pay</h5>
+                    <h3 class="h5">Provide Prerequisites & Pay</h3>
                     <p>
                       Following the assessment call and NDA confirmation, share
                       the requested prerequisites and grant access. Initiate the
@@ -575,7 +577,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="process__item">
-                    <h5>Outcome Discussion</h5>
+                    <h3 class="h5">Outcome Discussion</h3>
                     <p>
                       Based on a discussed timeline, receive a comprehensive
                       checklist of actionable items. Later schedule a call to
@@ -664,9 +666,9 @@
                       }"
                     />
                   </div>
-                  <h5 class="m-0 as-f-16 pts as-lh1 font-weight-bold">
+                  <h3 class="h5 m-0 as-f-16 pts as-lh1 font-weight-bold">
                     {{ faq.question }}
-                  </h5>
+                  </h3>
                 </div>
                 <div
                   class="ml-3"
