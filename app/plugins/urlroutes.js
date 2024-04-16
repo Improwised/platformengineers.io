@@ -43,9 +43,9 @@ const urls = {
   industry: (title) =>
     `/items/pe_industry?filter[slug][_eq]=${title}&fields[]=*.*,services.pe_services_id.slug,services.pe_services_id.title,services.pe_services_id.description,services.pe_services_id.icon,services.pe_services_id.icon_as_image`,
 
-  blogs: `/items/pe_blog?filter[status][_eq]=published&fields=*.*&sort=-date_created`,
+  blogs: `/items/pe_blog?filter[status][_eq]=published&fields=*.*,authors.directus_users_id.first_name,authors.directus_users_id.last_name,authors.directus_users_id.avatar&sort=-date_created`,
   blog: (title) =>
-    `/items/pe_blog?filter[slug][_eq]=${title}&single=1&fields[]=*.*`,
+    `/items/pe_blog?filter[slug][_eq]=${title}&single=1&fields[]=*.*,authors.directus_users_id.first_name,authors.directus_users_id.last_name,authors.directus_users_id.avatar`,
 
   // services: `/items/services?filter[status][_eq]=published&fields=*.*&sort=title`,
   // servicesListWithTitleOnly:

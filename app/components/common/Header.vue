@@ -3,35 +3,43 @@
     <div class="row py-2">
       <div class="col-md-6 d-flex align-items-center justify-content-center">
         <div>
-          <h1 class="h2">{{ title }}</h1>
+          <h1 class="h2 mb-0">{{ title }}</h1>
+          <div v-if="blogAuthor" class="lh-1 mb-3">
+            {{ dateTime }} |
+            {{ timeToRead }}
+          </div>
           <div v-if="description" class="lead" v-html="description"></div>
           <p v-if="caseStudy" style="font-size: 16px; max-width: 300px">
             {{ dateTime }}
           </p>
-          <div v-if="creator" class="d-flex align-items-center mt-3">
+          <div class="row">
             <div
-              class="d-flex align-items-center mr-2"
-              style="border-radius: 200px"
+              v-for="author in blogAuthor"
+              :key="author.id"
+              class="col-lg-4 col-md-12"
             >
-              <nuxt-img
-                v-if="avtar"
-                :src="$urls.assets(avtar)"
-                :alt="title"
-                :title="title"
-                format="png"
-                height="40"
-                width="32"
-                class="p-0 m-0 rounded author-s"
-              />
-            </div>
-            <div>
-              <strong class="m-0 p-0 lh-1">
-                {{ firstName }}
-                {{ lastName }}
-              </strong>
-              <div class="lh-1">
-                {{ dateTime }} |
-                {{ timeToRead }}
+              <div class="d-flex align-items-center mt-3">
+                <div
+                  class="d-flex align-items-center mr-2"
+                  style="border-radius: 200px"
+                >
+                  <nuxt-img
+                    v-if="author.directus_users_id.avatar"
+                    :src="$urls.assets(author.directus_users_id.avatar)"
+                    :alt="title"
+                    :title="title"
+                    format="png"
+                    height="40"
+                    width="32"
+                    class="p-0 m-0 rounded author-s"
+                  />
+                </div>
+                <div>
+                  <strong class="m-0 p-0 lh-1">
+                    {{ author.directus_users_id.first_name }}
+                    {{ author.directus_users_id.last_name }}
+                  </strong>
+                </div>
               </div>
             </div>
           </div>
@@ -94,6 +102,9 @@ export default {
     },
     caseStudy: {
       type: Boolean,
+    },
+    blogAuthor: {
+      type: Object,
     },
   },
 };
