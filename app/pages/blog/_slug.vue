@@ -11,7 +11,7 @@
         :date-time="blog.date_created | formatDateTime"
         :time-to-read="blog.time_to_read"
         :creator="true"
-        :blog-author="blog.authors"
+        :authors="blog.authors"
       />
     </div>
 

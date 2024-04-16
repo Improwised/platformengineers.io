@@ -4,7 +4,7 @@
       <div class="col-md-6 d-flex align-items-center justify-content-center">
         <div>
           <h1 class="h2 mb-0">{{ title }}</h1>
-          <div v-if="blogAuthor" class="lh-1 mb-3">
+          <div v-if="authors" class="lh-1 mb-3">
             {{ dateTime }} |
             {{ timeToRead }}
           </div>
@@ -14,7 +14,7 @@
           </p>
           <div class="row">
             <div
-              v-for="author in blogAuthor"
+              v-for="author in authors"
               :key="author.id"
               class="col-lg-4 col-md-12"
             >
@@ -103,7 +103,7 @@ export default {
     caseStudy: {
       type: Boolean,
     },
-    blogAuthor: {
+    authors: {
       type: Object,
     },
   },
