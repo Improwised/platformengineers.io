@@ -11,6 +11,7 @@
         :date-time="blog.date_created | formatDateTime"
         :time-to-read="blog.time_to_read"
         :creator="true"
+        :authors="blog.authors"
       />
     </div>
 
@@ -134,7 +135,7 @@ export default {
   data() {
     if (process.client) {
       return {
-        baseUrlPath: window.location.href+"/", // this.$route.fullPath,
+        baseUrlPath: window.location.href + "/", // this.$route.fullPath,
       };
     } else {
       return {
