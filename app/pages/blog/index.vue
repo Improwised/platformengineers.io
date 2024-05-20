@@ -2,7 +2,7 @@
   <div>
     <div class="blog-bk">
       <Navigation />
-      <Header title="Blog" image="/img/blog.webp" />
+      <Header title="Blog" image="/img/blog1.webp" />
     </div>
     <section class="section-padding">
       <List :list="blogList" readmore="/blog/" :showavtar="true" />
@@ -29,7 +29,7 @@ export default {
   },
   head() {
     const image = this.$img("/img/blog-bk-1.png", {
-      format: "png",
+      format: "webp",
       height: "400px",
     });
 

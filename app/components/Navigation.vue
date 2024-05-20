@@ -9,8 +9,7 @@
                 src="/img/plateform-engineers.png"
                 alt="Platform Engineers"
                 title="Platform Engineers"
-                format="png"
-                loading="lazy"
+                format="webp"
               />
             </a>
           </div>
@@ -41,8 +40,7 @@
                   src="/img/plateform-engineers.png"
                   alt="Platform Engineers"
                   title="Platform Engineers"
-                  format="png"
-                  loading="lazy"
+                  format="webp"
                   width="68"
                   height="55"
                 />
