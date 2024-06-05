@@ -511,10 +511,10 @@
                     class="m-0 p-0 text-white"
                     style="font-size: 4rem; line-height: 1"
                   >
-                    $500
+                    $750
                   </h2>
                   <p class="m-0" style="font-size: 1.3rem; color: gray">
-                    <s>$1000</s> / 50% off
+                    <s>$1000</s> / 25% off
                   </p>
                   <br />
                   <a
