@@ -511,11 +511,11 @@
                     class="m-0 p-0 text-white"
                     style="font-size: 4rem; line-height: 1"
                   >
-                    $750
+                    $1000
                   </h2>
-                  <p class="m-0" style="font-size: 1.3rem; color: gray">
+                  <!-- <p class="m-0" style="font-size: 1.3rem; color: gray">
                     <s>$1000</s> / 25% off
-                  </p>
+                  </p> -->
                   <br />
                   <a
                     href="https://calendly.com/platform-engineers/30min"
