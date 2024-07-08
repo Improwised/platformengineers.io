@@ -504,7 +504,7 @@
             >
               <div class="d-flex align-items-center justify-content-center">
                 <div class="text-center">
-                  <span class="badge badge-warning">Limited-time offer</span>
+                  <!-- <span class="badge badge-warning">Limited-time offer</span> -->
                   <br />
                   <br />
                   <h2
