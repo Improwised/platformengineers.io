@@ -97,7 +97,7 @@
               height="40"
               width="68"
             />
-            <h2 class="h6">Amazon Web Services</h2>
+            <h2 class="h6">AWS</h2>
           </div>
         </div>
         <div class="">
@@ -111,7 +111,21 @@
               height="40"
               width="45"
             />
-            <h2 class="h6">Google Cloud Platform</h2>
+            <h2 class="h6">GCP</h2>
+          </div>
+        </div>
+        <div class="">
+          <div class="boxed m-0 text-center">
+            <nuxt-img
+              src="img/technologies/azure.svg"
+              alt="Azure | Platform Engineers"
+              format="png"
+              loading="lazy"
+              title="Azure"
+              height="40"
+              width="45"
+            />
+            <h2 class="h6">Azure</h2>
           </div>
         </div>
         <div class="">
