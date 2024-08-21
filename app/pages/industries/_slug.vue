@@ -114,11 +114,40 @@
       <section class="text-center border-top bg-- section-padding">
         <div class="container">
           <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-              <div class="cta">
-                <h2>Let's Dive Deeper into Your Needs – Ready to Talk?</h2>
-                <Button text="Contact us" />
-              </div>
+            <div class="cta">
+              <h2 v-if="$route.params.slug === 'IoT'">
+                Let's collaborate to build a scalable, secure, and
+                high-performance IoT platform tailored to your specific needs.
+              </h2>
+              <h2 v-else-if="$route.params.slug === 'ecommerce'">
+                Reduce Costs, Increase Efficiency - Let's Build a Scalable,
+                Secure eCommerce Platform for Your Business.
+              </h2>
+
+              <h2 v-else-if="$route.params.slug === 'fintech'">
+                Let's build a platform that's as agile and secure as your
+                financial future. Our expert team is dedicated to delivering
+                scalable, high-performance solutions tailored to your specific
+                needs.
+              </h2>
+
+              <h2 v-else-if="$route.params.slug === 'SaaS'">
+                Scale your SaaS business with confidence using our platform
+                engineering solutions.
+              </h2>
+
+              <h2 v-else-if="$route.params.slug === 'enterprise'">
+                Don't let inefficiencies hold you back. Contact us today to
+                explore how our services can transform your SaaS business. Let's
+                work together to build a scalable, reliable, and secure platform
+                that meets the evolving needs of your customers.
+              </h2>
+
+              <h2 v-else>
+                Start Your Platform Engineering Journey Today. Let's Discuss
+                Your Platform Engineering Needs.
+              </h2>
+              <Button text="Contact us" />
             </div>
           </div>
         </div>
