@@ -127,11 +127,47 @@
     <section class="text-center border-top bg-- section-padding">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <div class="cta">
-              <h2>Want to know more about us?</h2>
-              <Button text="Get in Touch" />
-            </div>
+          <div class="cta">
+            <h2 v-if="$route.params.slug === 'kubernetes-consulting-services'">
+              Our Kubernetes consulting experts are here to guide you every step
+              of the way. From strategy to deployment, optimization, and beyond,
+              we'll help you harness the full potential of Kubernetes.
+            </h2>
+
+            <h2 v-else-if="$route.params.slug === 'containerization'">
+              Experience faster time-to-market and enhanced scalability. Let's
+              discuss your containerization needs.
+            </h2>
+
+            <h2 v-else-if="$route.params.slug === 'performance-optimization'">
+              Elevate your application performance and infrastructure cost
+              efficiency. Contact us today to discuss how our platform
+              engineering services can help you achieve your business
+              objectives.
+            </h2>
+
+            <h2 v-else-if="$route.params.slug === 'ci-cd-implementation'">
+              Free your developers from mundane tasks and let them focus on
+              innovation. Our CI/CD solutions automate the build, test, and
+              deployment process, boosting productivity and morale.
+            </h2>
+
+            <h2
+              v-else-if="
+                $route.params.slug === 'infrastructure-maintenance-and-support'
+              "
+            >
+              Don't let infrastructure downtime impact your productivity and
+              profitability. Partner with us to keep your systems running
+              smoothly and performing at their best. Contact us today to learn
+              more and schedule a consultation
+            </h2>
+
+            <h2 v-else>
+              Start Your Platform Engineering Journey Today. Let's Discuss Your
+              Platform Engineering Needs.
+            </h2>
+            <Button text="Get in Touch" />
           </div>
         </div>
       </div>

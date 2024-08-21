@@ -691,14 +691,15 @@
       class="d-flex align-items-center justify-content-center as-call-to-action-block"
       :style="`background: url(${callToAction}),linear-gradient(to left, #323b95 0%, rgb(125 66 219) 100%)`"
     >
-      <div
-        class="d-flex align-items-center align-self-stretch p-3 p-sm-5 text-center"
-      >
+      <div class="align-items-center align-self-stretch p-3 p-sm-5 text-center">
         <div>
           <h2 class="text-white">
-            Let's elevate your application performance and infrastructure cost
-            efficiency
+            Don't let inefficiencies hold you back. Contact us today to schedule
+            your assessment and start achieving better performance and cost
+            efficiency for your applications and infrastructure.
           </h2>
+        </div>
+        <div class="mt-4">
           <button
             class="btn px-5 as-call-to-action b-30 m-0"
             @click="scrollPricingSection"
