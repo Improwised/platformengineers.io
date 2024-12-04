@@ -422,185 +422,77 @@
       </div>
     </section>
 
-    <!-- pricing -->
+    <!-- process -->
     <section class="section-padding">
-      <div class="as-pricing">
-        <div class="container">
-          <div class="row py-3 py-sm-5">
-            <SectionHeading
-              title="Pricing"
-              description="We prioritize genuine human connections and believe in
-                understanding your needs through meaningful conversations before
-                any financial commitment. It's our commitment to ensure a
-                personalized and satisfactory experience."
-            />
-          </div>
-          <div class="row as-pricing-row text-white mb-5">
-            <div
-              class="col-lg-8 p-3 p-sm-5 d-flex align-items-center justify-content-center"
-            >
-              <div>
-                <p>
-                  This assessment, facilitated by the PlatformEngineers, is a
-                  unique offering in the market, setting it apart with
-                  distinctive technical capabilities not found elsewhere.
-                </p>
-                <hr />
-                <div
-                  class="d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap"
-                >
-                  <div class="d-flex align-items-center">
-                    <nuxt-img
-                      src="/img/as/pricing/check.png"
-                      alt="No Hidden Fees | Pricing | platformengineers"
-                      title="No Hidden Fees | Pricing | platformengineers"
-                      format="png"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      quality="80"
-                    />
-                    &nbsp;&nbsp;No Hidden Fees
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <nuxt-img
-                      src="/img/as/pricing/check.png"
-                      alt="Money back guarantee | Pricing | platformengineers"
-                      title="Money back guarantee | Pricing | platformengineers"
-                      format="png"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      quality="80"
-                    />
-                    &nbsp;&nbsp;Money back guarantee
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <nuxt-img
-                      src="/img/as/pricing/check.png"
-                      alt="Get Tax invoice | Pricing | platformengineers"
-                      title="Get Tax invoice | Pricing | platformengineers"
-                      format="png"
-                      loading="lazy"
-                      width="16"
-                      height="16"
-                      quality="80"
-                    />
-                    &nbsp;&nbsp;Get Tax invoice
-                  </div>
-                </div>
-                <div class="text-center pt-5">
+      <div class="container">
+        <div class="row pt-3 pt-sm-5">
+          <SectionHeading title="Process" />
+        </div>
+
+        <div class="row d-block d-sm-none pb-3 pb-sm-5">
+          <div class="col">
+            <div class="process-2 row">
+              <div class="col-md-3">
+                <div class="process__item">
+                  <h5>Start Assessment</h5>
                   <p>
-                    Check out the <a href="/assessment/#faqs">FAQs</a> if you
-                    still have questions.
+                    Begin by clicking "Schedule a Call." Complete a brief form
+                    and arrange a 15-minute Google Calendar call to delve into
+                    your specific needs and challenges. Let's start Assessment!
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="process__item">
+                  <h5>NDA process - Privacy assurance</h5>
+                  <p>
+                    After our assessment call, we will proceed to the signing of
+                    the NDA. We respect the confidentiality of your
+                    infrastructure and proprietary information. So, if you have
+                    your own NDA, feel free to share it with us, and we will
+                    reciprocate by signing it. Otherwise, we have our template
+                    of a (NDA) to ensure the privacy and confidentiality of your
+                    data.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="process__item">
+                  <h5>Provide Prerequisites & Pay</h5>
+                  <p>
+                    Following the assessment call and NDA confirmation, share
+                    the requested prerequisites and grant access. Initiate the
+                    assessment by making a secure USD 250 payment through the
+                    provided email link. Your commitment fuels the process.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="process__item">
+                  <h5>Outcome Discussion</h5>
+                  <p>
+                    Based on a discussed timeline, receive a comprehensive
+                    checklist of actionable items. Later schedule a call to
+                    discuss it in detail. Either you can implement actions with
+                    your team or we can help you do it for an additional fee.
                   </p>
                 </div>
               </div>
             </div>
-            <div
-              id="as-pricing"
-              class="col-lg-4 d-flex align-items-center justify-content-center as-p-block p-3 p-sm-5"
-              :style="`background-image: url(${pricing})`"
-            >
-              <div class="d-flex align-items-center justify-content-center">
-                <div class="text-center">
-                  <!-- <span class="badge badge-warning">Limited-time offer</span> -->
-                  <br />
-                  <br />
-                  <h2
-                    class="m-0 p-0 text-white"
-                    style="font-size: 4rem; line-height: 1"
-                  >
-                    $1000
-                  </h2>
-                  <!-- <p class="m-0" style="font-size: 1.3rem; color: gray">
-                    <s>$1000</s> / 25% off
-                  </p> -->
-                  <br />
-                  <a
-                    href="https://calendly.com/platform-engineers/30min"
-                    class="btn px-5 as-call-to-action b-30 m-0"
-                    target="_blank"
-                  >
-                    SCHEDULE A CALL
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
+        </div>
 
-          <!-- process -->
-          <div class="row pt-3 pt-sm-5">
-            <SectionHeading title="Process" />
-          </div>
-
-          <div class="row d-block d-sm-none pb-3 pb-sm-5">
-            <div class="col">
-              <div class="process-2 row">
-                <div class="col-md-3">
-                  <div class="process__item">
-                    <h5>Start Assessment</h5>
-                    <p>
-                      Begin by clicking "Schedule a Call." Complete a brief form
-                      and arrange a 15-minute Google Calendar call to delve into
-                      your specific needs and challenges. Let's start
-                      Assessment!
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="process__item">
-                    <h5>NDA process - Privacy assurance</h5>
-                    <p>
-                      After our assessment call, we will proceed to the signing
-                      of the NDA. We respect the confidentiality of your
-                      infrastructure and proprietary information. So, if you
-                      have your own NDA, feel free to share it with us, and we
-                      will reciprocate by signing it. Otherwise, we have our
-                      template of a (NDA) to ensure the privacy and
-                      confidentiality of your data.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="process__item">
-                    <h5>Provide Prerequisites & Pay</h5>
-                    <p>
-                      Following the assessment call and NDA confirmation, share
-                      the requested prerequisites and grant access. Initiate the
-                      assessment by making a secure USD 250 payment through the
-                      provided email link. Your commitment fuels the process.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="process__item">
-                    <h5>Outcome Discussion</h5>
-                    <p>
-                      Based on a discussed timeline, receive a comprehensive
-                      checklist of actionable items. Later schedule a call to
-                      discuss it in detail. Either you can implement actions
-                      with your team or we can help you do it for an additional
-                      fee.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row d-none d-sm-block pt-3 pt-sm-5">
-            <div class="col-lg-12 text-center">
-              <nuxt-img
-                src="/img/as/pricing/process.png"
-                alt="process | assessment | platformengineers"
-                title="process | assessment | platformengineers"
-                format="png"
-                loading="lazy"
-                width="1110"
-                quality="80"
-              />
-            </div>
+        <div class="row d-none d-sm-block pt-3 pt-sm-5">
+          <div class="col-lg-12 text-center">
+            <nuxt-img
+              src="/img/as/pricing/process.png"
+              alt="process | assessment | platformengineers"
+              title="process | assessment | platformengineers"
+              format="png"
+              loading="lazy"
+              width="1110"
+              quality="80"
+            />
           </div>
         </div>
       </div>
