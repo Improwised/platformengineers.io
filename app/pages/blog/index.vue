@@ -29,7 +29,7 @@ export default {
   },
   head() {
     const image = this.$img("/img/blog-bk-1.png", {
-      format: "png",
+      format: "webp",
       height: "400px",
     });
 
