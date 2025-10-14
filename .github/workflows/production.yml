@@ -21,7 +21,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: 16.15.1
@@ -39,6 +39,6 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
         external_repository: Improwised/platformengineers.io-prod
         publish_dir: ./app/public
